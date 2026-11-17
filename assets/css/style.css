@@ -1,26 +1,36 @@
 /* ==========================================================================
-   Meadowside Clinic — Custom Stylesheet
-   Palette: High-contrast light theme (warm cream, sage, deep forest green)
-   Typography: Source Serif 4 (body & headings, 18px base for readability)
+   Meadowside Clinic — Luminous Botanical & Editorial Stylesheet (v3)
+   Inspired by Muna Osteopathy (fresh mint washes + vibrant coral energy),
+   Sora Health (sunlit ivory + editorial serif poise), & Wellthy Clinic
+   (airy white clarity + confident contrast).
    ========================================================================== */
 
 :root {
-  --color-bg: #faf8f3;
+  --color-bg: #fffdf9;
   --color-surface: #ffffff;
-  --color-surface-sage: #e8efea;
-  --color-surface-warm: #f2ece1;
-  --color-primary: #214033;
-  --color-primary-dark: #162b22;
-  --color-accent: #9c523b;
-  --color-accent-dark: #7d3f2c;
-  --color-text: #1e2421;
-  --color-text-muted: #4a5550;
-  --color-border: #d5ddd7;
-  --color-focus: #9c523b;
+  --color-surface-sage: #e6f4ec;
+  --color-surface-mint: #f2faf5;
+  --color-surface-warm: #faf3ea;
+  --color-primary: #144d46;
+  --color-primary-dark: #0d3631;
+  --color-primary-soft: #266b62;
+  --color-accent: #c24129;
+  --color-accent-dark: #9e311d;
+  --color-coral-bright: #f16344;
+  --color-gold: #f0a868;
+  --color-text: #172623;
+  --color-text-muted: #42544f;
+  --color-border: #d2e4da;
+  --color-border-warm: #eadbc9;
+  --color-focus: #c24129;
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --shadow-soft: 0 6px 20px rgba(33, 64, 51, 0.08);
+  --radius-sm: 0.6rem;
+  --radius-md: 0.95rem;
+  --radius-lg: 1.35rem;
+  --shadow-soft: 0 14px 36px rgba(20, 77, 70, 0.08);
+  --shadow-card: 0 6px 22px rgba(20, 77, 70, 0.06);
+  --shadow-hover: 0 14px 30px rgba(20, 77, 70, 0.12);
 }
 
 /* Base typography & accessibility */
@@ -33,7 +43,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-serif);
   font-size: 1.125rem;
-  line-height: 1.65;
+  line-height: 1.72;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -45,29 +55,53 @@ main {
 
 h1,
 h2,
+.display-heading {
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 2.65rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
 h3,
 h4 {
   color: var(--color-primary);
+  font-family: var(--font-serif);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.3;
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--color-accent);
 }
 
 p,
 li {
-  max-width: 68ch;
+  max-width: 66ch;
 }
 
 a {
   color: var(--color-primary);
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.22em;
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 a:hover,
 a:focus-visible {
-  color: var(--color-primary-dark);
+  color: var(--color-accent);
 }
 
-/* Clear keyboard focus ring across all interactive elements */
+/* High-visibility keyboard focus ring */
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
@@ -81,25 +115,46 @@ a:focus-visible {
   z-index: 1100;
   background-color: var(--color-primary);
   color: #ffffff;
-  padding: 0.65rem 1.1rem;
-  border-radius: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-sm);
   text-decoration: none;
   font-weight: 600;
 }
 
+/* Top clinical reassurance utility bar */
+.utility-bar {
+  background: linear-gradient(90deg, #10403a 0%, #144d46 55%, #1a5c54 100%);
+  color: #f4faf6;
+  font-size: 0.88rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.utility-bar a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.utility-dot {
+  color: var(--color-gold);
+  margin: 0 0.5rem;
+}
+
 /* Header & Navbar */
 .site-header {
-  background-color: var(--color-surface);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 14px rgba(20, 77, 70, 0.04);
 }
 
 .navbar-brand {
   color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1.35rem;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .navbar-brand:hover,
@@ -107,19 +162,31 @@ a:focus-visible {
   color: var(--color-primary-dark);
 }
 
+.brand-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.05;
+  color: var(--color-primary);
+}
+
 .brand-subtitle {
   display: block;
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   color: var(--color-text-muted);
-  line-height: 1.2;
+  margin-top: 0.15rem;
 }
 
 .navbar-nav .nav-link {
   color: var(--color-text);
   font-weight: 600;
-  padding: 0.65rem 0.95rem;
-  border-radius: 0.5rem;
+  font-size: 1.02rem;
+  padding: 0.6rem 0.95rem;
+  border-radius: var(--radius-sm);
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -132,22 +199,26 @@ a:focus-visible {
 }
 
 .navbar-nav .nav-link.active {
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: var(--color-surface-sage);
+  color: var(--color-primary);
+  box-shadow: inset 0 -2px 0 var(--color-coral-bright);
 }
 
 /* Buttons */
 .btn-clinic-primary {
   background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   color: #ffffff;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 0.74rem 1.55rem;
+  border-radius: 2rem;
   min-height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(20, 77, 70, 0.18);
 }
 
 .btn-clinic-primary:hover,
@@ -155,186 +226,329 @@ a:focus-visible {
   background-color: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(20, 77, 70, 0.24);
 }
 
 .btn-clinic-outline {
-  background-color: transparent;
+  background-color: var(--color-surface);
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
   font-weight: 600;
-  padding: 0.7rem 1.45rem;
+  padding: 0.72rem 1.45rem;
+  border-radius: 2rem;
   min-height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  text-decoration: none;
 }
 
 .btn-clinic-outline:hover,
 .btn-clinic-outline:focus-visible {
   background-color: var(--color-primary);
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-clinic-accent {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background: linear-gradient(135deg, #c9462d 0%, #ad341d 100%);
+  border: 2px solid #ad341d;
   color: #ffffff;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 0.74rem 1.6rem;
+  border-radius: 2rem;
   min-height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(194, 65, 41, 0.25);
 }
 
 .btn-clinic-accent:hover,
 .btn-clinic-accent:focus-visible {
-  background-color: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
+  background: linear-gradient(135deg, #b53821 0%, #942a16 100%);
+  border-color: #942a16;
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(194, 65, 41, 0.3);
 }
 
-/* Section surfaces */
+/* Section surfaces & luminous gradients */
 .hero-section {
-  background-color: var(--color-surface-sage);
+  background: radial-gradient(circle at 86% 18%, rgba(217, 242, 233, 0.85) 0%, rgba(255, 253, 249, 0.92) 48%, #faf3ea 100%);
   border-bottom: 1px solid var(--color-border);
-  padding: 3rem 0;
+  padding: 3rem 0 3.75rem;
 }
 
 .page-intro {
-  background-color: var(--color-surface-sage);
+  background: linear-gradient(125deg, #eaf6ef 0%, #fffdf9 58%, #faf1e5 100%);
   border-bottom: 1px solid var(--color-border);
-  padding: 2.5rem 0;
+  padding: 2.85rem 0;
 }
 
 .section-pad {
-  padding: 3.5rem 0;
+  padding: 3.75rem 0;
 }
 
 .section-sage {
-  background-color: var(--color-surface-sage);
+  background: linear-gradient(135deg, #e2f3ea 0%, #eff8f3 60%, #f9f3eb 100%);
 }
 
 .section-warm {
-  background-color: var(--color-surface-warm);
+  background-color: var(--color-surface-mint);
 }
 
-/* Eyebrow label */
+/* Eyebrow & metadata tags */
 .eyebrow-text {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+.pill-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: var(--color-surface-sage);
+  color: var(--color-primary);
+  border: 1px solid #b8dcc8;
+  padding: 0.32rem 0.82rem;
+  border-radius: 2rem;
+}
+
+/* Editorial index numeral */
+.index-numeral {
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  line-height: 1;
+  color: var(--color-coral-bright);
+  display: block;
   margin-bottom: 0.5rem;
 }
 
-/* Cards & layout helpers */
-.clinic-card {
+/* Hero trust metrics bar */
+.trust-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: var(--color-primary);
+  display: block;
+}
+
+.metric-label {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Editorial artwork frame */
+.artwork-frame {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  padding: 0.9rem;
   box-shadow: var(--shadow-soft);
-  padding: 1.75rem;
+  margin: 0;
+}
+
+.artwork-frame svg,
+.artwork-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.artwork-caption {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  padding: 0.7rem 0.4rem 0.15rem;
+  margin: 0;
+}
+
+/* Elevated luminous cards */
+.clinic-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.85rem;
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+}
+
+.clinic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-top-color: var(--color-coral-bright);
 }
 
 .clinic-card .card-link-bottom {
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 1.15rem;
 }
 
-/* CSS Grid pattern for clinic trust highlights & steps */
+/* CSS Grid patterns */
 .highlights-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
+.four-step-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
 .step-badge {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 50%;
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #144d46 0%, #266b62 100%);
   color: #ffffff;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-/* Credentials & callout box */
+/* Positive & Boundary comparison panels */
+.promise-panel-positive {
+  background-color: var(--color-surface);
+  border: 1px solid #bfe0ce;
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  height: 100%;
+}
+
+.promise-panel-boundary {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-warm);
+  border-top: 4px solid var(--color-coral-bright);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  height: 100%;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.list-marker {
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.list-marker-boundary {
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Credentials & callout boxes */
 .credential-box {
-  background-color: var(--color-surface-warm);
+  background-color: var(--color-surface-sage);
+  border: 1px solid #c1e0cf;
   border-left: 4px solid var(--color-primary);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1.25rem 1.5rem;
+  padding: 1.35rem 1.5rem;
 }
 
 .notice-box {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background-color: #fdf6f3;
+  border: 1px solid #eed2c7;
   border-left: 4px solid var(--color-accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1.25rem 1.5rem;
+  padding: 1.35rem 1.5rem;
 }
 
-/* Testimonials */
+/* Editorial Pull-Quote Testimonials */
 .testimonial-card {
+  position: relative;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-coral-bright);
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 2.25rem 2rem 2rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: var(--shadow-card);
+}
+
+.testimonial-card::before {
+  content: "\201C";
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: #f16344;
+  opacity: 0.32;
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
 .testimonial-quote {
+  font-size: 1.15rem;
   font-style: italic;
   color: var(--color-text);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.68;
 }
 
 .testimonial-author {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
   margin-bottom: 0;
 }
 
-/* Temporary image scaffold slots (replaced when WebP photos are added) */
-.photo-placeholder {
-  background-color: var(--color-surface-warm);
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-lg);
+.testimonial-context {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 400;
   color: var(--color-text-muted);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-  width: 100%;
-}
-
-.photo-placeholder-hero {
-  aspect-ratio: 4 / 3;
-}
-
-.photo-placeholder-portrait {
-  aspect-ratio: 4 / 5;
-  max-width: 420px;
-}
-
-.photo-placeholder-card {
-  aspect-ratio: 16 / 10;
 }
 
 /* Bootstrap Accordion styling */
@@ -344,6 +558,7 @@ a:focus-visible {
   overflow: hidden;
   margin-bottom: 0.85rem;
   background-color: var(--color-surface);
+  box-shadow: 0 3px 12px rgba(20, 77, 70, 0.04);
 }
 
 .accordion-button {
@@ -352,7 +567,7 @@ a:focus-visible {
   font-weight: 600;
   color: var(--color-primary);
   background-color: var(--color-surface);
-  padding: 1.15rem 1.25rem;
+  padding: 1.2rem 1.35rem;
 }
 
 .accordion-button:not(.collapsed) {
@@ -364,24 +579,25 @@ a:focus-visible {
 .accordion-body {
   background-color: var(--color-surface);
   color: var(--color-text);
-  padding: 1.25rem;
+  padding: 1.35rem;
 }
 
 /* Form controls */
 .form-control,
 .form-select {
-  border: 1px solid #9aa89f;
-  border-radius: 0.5rem;
-  padding: 0.7rem 0.9rem;
+  border: 1px solid #96b5a5;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.95rem;
   font-size: 1.05rem;
   color: var(--color-text);
   background-color: var(--color-surface);
+  min-height: 48px;
 }
 
 .form-control:focus,
 .form-select:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 0.2rem rgba(33, 64, 51, 0.2);
+  box-shadow: 0 0 0 0.22rem rgba(20, 77, 70, 0.18);
 }
 
 .form-label {
@@ -391,7 +607,7 @@ a:focus-visible {
 
 .form-text {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 
 /* Map figure */
@@ -405,20 +621,22 @@ a:focus-visible {
 
 /* Footer */
 .site-footer {
-  background-color: var(--color-primary);
-  color: #f3f6f4;
-  padding: 3rem 0 2rem;
+  background: linear-gradient(180deg, #144d46 0%, #0e3833 100%);
+  color: #eff7f2;
+  padding: 3.5rem 0 2.25rem;
   margin-top: auto;
 }
 
 .site-footer h2,
 .site-footer h3 {
   color: #ffffff;
-  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: 0.01em;
 }
 
 .site-footer a {
-  color: #e8efea;
+  color: #d6efe2;
 }
 
 .site-footer a:hover,
@@ -427,31 +645,70 @@ a:focus-visible {
 }
 
 .footer-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
+  h1 {
+    font-size: 3.15rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
   .hero-section {
-    padding: 4.5rem 0;
+    padding: 4.25rem 0 4.85rem;
   }
 
   .section-pad {
-    padding: 4.25rem 0;
+    padding: 4.5rem 0;
   }
 
   .highlights-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
+
+  .four-step-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 2.65rem;
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
   }
 
   .navbar-nav {
     gap: 0.35rem;
+  }
+
+  .four-step-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a,
+  .clinic-card {
+    transition: none;
+  }
+
+  .clinic-card:hover,
+  .btn-clinic-primary:hover,
+  .btn-clinic-outline:hover,
+  .btn-clinic-accent:hover {
+    transform: none;
   }
 }

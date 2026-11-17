@@ -7,24 +7,31 @@
   <title>Contact &amp; Enquiries | Meadowside Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
+  <div class="utility-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
+      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
+    </div>
+  </div>
+
   <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <circle cx="16" cy="16" r="15" fill="#E8EFEA" stroke="#214033" stroke-width="2" />
-            <path d="M16 7C12 11 11 17 16 24C21 17 20 11 16 7Z" fill="#214033" />
-            <path d="M16 14C12.5 14.5 10 17 9 20.5C12.5 21 15 19 16 16.5" stroke="#9C523B" stroke-width="1.8" stroke-linecap="round" />
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <circle cx="18" cy="18" r="17" fill="#E6F4EC" stroke="#144D46" stroke-width="1.8" />
+            <path d="M18 7.5C13.5 12 12.5 18.5 18 26.5C23.5 18.5 22.5 12 18 7.5Z" fill="#144D46" />
+            <path d="M18 15.5C14 16 11.2 18.8 10 22.8C14 23.2 16.8 21 18 18.2" stroke="#F16344" stroke-width="2" stroke-linecap="round" />
           </svg>
           <span>
-            Meadowside Clinic
+            <span class="brand-title">Meadowside Clinic</span>
             <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
           </span>
         </a>
@@ -46,7 +53,7 @@
               <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
             </li>
             <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" aria-current="page" href="contact.html">Enquire Now</a>
+              <a class="btn btn-clinic-primary" aria-current="page" href="contact.html">Arrange a Visit</a>
             </li>
           </ul>
         </div>
@@ -58,9 +65,9 @@
     <section class="page-intro">
       <div class="container">
         <p class="eyebrow-text">Get in Touch</p>
-        <h1 class="mb-2">Contact &amp; Appointment Enquiries</h1>
+        <h1 class="mb-2">Contact &amp; <em>appointment</em> enquiries</h1>
         <p class="lead mb-0">
-          Appointments are arranged individually so every visit stays calm and unhurried. Send a message below to request a time or ask a question.
+          Appointments are arranged individually so every visit stays calm and unhurried. Send a message below to request a time or ask a question before booking.
         </p>
       </div>
     </section>
@@ -70,9 +77,10 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-7">
             <div class="clinic-card">
-              <h2 class="h3 mb-2">Send an Enquiry</h2>
+              <span class="pill-tag mb-2 align-self-start">Direct to Lydia</span>
+              <h2 class="mb-2">Send an <em>enquiry</em></h2>
               <p class="mb-4">
-                Fields marked with <span aria-hidden="true">*</span><span class="visually-hidden">an asterisk</span> are required. Lydia aims to respond within 1&ndash;2 working days.
+                Fields marked with <span aria-hidden="true">*</span><span class="visually-hidden">an asterisk</span> are required. Lydia personally reads all enquiries and aims to reply within 1&ndash;2 working days.
               </p>
 
               <form action="thank-you.html" method="get">
@@ -117,10 +125,11 @@
                     <label class="form-label" for="enquiryType">Who is the appointment for? *</label>
                     <select class="form-select" id="enquiryType" name="enquiryType" required>
                       <option value="">Please choose an option</option>
-                      <option value="adult">Adult initial consultation</option>
-                      <option value="pregnancy">Pregnancy or postnatal visit</option>
-                      <option value="baby-child">Baby or child appointment</option>
-                      <option value="older-adult">Older adult appointment</option>
+                      <option value="adult">Adult initial consultation (60 mins)</option>
+                      <option value="pregnancy">Pregnancy or postnatal visit (60 mins)</option>
+                      <option value="baby-child">Baby or child appointment (45 mins)</option>
+                      <option value="older-adult">Older adult appointment (60 mins)</option>
+                      <option value="follow-up">Follow-up appointment (40 mins)</option>
                       <option value="question">General question before booking</option>
                     </select>
                   </div>
@@ -144,7 +153,7 @@
                     minlength="10"
                     required></textarea>
                   <div id="messageHelp" class="form-text">
-                    Share a brief note about your non-urgent concern, preferred days of the week, or any accessibility needs.
+                    Share a brief note about your non-urgent concern, preferred days of the week, or any physical accessibility needs.
                   </div>
                 </div>
 
@@ -162,10 +171,11 @@
 
           <div class="col-lg-5">
             <div class="clinic-card mb-4">
+              <span class="pill-tag mb-2 align-self-start">Friendly Chat First</span>
               <h2 class="h4 mb-3">Direct Contact Details</h2>
               <p class="mb-2">
-                <strong>Phone:</strong> <a href="tel:+442085550142">020 8555 0142</a><br>
-                <span class="small text-muted">If Lydia is in a treatment session, please leave a short voicemail and she will return your call.</span>
+                <strong>Call for a friendly chat:</strong> <a href="tel:+442085550142">020 8555 0142</a><br>
+                <span class="small text-muted">If Lydia is with a patient, leave a brief voicemail and she will call you back to answer questions or help decide if osteopathy fits your needs.</span>
               </p>
               <p class="mb-2">
                 <strong>Email:</strong> <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a>
@@ -178,14 +188,14 @@
             <div class="credential-box mb-4">
               <h2 class="h5 mb-2">Appointment-Based Scheduling</h2>
               <p class="mb-0">
-                Meadowside Clinic operates strictly by appointment rather than fixed drop-in hours. Daytime and select early-evening slots are available by arrangement.
+                Meadowside Clinic operates strictly by appointment rather than fixed drop-in hours. Daytime and select early-evening slots are arranged directly with you.
               </p>
             </div>
 
             <div class="notice-box">
               <h2 class="h5 mb-2">Urgent Medical Symptoms</h2>
               <p class="mb-0">
-                Osteopathy is intended for non-urgent musculoskeletal care. If you or your child have sudden severe pain, fever, unexplained numbness, or any medical emergency, please contact your GP, call <strong>NHS 111</strong>, or dial <strong>999</strong>.
+                Osteopathy is intended for non-urgent musculoskeletal care. If you or your child experience sudden severe pain, fever, unexplained numbness, or any medical emergency, please contact your GP, call <strong>NHS 111</strong>, or dial <strong>999</strong>.
               </p>
             </div>
           </div>
