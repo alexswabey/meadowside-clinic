@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Meet Lydia Selby, M.Ost., GOsC-registered cranial osteopath at Meadowside Clinic near Twickenham Green. Learn about her training, calm approach, and credentials.">
   <title>About Lydia Selby, M.Ost. | Meadowside Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -25,11 +26,7 @@
     <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <circle cx="18" cy="18" r="17" fill="#E6F4EC" stroke="#144D46" stroke-width="1.8" />
-            <path d="M18 7.5C13.5 12 12.5 18.5 18 26.5C23.5 18.5 22.5 12 18 7.5Z" fill="#144D46" />
-            <path d="M18 15.5C14 16 11.2 18.8 10 22.8C14 23.2 16.8 21 18 18.2" stroke="#F16344" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
           <span>
             <span class="brand-title">Meadowside Clinic</span>
             <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
@@ -82,7 +79,7 @@
                 alt="Editorial portrait illustration of Lydia Selby, M.Ost., GOsC-registered cranial osteopath at Meadowside Clinic in Twickenham"
                 width="640"
                 height="760"
-                loading="lazy">
+                fetchpriority="high">
               <figcaption class="artwork-caption">
                 Lydia Selby, M.Ost. &mdash; Principal Osteopath at Meadowside Clinic.
               </figcaption>
@@ -169,27 +166,31 @@
           </div>
         </div>
         <div class="row g-4">
-          <div class="col-md-6">
-            <article class="testimonial-card">
-              <p class="testimonial-quote">
-                &ldquo;As someone in my seventies who was nervous about seeing an osteopath for the first time, I was struck by how patiently Lydia listened. Nothing felt forceful, and I left feeling much looser and well informed.&rdquo;
-              </p>
-              <p class="testimonial-author">
+          <div class="col-md-6 d-flex">
+            <figure class="testimonial-card">
+              <blockquote class="testimonial-quote">
+                <p class="mb-0">
+                  &ldquo;As someone in my seventies who was nervous about seeing an osteopath for the first time, I was struck by how patiently Lydia listened. Nothing felt forceful, and I left feeling much looser and well informed.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="testimonial-author">
                 Graham W.
                 <span class="testimonial-context">Teddington &bull; Sample Patient Review</span>
-              </p>
-            </article>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col-md-6">
-            <article class="testimonial-card">
-              <p class="testimonial-quote">
-                &ldquo;During my third trimester my lower back and ribs were constantly uncomfortable. Lydia checked in with me throughout and offered simple posture adjustments for home that made a real difference.&rdquo;
-              </p>
-              <p class="testimonial-author">
+          <div class="col-md-6 d-flex">
+            <figure class="testimonial-card">
+              <blockquote class="testimonial-quote">
+                <p class="mb-0">
+                  &ldquo;During my third trimester my lower back and ribs were constantly uncomfortable. Lydia checked in with me throughout and offered simple posture adjustments for home that made a real difference.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="testimonial-author">
                 Priya K.
                 <span class="testimonial-context">Twickenham &bull; Sample Patient Review</span>
-              </p>
-            </article>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div class="mt-4 d-flex flex-wrap gap-3">
@@ -236,6 +237,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

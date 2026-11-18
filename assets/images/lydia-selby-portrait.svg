@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" role="img" aria-labelledby="portraitTitle portraitDesc">
   <title id="portraitTitle">Editorial portrait illustration of Lydia Selby, M.Ost., GOsC-registered cranial osteopath</title>
-  <desc id="portraitDesc">Warm minimalist studio portrait of osteopath Lydia Selby in a deep emerald linen jacket against a soft mint arch and botanical leaf motif.</desc>
-  <rect width="640" height="760" fill="#FAF3EA" />
-  <path d="M 90 310 A 230 230 0 0 1 550 310 L 550 760 L 90 760 Z" fill="#DEF0E8" />
-  <path d="M 120 320 A 200 200 0 0 1 520 320 L 520 760 L 120 760 Z" fill="#FFFDF9" />
-  <g stroke="#78B49B" stroke-width="2.5" fill="none" opacity="0.72">
+  <desc id="portraitDesc">Minimalist studio portrait of osteopath Lydia Selby in a tailored deep clinical-teal jacket against a pale sea-glass arch and clean botanical motif.</desc>
+  <rect width="640" height="760" fill="#F5F2ED" />
+  <path d="M 90 310 A 230 230 0 0 1 550 310 L 550 760 L 90 760 Z" fill="#E1EFF2" />
+  <path d="M 120 320 A 200 200 0 0 1 520 320 L 520 760 L 120 760 Z" fill="#FAFCFD" />
+  <g stroke="#7AA4AC" stroke-width="2.5" fill="none" opacity="0.72">
     <path d="M 450 480 Q 490 330 520 190" />
-    <ellipse cx="485" cy="290" rx="22" ry="10" transform="rotate(-30 485 290)" fill="#BFE2D1" stroke="none" />
-    <ellipse cx="512" cy="235" rx="20" ry="9" transform="rotate(20 512 235)" fill="#BFE2D1" stroke="none" />
-    <ellipse cx="468" cy="345" rx="24" ry="11" transform="rotate(15 468 345)" fill="#9ED1BA" stroke="none" />
+    <ellipse cx="485" cy="290" rx="22" ry="10" transform="rotate(-30 485 290)" fill="#CFE3E7" stroke="none" />
+    <ellipse cx="512" cy="235" rx="20" ry="9" transform="rotate(20 512 235)" fill="#CFE3E7" stroke="none" />
+    <ellipse cx="468" cy="345" rx="24" ry="11" transform="rotate(15 468 345)" fill="#AED0D6" stroke="none" />
   </g>
-  <path d="M 135 760 C 145 565 215 505 320 505 C 425 505 495 565 505 760 Z" fill="#144D46" />
-  <polygon points="265,505 375,505 345,650 295,650" fill="#FFFDF9" />
-  <polygon points="265,505 225,545 288,655 295,650" fill="#0D3631" />
-  <polygon points="375,505 415,545 352,655 345,650" fill="#0D3631" />
+  <path d="M 135 760 C 145 565 215 505 320 505 C 425 505 495 565 505 760 Z" fill="#12525E" />
+  <polygon points="265,505 375,505 345,650 295,650" fill="#FAFCFD" />
+  <polygon points="265,505 225,545 288,655 295,650" fill="#0C3C45" />
+  <polygon points="375,505 415,545 352,655 345,650" fill="#0C3C45" />
   <rect x="286" y="425" width="68" height="96" rx="28" fill="#EBBF9F" />
   <path d="M 286 458 Q 320 482 354 458 L 354 435 L 286 435 Z" fill="#DCAA87" opacity="0.55" />
   <path d="M 205 310 C 195 200 250 155 320 155 C 390 155 445 200 435 310 C 445 395 432 465 395 492 L 245 492 C 208 465 195 395 205 310 Z" fill="#523629" />
   <path d="M 236 290 C 236 225 272 195 320 195 C 368 195 404 225 404 290 C 404 378 366 445 320 445 C 274 445 236 378 236 290 Z" fill="#F5D3BA" />
-  <circle cx="272" cy="348" r="22" fill="#F16344" opacity="0.18" />
-  <circle cx="368" cy="348" r="22" fill="#F16344" opacity="0.18" />
+  <circle cx="272" cy="348" r="22" fill="#8A3C54" opacity="0.14" />
+  <circle cx="368" cy="348" r="22" fill="#8A3C54" opacity="0.14" />
   <path d="M 232 292 C 235 235 278 205 335 205 C 365 205 395 230 406 278 C 408 218 372 172 318 172 C 258 172 224 218 232 292 Z" fill="#634233" />
   <path d="M 264 292 Q 284 283 302 290" stroke="#523629" stroke-width="3.5" fill="none" stroke-linecap="round" />
   <path d="M 338 290 Q 356 283 376 292" stroke="#523629" stroke-width="3.5" fill="none" stroke-linecap="round" />
-  <ellipse cx="284" cy="312" rx="9" ry="6" fill="#1E2B28" />
-  <ellipse cx="356" cy="312" rx="9" ry="6" fill="#1E2B28" />
+  <ellipse cx="284" cy="312" rx="9" ry="6" fill="#13262A" />
+  <ellipse cx="356" cy="312" rx="9" ry="6" fill="#13262A" />
   <circle cx="281" cy="310" r="2" fill="#FFFFFF" />
   <circle cx="353" cy="310" r="2" fill="#FFFFFF" />
   <path d="M 320 308 L 316 352 Q 322 358 328 353" stroke="#CC9B7C" stroke-width="2.8" fill="none" stroke-linecap="round" />
-  <path d="M 294 384 Q 320 402 346 384" stroke="#C24129" stroke-width="3.8" fill="none" stroke-linecap="round" />
-  <circle cx="233" cy="346" r="5" fill="#F16344" />
-  <circle cx="407" cy="346" r="5" fill="#F16344" />
+  <path d="M 294 384 Q 320 402 346 384" stroke="#9B4A5E" stroke-width="3.8" fill="none" stroke-linecap="round" />
+  <circle cx="233" cy="346" r="5" fill="#8A3C54" />
+  <circle cx="407" cy="346" r="5" fill="#8A3C54" />
   <g transform="translate(56, 668)">
-    <rect x="0" y="0" width="528" height="58" rx="12" fill="#FFFFFF" stroke="#D2E4DA" stroke-width="2" />
-    <circle cx="34" cy="29" r="14" fill="#144D46" />
+    <rect x="0" y="0" width="528" height="58" rx="12" fill="#FFFFFF" stroke="#CFDFE3" stroke-width="2" />
+    <circle cx="34" cy="29" r="14" fill="#12525E" />
     <path d="M 28 29 L 32 34 L 41 24" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="62" y="26" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#144D46">Lydia Selby, M.Ost.</text>
-    <text x="62" y="45" font-family="Georgia, serif" font-size="13" fill="#42544F">General Osteopathic Council (GOsC) Registered &bull; Twickenham</text>
+    <text x="62" y="26" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#12525E">Lydia Selby, M.Ost.</text>
+    <text x="62" y="45" font-family="Georgia, serif" font-size="13" fill="#456268">General Osteopathic Council (GOsC) Registered &bull; Twickenham</text>
   </g>
 </svg>

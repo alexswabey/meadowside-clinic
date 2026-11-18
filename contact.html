@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Send an appointment enquiry or ask a question about cranial osteopathy at Meadowside Clinic near Twickenham Green.">
   <title>Contact &amp; Enquiries | Meadowside Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -25,11 +26,7 @@
     <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <circle cx="18" cy="18" r="17" fill="#E6F4EC" stroke="#144D46" stroke-width="1.8" />
-            <path d="M18 7.5C13.5 12 12.5 18.5 18 26.5C23.5 18.5 22.5 12 18 7.5Z" fill="#144D46" />
-            <path d="M18 15.5C14 16 11.2 18.8 10 22.8C14 23.2 16.8 21 18 18.2" stroke="#F16344" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
           <span>
             <span class="brand-title">Meadowside Clinic</span>
             <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
@@ -85,7 +82,7 @@
 
               <form action="thank-you.html" method="get">
                 <div class="mb-3">
-                  <label class="form-label" for="fullName">Full name *</label>
+                  <label class="form-label" for="fullName">Full name <span aria-hidden="true">*</span></label>
                   <input
                     type="text"
                     class="form-control"
@@ -94,11 +91,15 @@
                     autocomplete="name"
                     minlength="2"
                     required>
+                  <div class="form-error-msg">
+                    <span class="error-badge" aria-hidden="true">!</span>Please enter your full name (at least 2 characters).
+                  </div>
                 </div>
 
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
-                    <label class="form-label" for="email">Email address *</label>
+                    <label class="form-label" for="email">Email address <span aria-hidden="true">*</span></label>
+                    <div id="emailHelp" class="form-text form-hint">Used only to reply to your enquiry.</div>
                     <input
                       type="email"
                       class="form-control"
@@ -107,24 +108,28 @@
                       autocomplete="email"
                       aria-describedby="emailHelp"
                       required>
-                    <div id="emailHelp" class="form-text">Used only to reply to your enquiry.</div>
+                    <div class="form-error-msg">
+                      <span class="error-badge" aria-hidden="true">!</span>Enter an email address in the format name@example.com.
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <label class="form-label" for="phone">Telephone (optional)</label>
+                    <div id="phoneHelp" class="form-text form-hint">Helpful if you prefer a friendly call back.</div>
                     <input
                       type="tel"
                       class="form-control"
                       id="phone"
                       name="phone"
-                      autocomplete="tel">
+                      autocomplete="tel"
+                      aria-describedby="phoneHelp">
                   </div>
                 </div>
 
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
-                    <label class="form-label" for="enquiryType">Who is the appointment for? *</label>
+                    <label class="form-label" for="enquiryType">Who is the appointment for? <span aria-hidden="true">*</span></label>
                     <select class="form-select" id="enquiryType" name="enquiryType" required>
-                      <option value="">Please choose an option</option>
+                      <option value="" disabled selected>Please choose an option</option>
                       <option value="adult">Adult initial consultation (60 mins)</option>
                       <option value="pregnancy">Pregnancy or postnatal visit (60 mins)</option>
                       <option value="baby-child">Baby or child appointment (45 mins)</option>
@@ -132,6 +137,9 @@
                       <option value="follow-up">Follow-up appointment (40 mins)</option>
                       <option value="question">General question before booking</option>
                     </select>
+                    <div class="form-error-msg">
+                      <span class="error-badge" aria-hidden="true">!</span>Please select who the appointment is for.
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <label class="form-label" for="replyPreference">Preferred reply method</label>
@@ -143,7 +151,10 @@
                 </div>
 
                 <div class="mb-3">
-                  <label class="form-label" for="message">How can Lydia help? *</label>
+                  <label class="form-label" for="message">How can Lydia help? <span aria-hidden="true">*</span></label>
+                  <div id="messageHelp" class="form-text form-hint">
+                    Share a brief note about your non-urgent concern, preferred days of the week, or any physical accessibility needs.
+                  </div>
                   <textarea
                     class="form-control"
                     id="message"
@@ -152,16 +163,19 @@
                     aria-describedby="messageHelp"
                     minlength="10"
                     required></textarea>
-                  <div id="messageHelp" class="form-text">
-                    Share a brief note about your non-urgent concern, preferred days of the week, or any physical accessibility needs.
+                  <div class="form-error-msg">
+                    <span class="error-badge" aria-hidden="true">!</span>Please add a brief note (at least 10 characters) so Lydia can help.
                   </div>
                 </div>
 
-                <div class="form-check mb-4">
+                <div class="consent-field mb-4">
                   <input class="form-check-input" type="checkbox" value="agreed" id="consentCheck" name="consentCheck" required>
                   <label class="form-check-label" for="consentCheck">
-                    I understand this enquiry is for non-urgent osteopathic care and that submitting this form on this demonstration site shows a confirmation page. *
+                    <span>I understand this enquiry is for non-urgent osteopathic care and that submitting this form on this demonstration site shows a confirmation page. <span aria-hidden="true">*</span></span>
                   </label>
+                  <div class="form-error-msg">
+                    <span class="error-badge" aria-hidden="true">!</span>Please tick to confirm you understand this enquiry is for non-urgent care.
+                  </div>
                 </div>
 
                 <button type="submit" class="btn btn-clinic-accent">Submit Enquiry</button>
@@ -240,6 +254,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
