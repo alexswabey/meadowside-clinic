@@ -72,9 +72,9 @@
     <circle cx="385" cy="174" r="7" fill="#8A3C54" />
 
     <!-- Label Card -->
-    <rect x="252" y="86" width="266" height="54" rx="12" fill="#12525E" />
-    <text x="385" y="110" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Meadowside Clinic (14 Meadowside Mews)</text>
-    <text x="385" y="129" font-family="Georgia, serif" font-size="12" fill="#D7EEF2" text-anchor="middle">Step-free ground-floor entrance &bull; 20m off Staines Rd</text>
+    <rect x="200" y="84" width="370" height="58" rx="12" fill="#12525E" />
+    <text x="385" y="109" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Meadowside Clinic (14 Meadowside Mews)</text>
+    <text x="385" y="129" font-family="Georgia, serif" font-size="11.5" fill="#D7EEF2" text-anchor="middle">Step-free ground-floor entrance &#8226; 20m off Staines Rd</text>
   </g>
 
   <!-- Compass N -->

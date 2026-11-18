@@ -36,6 +36,6 @@
     <circle cx="34" cy="29" r="14" fill="#12525E" />
     <path d="M 28 29 L 32 34 L 41 24" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
     <text x="62" y="26" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#12525E">Lydia Selby, M.Ost.</text>
-    <text x="62" y="45" font-family="Georgia, serif" font-size="13" fill="#456268">General Osteopathic Council (GOsC) Registered &bull; Twickenham</text>
+    <text x="62" y="45" font-family="Georgia, serif" font-size="13" fill="#456268">General Osteopathic Council (GOsC) Registered &#8226; Twickenham</text>
   </g>
 </svg>
