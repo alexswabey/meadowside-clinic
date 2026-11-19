@@ -22,6 +22,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -44,6 +45,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
               </li>
+              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -68,16 +70,18 @@
               Fields marked <span aria-hidden="true">*</span> are required.
             </p>
 
-            <!-- Pure HTML5 validation + GET action to thank-you.html for static GitHub Pages -->
+            <!-- Native HTML5 constraint validation (no novalidate, no hardcoded .was-validated); GET avoids GitHub Pages 405 errors -->
             <form action="thank-you.html" method="get" class="clinic-form">
               <div class="mb-3">
                 <label for="contactName" class="form-label mb-1">Your name <span aria-hidden="true">*</span></label>
                 <input type="text" class="form-control" id="contactName" name="name" required autocomplete="name" placeholder="e.g. Alex Taylor">
+                <!-- Kept out of static aria-describedby so screen readers do not announce hidden errors on page load -->
                 <div class="clinic-error-hint" aria-hidden="true">Please enter your name so we know how to address our reply.</div>
               </div>
 
               <div class="mb-3">
                 <label for="contactEmail" class="form-label mb-1">Email address <span aria-hidden="true">*</span></label>
+                <!-- Format hints sit above inputs so browser autofill popovers and mobile keyboards do not cover them -->
                 <div id="emailHint" class="form-text mt-0 mb-2">We only use your email to reply to this enquiry.</div>
                 <input type="email" class="form-control" id="contactEmail" name="email" required autocomplete="email" inputmode="email" autocorrect="off" autocapitalize="none" spellcheck="false" aria-describedby="emailHint" placeholder="you@example.com">
                 <div class="clinic-error-hint" aria-hidden="true">Please enter an email address in the format you@example.com.</div>
@@ -89,6 +93,7 @@
                 <input type="tel" class="form-control" id="contactPhone" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="phoneHint" placeholder="e.g. 020 8555 0142">
               </div>
 
+              <!-- Radio group inside fieldset/legend gives clearer form semantics than a toggle switch -->
               <fieldset class="mb-3">
                 <legend class="form-label fs-6 mb-2">Preferred way to reply</legend>
                 <div class="form-check form-check-inline">

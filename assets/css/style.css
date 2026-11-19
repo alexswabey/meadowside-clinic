@@ -39,7 +39,7 @@
   --bs-focus-ring-color: rgba(18, 82, 94, 0.25);
 }
 
-/* Smooth anchor jumps that clear the sticky Mineral Teal navbar */
+/* Offset in-page anchor jumps (#faq, #accessibility) so targets clear the sticky navbar */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
@@ -187,7 +187,7 @@ body {
   font-weight: 600;
 }
 
-/* Active highlight & >= 3:1 boundary for CTA inside Mineral Teal navbar/offcanvas */
+/* Rosewood (#8A3C54) directly on Mineral Teal (#12525E) is ~1.19:1; light border lifts UI contrast >= 6.5:1 */
 .clinic-navbar .btn-clinic-cta,
 .clinic-offcanvas .btn-clinic-cta {
   --bs-btn-border-color: var(--clinic-mist);
@@ -291,7 +291,7 @@ body {
   border-left-color: var(--clinic-accent);
 }
 
-/* Boxed stay-open FAQ accordion */
+/* Boxed stay-open FAQ accordion (recolours Bootstrap's default blue SVG chevron to Mineral Teal) */
 .clinic-accordion {
   --bs-accordion-bg: #ffffff;
   --bs-accordion-color: var(--clinic-text);
@@ -302,6 +302,7 @@ body {
   --bs-accordion-active-bg: var(--clinic-mist);
   --bs-accordion-active-color: var(--clinic-primary-dark);
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.25);
+  /* Inline SVG URIs override Bootstrap's compiled blue arrow icons without custom JS */
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312525E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230C3C45' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
@@ -337,6 +338,7 @@ body {
   color: var(--clinic-primary-dark);
 }
 
+/* Keep >= 1rem font size so iOS Safari does not auto-zoom on focus, and >= 44px touch height */
 .clinic-form .form-control {
   font-size: max(1rem, 1em);
   min-height: 44px;
@@ -368,6 +370,7 @@ body {
   margin-top: 0.35rem;
 }
 
+/* Defer visual error feedback until after interaction/blur (zero JS); :has() ensures WebKit repaints on Tab blur */
 .clinic-form .form-control:user-invalid {
   border-color: var(--clinic-error);
   background-color: var(--clinic-error-bg);
@@ -412,6 +415,7 @@ body {
   }
 }
 
+/* Windows Forced Colors Mode strips background tints/shadows; restore crisp system borders and focus rings */
 @media (forced-colors: active) {
   .btn,
   .card,

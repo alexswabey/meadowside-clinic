@@ -22,6 +22,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -44,6 +45,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
+              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -71,6 +73,7 @@
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
+            <!-- Above-the-fold primary visual: fetchpriority="high" elevates priority; omit loading="lazy" to protect LCP -->
             <img src="assets/images/twickenham-map.svg" class="img-fluid rounded border" alt="Minimal street diagram showing Meadowside Clinic at 14 Meadowside Mews just north of Twickenham Green between Staines Road and Hampton Road" width="800" height="500" fetchpriority="high">
           </div>
         </div>

@@ -23,6 +23,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- role="group" gives static aria-labelledby a valid ARIA role until Bootstrap adds role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -45,6 +46,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
+              <!-- d-grid makes CTA full-width inside the mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -66,6 +68,7 @@
             <p class="lead mb-4">
               At Meadowside Clinic, every appointment gives you space to talk things through, move comfortably, and receive gentle hands-on support—whether you are visiting for busy workdays, active routines, pregnancy, or quieter years.
             </p>
+            <!-- d-grid stacks CTAs full-width on narrow phones, then snaps inline at sm+ (576px) -->
             <div class="d-grid gap-2 d-sm-flex">
               <a class="btn btn-clinic-cta btn-lg" href="booking.html">Book an Appointment</a>
               <a class="btn btn-clinic-outline btn-lg" href="treatments.html">Explore Treatments</a>
@@ -133,6 +136,7 @@
         </div>
         <div class="row gy-4">
           <div class="col-lg-6">
+            <!-- overflow-hidden clips card photo corners; stretched-link sits only on the short title link for clean screen-reader labels -->
             <div class="card clinic-card-link overflow-hidden h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-4">

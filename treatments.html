@@ -22,6 +22,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -44,6 +45,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
+              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -69,7 +71,7 @@
       </div>
     </section>
 
-    <!-- 2. Interactive .nav-pills Appointment Switcher (90 mins vs 45 mins) -->
+    <!-- 2. Interactive .nav-pills Appointment Switcher (data-bs-toggle="pill" handles tab/ARIA state with zero custom JS) -->
     <section class="section-pad section-porcelain section-divider">
       <div class="container">
         <ul class="nav nav-pills clinic-pills d-inline-flex flex-wrap gap-1 mb-4" id="appointmentTabs" role="tablist">
@@ -159,7 +161,7 @@
       </div>
     </section>
 
-    <!-- 3. Dedicated Centered Boxed Stay-Open FAQ Accordion (no data-bs-parent) -->
+    <!-- 3. Dedicated Centered Boxed Stay-Open FAQ Accordion (omitting data-bs-parent keeps answers open independently without scroll jumps) -->
     <section id="faq" class="section-pad section-porcelain section-divider">
       <div class="container">
         <div class="row justify-content-center">
