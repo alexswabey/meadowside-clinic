@@ -4,252 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Send an appointment enquiry or ask a question about cranial osteopathy at Meadowside Clinic near Twickenham Green.">
+  <meta name="description" content="Send a message or appointment enquiry to Meadowside Clinic near Twickenham Green, or reach Lydia Selby directly by telephone.">
   <title>Contact &amp; Enquiries | Meadowside Clinic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="utility-bar">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
-      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
-    </div>
-  </div>
-
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
-          <span>
-            <span class="brand-title">Meadowside Clinic</span>
-            <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
-          </span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Lydia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="treatments.html">Treatments &amp; FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
-            </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" aria-current="page" href="contact.html">Arrange a Visit</a>
-            </li>
-          </ul>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="page-intro">
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. 7 / 4 Asymmetric Enquiry Form & Direct Details Sidebar (photo-free) -->
+    <section class="section-pad section-porcelain">
       <div class="container">
-        <p class="eyebrow-text">Get in Touch</p>
-        <h1 class="mb-2">Contact &amp; <em>appointment</em> enquiries</h1>
-        <p class="lead mb-0">
-          Appointments are arranged individually so every visit stays calm and unhurried. Send a message below to request a time or ask a question before booking.
-        </p>
+        <div class="row gy-5 align-items-start">
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-semibold mb-2">Get in touch</h1>
+            <p class="lead mb-2">
+              Ask a question before booking, check clinic access, or request a preferred appointment day.
+            </p>
+            <p class="small text-body-secondary mb-4">
+              Fields marked <span aria-hidden="true">*</span> are required.
+            </p>
+
+            <!-- Pure HTML5 validation + GET action to thank-you.html for static GitHub Pages -->
+            <form action="thank-you.html" method="get" class="clinic-form">
+              <div class="mb-3">
+                <label for="contactName" class="form-label mb-1">Your name <span aria-hidden="true">*</span></label>
+                <input type="text" class="form-control" id="contactName" name="name" required autocomplete="name" placeholder="e.g. Alex Taylor">
+                <div class="clinic-error-hint" aria-hidden="true">Please enter your name so we know how to address our reply.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label mb-1">Email address <span aria-hidden="true">*</span></label>
+                <div id="emailHint" class="form-text mt-0 mb-2">We only use your email to reply to this enquiry.</div>
+                <input type="email" class="form-control" id="contactEmail" name="email" required autocomplete="email" inputmode="email" autocorrect="off" autocapitalize="none" spellcheck="false" aria-describedby="emailHint" placeholder="you@example.com">
+                <div class="clinic-error-hint" aria-hidden="true">Please enter an email address in the format you@example.com.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactPhone" class="form-label mb-1">Telephone <span class="fw-normal text-body-secondary">(optional)</span></label>
+                <div id="phoneHint" class="form-text mt-0 mb-2">Include a number if you prefer a quick telephone call.</div>
+                <input type="tel" class="form-control" id="contactPhone" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="phoneHint" placeholder="e.g. 020 8555 0142">
+              </div>
+
+              <fieldset class="mb-3">
+                <legend class="form-label fs-6 mb-2">Preferred way to reply</legend>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="reply_preference" id="replyEmail" value="email" checked>
+                  <label class="form-check-label" for="replyEmail">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="reply_preference" id="replyPhone" value="phone">
+                  <label class="form-check-label" for="replyPhone">Phone call</label>
+                </div>
+              </fieldset>
+
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label mb-1">How can we help? <span aria-hidden="true">*</span></label>
+                <div id="messageHint" class="form-text mt-0 mb-2">Please avoid sharing sensitive medical history here—a brief question or preferred days is plenty.</div>
+                <textarea class="form-control" id="contactMessage" name="message" rows="4" required minlength="10" aria-describedby="messageHint" placeholder="Share a brief question or preferred times..."></textarea>
+                <div class="clinic-error-hint" aria-hidden="true">Please write a short message (at least 10 characters) before sending.</div>
+              </div>
+
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="submit" class="btn btn-clinic-cta btn-lg">Send Enquiry</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-4 offset-lg-1">
+            <div class="card section-mist p-4 mb-4">
+              <h2 class="h5 fw-semibold mb-3">Direct clinic details</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 py-2">
+                  <strong>Phone:</strong> <a href="tel:+442085550142">020 8555 0142</a>
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <strong>Email:</strong> <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a>
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <strong>Clinic:</strong> 14 Meadowside Mews, Twickenham TW2 5QA (<a href="visiting.html">view map &amp; access</a>)
+                </li>
+              </ul>
+            </div>
+
+            <aside class="clinic-callout border-start border-4 rounded-end p-4">
+              <h2 class="h6 fw-semibold mb-2">When to expect a reply</h2>
+              <p class="small mb-2">
+                Lydia reads messages personally between appointments and aims to reply within one working day.
+              </p>
+              <p class="small text-body-secondary mb-0">
+                Educational notice: this is a fictional student clinic site, so submitting this form opens a confirmation preview without transmitting personal data.
+              </p>
+            </aside>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section-pad">
+    <!-- 2. Patient-Experience Trust Band on Warm Linen -->
+    <section class="section-pad section-linen section-divider">
       <div class="container">
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-7">
-            <div class="clinic-card">
-              <span class="pill-tag mb-2 align-self-start">Direct to Lydia</span>
-              <h2 class="mb-2">Send an <em>enquiry</em></h2>
-              <p class="mb-4">
-                Fields marked with <span aria-hidden="true">*</span><span class="visually-hidden">an asterisk</span> are required. Lydia personally reads all enquiries and aims to reply within 1&ndash;2 working days.
-              </p>
-
-              <form action="thank-you.html" method="get">
-                <div class="mb-3">
-                  <label class="form-label" for="fullName">Full name <span aria-hidden="true">*</span></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullName"
-                    name="fullName"
-                    autocomplete="name"
-                    minlength="2"
-                    required>
-                  <div class="form-error-msg">
-                    <span class="error-badge" aria-hidden="true">!</span>Please enter your full name (at least 2 characters).
-                  </div>
-                </div>
-
-                <div class="row g-3 mb-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="email">Email address <span aria-hidden="true">*</span></label>
-                    <div id="emailHelp" class="form-text form-hint">Used only to reply to your enquiry.</div>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      autocomplete="email"
-                      aria-describedby="emailHelp"
-                      required>
-                    <div class="form-error-msg">
-                      <span class="error-badge" aria-hidden="true">!</span>Enter an email address in the format name@example.com.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="phone">Telephone (optional)</label>
-                    <div id="phoneHelp" class="form-text form-hint">Helpful if you prefer a friendly call back.</div>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                      autocomplete="tel"
-                      aria-describedby="phoneHelp">
-                  </div>
-                </div>
-
-                <div class="row g-3 mb-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="enquiryType">Who is the appointment for? <span aria-hidden="true">*</span></label>
-                    <select class="form-select" id="enquiryType" name="enquiryType" required>
-                      <option value="" disabled selected>Please choose an option</option>
-                      <option value="adult">Adult initial consultation (60 mins)</option>
-                      <option value="pregnancy">Pregnancy or postnatal visit (60 mins)</option>
-                      <option value="baby-child">Baby or child appointment (45 mins)</option>
-                      <option value="older-adult">Older adult appointment (60 mins)</option>
-                      <option value="follow-up">Follow-up appointment (40 mins)</option>
-                      <option value="question">General question before booking</option>
-                    </select>
-                    <div class="form-error-msg">
-                      <span class="error-badge" aria-hidden="true">!</span>Please select who the appointment is for.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="replyPreference">Preferred reply method</label>
-                    <select class="form-select" id="replyPreference" name="replyPreference">
-                      <option value="email">Email</option>
-                      <option value="phone">Telephone call</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label class="form-label" for="message">How can Lydia help? <span aria-hidden="true">*</span></label>
-                  <div id="messageHelp" class="form-text form-hint">
-                    Share a brief note about your non-urgent concern, preferred days of the week, or any physical accessibility needs.
-                  </div>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    name="message"
-                    rows="5"
-                    aria-describedby="messageHelp"
-                    minlength="10"
-                    required></textarea>
-                  <div class="form-error-msg">
-                    <span class="error-badge" aria-hidden="true">!</span>Please add a brief note (at least 10 characters) so Lydia can help.
-                  </div>
-                </div>
-
-                <div class="consent-field mb-4">
-                  <input class="form-check-input" type="checkbox" value="agreed" id="consentCheck" name="consentCheck" required>
-                  <label class="form-check-label" for="consentCheck">
-                    <span>I understand this enquiry is for non-urgent osteopathic care and that submitting this form on this demonstration site shows a confirmation page. <span aria-hidden="true">*</span></span>
-                  </label>
-                  <div class="form-error-msg">
-                    <span class="error-badge" aria-hidden="true">!</span>Please tick to confirm you understand this enquiry is for non-urgent care.
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-clinic-accent">Submit Enquiry</button>
-              </form>
-            </div>
-          </div>
-
-          <div class="col-lg-5">
-            <div class="clinic-card mb-4">
-              <span class="pill-tag mb-2 align-self-start">Friendly Chat First</span>
-              <h2 class="h4 mb-3">Direct Contact Details</h2>
-              <p class="mb-2">
-                <strong>Call for a friendly chat:</strong> <a href="tel:+442085550142">020 8555 0142</a><br>
-                <span class="small text-muted">If Lydia is with a patient, leave a brief voicemail and she will call you back to answer questions or help decide if osteopathy fits your needs.</span>
-              </p>
-              <p class="mb-2">
-                <strong>Email:</strong> <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a>
-              </p>
-              <p class="mb-0">
-                <strong>Address:</strong> 14 Meadowside Mews, Twickenham Green, TW2 5QA
-              </p>
-            </div>
-
-            <div class="credential-box mb-4">
-              <h2 class="h5 mb-2">Appointment-Based Scheduling</h2>
-              <p class="mb-0">
-                Meadowside Clinic operates strictly by appointment rather than fixed drop-in hours. Daytime and select early-evening slots are arranged directly with you.
-              </p>
-            </div>
-
-            <div class="notice-box">
-              <h2 class="h5 mb-2">Urgent Medical Symptoms</h2>
-              <p class="mb-0">
-                Osteopathy is intended for non-urgent musculoskeletal care. If you or your child experience sudden severe pain, fever, unexplained numbness, or any medical emergency, please contact your GP, call <strong>NHS 111</strong>, or dial <strong>999</strong>.
-              </p>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
+            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+              <blockquote class="blockquote fs-5 mb-3">
+                <p class="mb-0">
+                  &ldquo;I sent a quick enquiry because I wasn&rsquo;t sure what to wear or expect. Lydia replied warmly the same afternoon and put my mind completely at rest.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                Oliver K., St Margarets <span class="fw-normal">(illustrative patient reflection)</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <h2 class="mb-2">Meadowside Clinic</h2>
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
           <p class="mb-2">
-            Gentle cranial osteopathy with Lydia Selby, M.Ost. near Twickenham Green, Twickenham TW2.
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
           <p class="small mb-0">
-            General Osteopathic Council (GOsC) Registered &bull; Visits by appointment only.
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Explore the Clinic</h3>
-          <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Lydia</a></li>
-            <li><a href="treatments.html">Treatments &amp; FAQ</a></li>
-            <li><a href="visiting.html">Visiting the Clinic</a></li>
-            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Location &amp; Contact</h3>
-          <p class="mb-1">14 Meadowside Mews, Twickenham Green, TW2 5QA</p>
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
-        <p class="mb-0">Non-urgent musculoskeletal care &bull; In an emergency, call NHS 111 or 999.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>

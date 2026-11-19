@@ -1,97 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="mapTitle mapDesc">
-  <title id="mapTitle">Simplified area map of Meadowside Clinic near Twickenham Green</title>
-  <desc id="mapDesc">Map showing Meadowside Clinic just north of Twickenham Green, between Staines Road (A311) and Hampton Road, with Strawberry Hill Station to the south-east and Twickenham Station to the north-east.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="mapTitle mapDesc">
+  <title id="mapTitle">Minimal line map of Meadowside Clinic beside Twickenham Green</title>
+  <desc id="mapDesc">Minimal architectural street diagram showing Twickenham Green between Staines Road and Hampton Road, with Meadowside Clinic at 14 Meadowside Mews just north of The Green.</desc>
 
-  <!-- Clean porcelain background -->
-  <rect width="800" height="520" fill="#FAFCFD" />
+  <!-- Warm Porcelain ground -->
+  <rect width="800" height="500" fill="#FAFCFD" />
 
-  <!-- Subtle architectural neighbourhood blocks & street grid -->
-  <g stroke="#E9F0F2" stroke-width="8" fill="none" stroke-linecap="round">
-    <path d="M 80 70 L 80 455" />
-    <path d="M 210 50 L 210 295" />
-    <path d="M 590 60 L 590 460" />
-    <path d="M 55 140 L 735 140" />
-    <path d="M 475 390 L 745 390" />
+  <!-- Faint background street grid lines -->
+  <g stroke="#E3ECEE" stroke-width="2" fill="none">
+    <line x1="95" y1="50" x2="95" y2="440" />
+    <line x1="615" y1="50" x2="615" y2="440" />
+    <line x1="50" y1="115" x2="750" y2="115" />
+    <line x1="50" y1="415" x2="750" y2="415" />
   </g>
 
-  <!-- River Crane / sea-glass green corridor hint at top-left -->
-  <path d="M 20 85 Q 150 98 250 45" stroke="#D9ECF0" stroke-width="14" fill="none" stroke-linecap="round" />
+  <!-- Twickenham Green (calm Sea-Glass fill) -->
+  <polygon points="210,295 535,245 470,385" fill="#EAF3F5" stroke="#12525E" stroke-width="2.2" stroke-linejoin="round" />
+  <text x="392" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#0C3C45" text-anchor="middle">Twickenham Green</text>
 
-  <!-- Twickenham Green (central green triangle with soft mineral trees) -->
-  <polygon points="215,318 518,272 455,395" fill="#DFECE9" stroke="#266A78" stroke-width="3" stroke-linejoin="round" />
-  <circle cx="295" cy="322" r="10" fill="#8FBDC2" />
-  <circle cx="322" cy="348" r="12" fill="#8FBDC2" />
-  <circle cx="468" cy="306" r="11" fill="#8FBDC2" />
-  <circle cx="442" cy="356" r="10" fill="#8FBDC2" />
-  <text x="386" y="336" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#0C3C45" text-anchor="middle">Twickenham Green</text>
-
-  <!-- Main Roads -->
-  <!-- Staines Road (A311) -->
-  <path d="M 35 338 L 215 318 L 518 272 L 765 218" stroke="#DDD5C9" stroke-width="18" fill="none" stroke-linecap="round" />
-  <path d="M 35 338 L 215 318 L 518 272 L 765 218" stroke="#FFFFFF" stroke-width="11" fill="none" stroke-linecap="round" />
-
-  <!-- Hampton Road -->
-  <path d="M 185 485 L 455 395 L 518 272" stroke="#DDD5C9" stroke-width="16" fill="none" stroke-linecap="round" />
-  <path d="M 185 485 L 455 395 L 518 272" stroke="#FFFFFF" stroke-width="9" fill="none" stroke-linecap="round" />
-
-  <!-- Heath Road toward Twickenham Centre -->
-  <path d="M 518 272 L 765 278" stroke="#DDD5C9" stroke-width="16" fill="none" stroke-linecap="round" />
-  <path d="M 518 272 L 765 278" stroke="#FFFFFF" stroke-width="9" fill="none" stroke-linecap="round" />
-
-  <!-- Meadowside Mews (Step-free pedestrian access lane) -->
-  <path d="M 330 299 L 330 185 L 425 185" stroke="#12525E" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,6" />
-
-  <!-- Road labels -->
-  <text x="135" y="312" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#456268" transform="rotate(-7 135 312)">Staines Road (A311)</text>
-  <text x="302" y="460" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#456268" transform="rotate(-19 302 460)">Hampton Road (A311)</text>
-  <text x="642" y="262" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#456268">Heath Road</text>
-
-  <!-- Bus Stop markers along Staines Road -->
-  <g>
-    <circle cx="290" cy="306" r="9" fill="#8A3C54" stroke="#FFFFFF" stroke-width="2.5" />
-    <text x="285" y="287" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#6E2C40" text-anchor="middle">Bus Stop (110, 290, 490)</text>
+  <!-- Primary road strokes -->
+  <g fill="none" stroke="#8CA6AC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Staines Road (A311) -->
+    <path d="M 45 322 L 210 295 L 535 245 L 755 205" />
+    <!-- Hampton Road -->
+    <path d="M 190 475 L 470 385 L 535 245" />
+    <!-- Heath Road -->
+    <path d="M 535 245 L 755 258" />
   </g>
 
-  <!-- Rail Stations (directional cards) -->
-  <g>
-    <rect x="592" y="84" width="184" height="48" rx="10" fill="#FFFFFF" stroke="#12525E" stroke-width="2" />
-    <text x="684" y="106" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#12525E" text-anchor="middle">Twickenham Station</text>
-    <text x="684" y="123" font-family="Georgia, serif" font-size="11" fill="#456268" text-anchor="middle">Approx. 12 min walk NE</text>
-  </g>
+  <!-- Road labels placed clear of strokes -->
+  <text x="128" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Staines Rd (A311)</text>
+  <text x="315" y="454" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Hampton Rd</text>
+  <text x="692" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Heath Rd</text>
 
-  <g>
-    <rect x="576" y="422" width="200" height="48" rx="10" fill="#FFFFFF" stroke="#12525E" stroke-width="2" />
-    <text x="676" y="444" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#12525E" text-anchor="middle">Strawberry Hill Station</text>
-    <text x="676" y="461" font-family="Georgia, serif" font-size="11" fill="#456268" text-anchor="middle">Approx. 10 min level walk SE</text>
-  </g>
+  <!-- Meadowside Mews pedestrian lane -->
+  <path d="M 325 277 L 325 168 L 375 168" fill="none" stroke="#12525E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,6" />
 
-  <!-- Clinic Pin & Callout -->
-  <g>
-    <circle cx="385" cy="185" r="30" fill="#EAF3F5" stroke="#12525E" stroke-width="2" />
-    <path d="M 385 150 C 370 150 359 161 359 175 C 359 194 385 216 385 216 C 385 216 411 194 411 175 C 411 161 400 150 385 150 Z" fill="#12525E" stroke="#FFFFFF" stroke-width="3" />
-    <circle cx="385" cy="174" r="7" fill="#8A3C54" />
+  <!-- Clinic Pin -->
+  <circle cx="385" cy="168" r="20" fill="#8A3C54" fill-opacity="0.14" />
+  <circle cx="385" cy="168" r="9" fill="#8A3C54" stroke="#FAFCFD" stroke-width="2.5" />
 
-    <!-- Label Card -->
-    <rect x="200" y="84" width="370" height="58" rx="12" fill="#12525E" />
-    <text x="385" y="109" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Meadowside Clinic (14 Meadowside Mews)</text>
-    <text x="385" y="129" font-family="Georgia, serif" font-size="11.5" fill="#D7EEF2" text-anchor="middle">Step-free ground-floor entrance &#8226; 20m off Staines Rd</text>
-  </g>
+  <!-- Clinic Label Card (completely clear of roads) -->
+  <rect x="240" y="64" width="290" height="66" rx="10" fill="#F5F2ED" stroke="#12525E" stroke-width="1.8" />
+  <text x="385" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0C3C45" text-anchor="middle">Meadowside Clinic</text>
+  <text x="385" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6E2C40" text-anchor="middle">14 Meadowside Mews, TW2 5QA</text>
 
-  <!-- Compass N -->
-  <g transform="translate(56, 56)">
-    <circle cx="0" cy="0" r="22" fill="#FFFFFF" stroke="#CFDFE3" stroke-width="2" />
-    <polygon points="0,-13 5,4 0,0 -5,4" fill="#12525E" />
-    <text x="0" y="15" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#456268" text-anchor="middle">N</text>
-  </g>
-
-  <!-- Legend -->
-  <g transform="translate(24, 418)">
-    <rect x="0" y="0" width="222" height="78" rx="10" fill="#FFFFFF" stroke="#CFDFE3" stroke-width="1.5" />
-    <circle cx="22" cy="23" r="7" fill="#12525E" />
-    <text x="38" y="27" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#13262A">Meadowside Clinic</text>
-    <line x1="14" y1="45" x2="30" y2="45" stroke="#12525E" stroke-width="3.5" stroke-dasharray="4,3" />
-    <text x="38" y="49" font-family="Georgia, serif" font-size="12" fill="#13262A">Step-free mews path (20m)</text>
-    <circle cx="22" cy="65" r="5.5" fill="#8A3C54" />
-    <text x="38" y="69" font-family="Georgia, serif" font-size="12" fill="#13262A">Bus stop (110, 290, 490)</text>
+  <!-- Minimal Compass -->
+  <g transform="translate(72, 74)">
+    <circle cx="0" cy="0" r="20" fill="#FAFCFD" stroke="#B4CACE" stroke-width="1.5" />
+    <polygon points="0,-11 4.5,3 0,0 -4.5,3" fill="#12525E" />
+    <text x="0" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#456268" text-anchor="middle">N</text>
   </g>
 </svg>

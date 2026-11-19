@@ -4,385 +4,289 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Explore cranial osteopathy appointments, durations, what to expect, and frequently asked questions at Meadowside Clinic in Twickenham.">
-  <title>Treatments &amp; FAQ | Meadowside Clinic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <meta name="description" content="Explore what happens during an Initial Consultation (90 mins) and Follow-Up Session (45 mins) at Meadowside Clinic in Twickenham.">
+  <title>Treatments &amp; Appointments | Meadowside Clinic</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="utility-bar">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
-      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
-    </div>
-  </div>
-
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
-          <span>
-            <span class="brand-title">Meadowside Clinic</span>
-            <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
-          </span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Lydia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="treatments.html">Treatments &amp; FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
-            </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" href="contact.html">Arrange a Visit</a>
-            </li>
-          </ul>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="page-intro">
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. Sea-Glass Mist Text-Led Opener (distinct from Home & About; no hero photo) -->
+    <section class="section-pad section-mist">
       <div class="container">
-        <p class="eyebrow-text">Treatments &amp; Expectations</p>
-        <h1 class="mb-2">Cranial osteopathy &amp; <em>what to expect</em></h1>
-        <p class="lead mb-0">
-          Gentle, non-invasive care adapted for adults, expectant parents, babies, children, and older adults.
-        </p>
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-semibold mb-3">Appointments &amp; gentle care</h1>
+            <p class="lead mb-0">
+              Whether you are booking your first visit or returning for ongoing support, every session gives you calm, one-to-one attention tailored to your pace and comfort.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section-pad">
+    <!-- 2. Interactive .nav-pills Appointment Switcher (90 mins vs 45 mins) -->
+    <section class="section-pad section-porcelain section-divider">
       <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-lg-5">
-            <p class="eyebrow-text">Understanding the Modality</p>
-            <h2 class="mb-3">More than just the head: <em>whole-body</em> osteopathy</h2>
-            <p>
-              Cranial osteopathy is not a separate profession&mdash;it is a refined, gentle approach practised by registered osteopaths. Using light, steady contact at the head, spine, ribcage, pelvis, or sacrum, Lydia assesses areas of muscular guarding, joint stiffness, and everyday postural strain.
-            </p>
-            <p class="mb-0">
-              Sessions are calm, unhurried, and carried out fully clothed. Visitors commonly seek care for non-urgent neck and shoulder tightness, lower-back ache, jaw tension, postural adaptation during pregnancy, or gentle settling support for babies and children.
-            </p>
+        <ul class="nav nav-pills clinic-pills d-inline-flex flex-wrap gap-1 mb-4" id="appointmentTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="initial-tab" data-bs-toggle="pill" data-bs-target="#initial-pane" type="button" role="tab" aria-controls="initial-pane" aria-selected="true">
+              Initial Consultation &middot; 90 mins
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="followup-tab" data-bs-toggle="pill" data-bs-target="#followup-pane" type="button" role="tab" aria-controls="followup-pane" aria-selected="false">
+              Follow-Up Session &middot; 45 mins
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="appointmentTabsContent">
+          <div class="tab-pane fade show active" id="initial-pane" role="tabpanel" aria-labelledby="initial-tab" tabindex="0">
+            <div class="row align-items-center gy-4 gx-lg-5">
+              <div class="col-lg-5">
+                <!-- Image Slot (4:3, eager): Peaceful consultation corner; avoid anatomical/diagnostic tropes -->
+                <div class="ratio ratio-4x3">
+                  <div class="clinic-slot d-flex align-items-end p-3">
+                    <p class="small mb-0"><strong>Initial Consultation image slot (4:3, eager):</strong> Calm consultation nook with soft natural light.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="badge rounded-pill clinic-pill mb-2">90 mins · First Visit</span>
+                <h2 class="h3 fw-semibold mb-3">Initial Consultation</h2>
+                <p class="mb-3">
+                  Your first appointment gives us generous time to listen properly, understand your daily routine, and begin gentle treatment at a pace that feels comfortable for you.
+                </p>
+                <ul class="list-group list-group-flush mb-4">
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Conversation first</strong> — we talk through what brought you in, your general wellbeing, and what you hope to feel easier doing.
+                  </li>
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Gentle movement check</strong> — simple, comfortable movements to notice where things feel tight or restricted.
+                  </li>
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Tailored hands-on care</strong> — gentle osteopathic techniques explained step by step, plus clear ideas to support yourself between visits.
+                  </li>
+                </ul>
+                <div class="d-grid gap-2 d-sm-flex">
+                  <a class="btn btn-clinic-cta" href="booking.html">Book Initial Consultation</a>
+                  <a class="btn btn-clinic-outline" href="contact.html">Ask a Question First</a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="tab-pane fade" id="followup-pane" role="tabpanel" aria-labelledby="followup-tab" tabindex="0">
+            <div class="row align-items-center gy-4 gx-lg-5">
+              <div class="col-lg-5">
+                <!-- Image Slot (4:3): Gentle hands-on care detail or warm linen treatment space -->
+                <div class="ratio ratio-4x3">
+                  <div class="clinic-slot clinic-slot-warm d-flex align-items-end p-3">
+                    <p class="small mb-0"><strong>Follow-Up image slot (4:3):</strong> Soft linen / supportive calm hands-on clinic detail.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <span class="badge rounded-pill clinic-pill mb-2">45 mins · Ongoing Care</span>
+                <h2 class="h3 fw-semibold mb-3">Follow-Up Session</h2>
+                <p class="mb-3">
+                  Returning visits focus on how you have felt since your last appointment, adjusting treatment gently around how your body responds over time.
+                </p>
+                <ul class="list-group list-group-flush mb-4">
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Progress check-in</strong> — reviewing what eased, what still feels tender, and any changes in your week.
+                  </li>
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Focused hands-on treatment</strong> — unhurried manual care paced to your comfort on the day.
+                  </li>
+                  <li class="list-group-item px-0 py-3">
+                    <strong>Practical everyday guidance</strong> — simple pacing, breathing, or gentle mobility ideas for home and work.
+                  </li>
+                </ul>
+                <div class="d-grid gap-2 d-sm-flex">
+                  <a class="btn btn-clinic-cta" href="booking.html">Book Follow-Up Session</a>
+                  <a class="btn btn-clinic-outline" href="visiting.html">Visiting Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Dedicated Centered Boxed Stay-Open FAQ Accordion (no data-bs-parent) -->
+    <section id="faq" class="section-pad section-porcelain section-divider">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h2 fw-semibold text-center mb-2">Common questions before booking</h2>
+            <p class="text-center text-body-secondary mb-4">
+              Open as many answers as you like—everything stays visible so you can compare easily.
+            </p>
+            <div class="accordion clinic-accordion" id="treatmentsFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                    Do I need a GP referral before booking an appointment?
+                  </button>
+                </h3>
+                <div id="faqOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    No referral is needed. You can contact or book directly whenever you feel ready, and if sharing a note with your GP or another clinician would ever be helpful, we discuss that openly with your permission.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                    How gentle are osteopathic appointments here?
+                  </button>
+                </h3>
+                <div id="faqTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Comfort and consent guide every step. Lydia talks you through what she notices and checks in regularly during hands-on work, choosing calm, supportive techniques suited to how you feel.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                    What should I wear to my visit?
+                  </button>
+                </h3>
+                <div id="faqThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Loose, comfortable clothing—such as joggers, leggings, or a soft T-shirt—works well so you can move easily without feeling rushed or self-conscious.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                    May I bring a partner, friend, or family member?
+                  </button>
+                </h3>
+                <div id="faqFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Yes, you are always welcome to bring someone along to wait with you or join you in the consultation room if that helps you feel more relaxed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Full-Width Warm Linen Trust + CTA Band -->
+    <section class="section-pad section-linen section-divider">
+      <div class="container">
+        <div class="row align-items-center gy-4">
           <div class="col-lg-7">
-            <figure class="artwork-frame">
-              <svg viewBox="0 0 800 500" role="img" aria-labelledby="cranialTitle cranialDesc">
-                <title id="cranialTitle">Illustration of gentle whole-body cranial osteopathy contact points</title>
-                <desc id="cranialDesc">Educational diagram showing how cranial osteopathy uses light, steady hands-on contact across the head, upper neck, ribcage, and sacrum to ease muscular tension and support comfortable movement.</desc>
-                <rect width="800" height="500" fill="#F5F2ED" rx="16" />
-                <rect x="16" y="16" width="768" height="468" rx="12" fill="#FFFFFF" stroke="#CFDFE3" stroke-width="1.5" />
-                <circle cx="400" cy="250" r="185" fill="#EAF3F5" opacity="0.6" />
-                <circle cx="400" cy="250" r="125" fill="#DCECF0" opacity="0.7" />
-                <line x1="95" y1="330" x2="705" y2="330" stroke="#8C6C54" stroke-width="6" stroke-linecap="round" />
-                <rect x="115" y="298" width="95" height="28" rx="14" fill="#DCECF0" />
-                <circle cx="165" cy="272" r="30" fill="#12525E" />
-                <path d="M 198 282 C 255 292 330 278 425 288 C 505 296 575 270 645 312" stroke="#12525E" stroke-width="22" fill="none" stroke-linecap="round" />
-                <g>
-                  <circle cx="165" cy="272" r="46" fill="none" stroke="#8A3C54" stroke-width="2" stroke-dasharray="5,4" />
-                  <circle cx="165" cy="272" r="8" fill="#8A3C54" />
-                  <line x1="165" y1="224" x2="165" y2="132" stroke="#8A3C54" stroke-width="1.8" />
-                  <rect x="64" y="58" width="210" height="74" rx="10" fill="#FAFCFD" stroke="#CFDFE3" stroke-width="1.5" />
-                  <text x="80" y="84" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#12525E">01 &bull; Head &amp; Upper Neck</text>
-                  <text x="80" y="104" font-family="Georgia, serif" font-size="12" fill="#456268">Light contact under the base of</text>
-                  <text x="80" y="120" font-family="Georgia, serif" font-size="12" fill="#456268">the skull to ease neck &amp; jaw strain.</text>
-                </g>
-                <g>
-                  <circle cx="340" cy="285" r="42" fill="none" stroke="#12525E" stroke-width="2" stroke-dasharray="5,4" />
-                  <circle cx="340" cy="285" r="8" fill="#8A3C54" />
-                  <line x1="340" y1="241" x2="340" y2="152" stroke="#12525E" stroke-width="1.8" />
-                  <rect x="292" y="78" width="225" height="74" rx="10" fill="#FAFCFD" stroke="#CFDFE3" stroke-width="1.5" />
-                  <text x="308" y="104" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#12525E">02 &bull; Shoulders &amp; Ribcage</text>
-                  <text x="308" y="124" font-family="Georgia, serif" font-size="12" fill="#456268">Supporting posture, upper-back</text>
-                  <text x="308" y="140" font-family="Georgia, serif" font-size="12" fill="#456268">comfort, and unhurried breathing.</text>
-                </g>
-                <g>
-                  <circle cx="515" cy="292" r="42" fill="none" stroke="#8A3C54" stroke-width="2" stroke-dasharray="5,4" />
-                  <circle cx="515" cy="292" r="8" fill="#8A3C54" />
-                  <line x1="515" y1="248" x2="595" y2="162" stroke="#8A3C54" stroke-width="1.8" />
-                  <rect x="536" y="88" width="218" height="74" rx="10" fill="#FAFCFD" stroke="#CFDFE3" stroke-width="1.5" />
-                  <text x="552" y="114" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#12525E">03 &bull; Pelvis &amp; Lower Back</text>
-                  <text x="552" y="134" font-family="Georgia, serif" font-size="12" fill="#456268">Gentle balance through the</text>
-                  <text x="552" y="150" font-family="Georgia, serif" font-size="12" fill="#456268">lower spine, hips, and sacrum.</text>
-                </g>
-                <rect x="64" y="382" width="672" height="64" rx="12" fill="#EAF3F5" />
-                <text x="400" y="410" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#12525E" text-anchor="middle">Whole-body care &mdash; performed fully clothed without forceful clicking</text>
-                <text x="400" y="432" font-family="Georgia, serif" font-size="13" fill="#456268" text-anchor="middle">Sessions are adapted to your comfort whether lying down, side-lying in pregnancy, or holding a baby.</text>
-              </svg>
-              <figcaption class="artwork-caption">
-                How gentle cranial and functional contact connects head, ribcage, and pelvic mechanics.
+            <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
+            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+              <blockquote class="blockquote fs-5 mb-3">
+                <p class="mb-0">
+                  &ldquo;Having 90 minutes for the first session made all the difference—nothing was hurried and every question was answered calmly.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                Martin P., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
               </figcaption>
             </figure>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="appointments" class="section-pad section-warm border-top border-bottom">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Appointment Types</p>
-            <h2 class="mb-2">Unhurried sessions tailored to <em>your</em> needs</h2>
-            <p class="mb-0">
-              All visits are booked by arrangement. Session durations and structures are outlined below; please enquire directly to discuss appointment availability.
-            </p>
+          <div class="col-lg-4 offset-lg-1">
+            <div class="d-grid gap-2 d-sm-flex justify-content-lg-end">
+              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-clinic-outline" href="visiting.html">Visiting Info</a>
+            </div>
           </div>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="index-numeral mb-0" aria-hidden="true">01</span>
-                <span class="pill-tag">60 Minutes</span>
-              </div>
-              <h3 class="h4 mb-3">Initial Consultation &amp; Treatment</h3>
-              <p>
-                For new adult patients, including pregnancy and postnatal visits. Includes a full health and lifestyle conversation, gentle postural and movement assessment, and hands-on treatment where appropriate.
-              </p>
-              <ul class="ps-3 mb-3">
-                <li>Unhurried case history at your pace</li>
-                <li>Gentle hands-on assessment &amp; cranial care</li>
-                <li>Plain-English findings and home comfort advice</li>
-              </ul>
-              <div class="card-link-bottom">
-                <a class="btn btn-clinic-outline w-100" href="contact.html">Enquire About an Initial Visit</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="index-numeral mb-0" aria-hidden="true">02</span>
-                <span class="pill-tag">40 Minutes</span>
-              </div>
-              <h3 class="h4 mb-3">Follow-Up Appointment</h3>
-              <p>
-                For returning patients continuing care or checking in on seasonal flare-ups. Lydia reviews how you felt after your previous session and adapts treatment as your mobility progresses.
-              </p>
-              <ul class="ps-3 mb-3">
-                <li>Review of progress since your last visit</li>
-                <li>Focused cranial, joint, and soft-tissue care</li>
-                <li>Reviewed visit-by-visit with zero package pressure</li>
-              </ul>
-              <div class="card-link-bottom">
-                <a class="btn btn-clinic-outline w-100" href="contact.html">Request a Follow-Up</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="index-numeral mb-0" aria-hidden="true">03</span>
-                <span class="pill-tag">45 Minutes</span>
-              </div>
-              <h3 class="h4 mb-3">Babies &amp; Children Appointment</h3>
-              <p>
-                A quiet, flexible session paced around young patients and parents. Very gentle cranial osteopathy can take place while a baby feeds, sleeps, or sits on a parent's lap.
-              </p>
-              <ul class="ps-3 mb-3">
-                <li>Built-in time for feeding, changing, or settling</li>
-                <li>Feather-light, soothing manual contact</li>
-                <li>Parent or legal guardian present throughout</li>
-              </ul>
-              <div class="card-link-bottom">
-                <a class="btn btn-clinic-outline w-100" href="contact.html">Enquire for Your Family</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad border-bottom">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">First-Time Visitors</p>
-            <h2 class="mb-2">How your first appointment <em>unfolds</em></h2>
-          </div>
-        </div>
-        <div class="four-step-grid">
-          <article class="clinic-card">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="step-badge" aria-hidden="true">1</span>
-              <h3 class="h5 mb-0">Conversation</h3>
-            </div>
-            <p class="mb-0">
-              We discuss what brought you in, your general medical history, and what activities you want to get back to comfortably.
-            </p>
-          </article>
-          <article class="clinic-card">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="step-badge" aria-hidden="true">2</span>
-              <h3 class="h5 mb-0">Dressed Assessment</h3>
-            </div>
-            <p class="mb-0">
-              Lydia observes simple, comfortable movements and uses light palpation while you remain dressed in soft everyday clothing.
-            </p>
-          </article>
-          <article class="clinic-card">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="step-badge" aria-hidden="true">3</span>
-              <h3 class="h5 mb-0">Gentle Treatment</h3>
-            </div>
-            <p class="mb-0">
-              You rest on the padded couch while Lydia applies subtle cranial and soft-tissue techniques, checking your comfort throughout.
-            </p>
-          </article>
-          <article class="clinic-card">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="step-badge" aria-hidden="true">4</span>
-              <h3 class="h5 mb-0">Clear Plan</h3>
-            </div>
-            <p class="mb-0">
-              You leave with an honest summary of what Lydia found, gentle self-care tips, and clear guidance on whether follow-up care is needed.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section-pad">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Frequently Asked Questions</p>
-            <h2 class="mb-0">Common questions before your <em>first visit</em></h2>
-          </div>
-        </div>
-
-        <div class="faq-list" id="clinicFaq">
-          <details class="faq-item" open>
-            <summary class="faq-summary">Is cranial osteopathy only for the head?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                No. Although the name comes from the gentle work often carried out around the head and base of the spine, cranial osteopathy is a whole-body approach. Lydia may place her hands gently on your shoulders, back, ribcage, pelvis, or feet depending on what she is assessing.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">Does treatment hurt or involve clicking joints?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                Cranial osteopathy is very gentle and non-forceful. Many patients describe the sensation as light pressure, warmth, or deep relaxation. Lydia does not use forceful joint manipulation unless discussed and appropriate for you, and always works within your comfort.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">Do I need a referral from my GP?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                No GP referral is required to book an osteopathy appointment. However, if you have a complex medical history or Lydia notices anything that would benefit from your doctor's input, she will always recommend speaking with your GP.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">What should I wear to my appointment?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                Comfortable, loose-fitting clothing such as soft trousers, leggings, or a t-shirt works well. Because cranial osteopathy uses very light contact, treatment can usually take place fully clothed.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">What if my baby needs feeding or changing during the session?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                Appointments for babies and children are scheduled for 45 minutes specifically so there is never any rush. You are welcome to feed, change, or cuddle your baby at any point, and Lydia can often treat gently while your baby is held in your arms.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">How many appointments will I need?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                Everyone responds differently depending on how long an issue has been present and their daily routine. At the end of your first session, Lydia will share an honest view of what she recommends, and progress is reviewed after each visit.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-summary">How do appointment-based visits work?</summary>
-            <div class="faq-answer">
-              <p class="mb-0">
-                Meadowside Clinic does not operate drop-in hours so that every patient has quiet, uninterrupted time. Simply send an enquiry via the <a href="contact.html">Contact page</a> and Lydia will offer available days and times that suit you.
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad section-sage border-top">
-      <div class="container text-center">
-        <p class="eyebrow-text">Personal Guidance</p>
-        <h2 class="mb-3">Unsure if cranial osteopathy is <em>right</em> for you?</h2>
-        <p class="mx-auto mb-4">
-          If you would like to check whether your concern is suitable for osteopathic care before booking, Lydia is happy to answer a brief enquiry.
-        </p>
-        <a class="btn btn-clinic-primary" href="contact.html">Send a Question or Enquiry</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <h2 class="mb-2">Meadowside Clinic</h2>
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
           <p class="mb-2">
-            Gentle cranial osteopathy with Lydia Selby, M.Ost. near Twickenham Green, Twickenham TW2.
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
           <p class="small mb-0">
-            General Osteopathic Council (GOsC) Registered &bull; Visits by appointment only.
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Explore the Clinic</h3>
-          <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Lydia</a></li>
-            <li><a href="treatments.html">Treatments &amp; FAQ</a></li>
-            <li><a href="visiting.html">Visiting the Clinic</a></li>
-            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Location &amp; Contact</h3>
-          <p class="mb-1">14 Meadowside Mews, Twickenham Green, TW2 5QA</p>
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
-        <p class="mb-0">Non-urgent musculoskeletal care &bull; In an emergency, call NHS 111 or 999.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>

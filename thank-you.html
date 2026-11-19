@@ -4,104 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="robots" content="noindex">
-  <meta name="description" content="Enquiry confirmation from Meadowside Clinic in Twickenham.">
+  <meta name="description" content="Confirmation page for Meadowside Clinic enquiries, including next steps and fictional-practice educational notice.">
   <title>Thank You | Meadowside Clinic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="utility-bar">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
-      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
-    </div>
-  </div>
-
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
-          <span>
-            <span class="brand-title">Meadowside Clinic</span>
-            <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
-          </span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Lydia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="treatments.html">Treatments &amp; FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
-            </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" href="contact.html">Arrange a Visit</a>
-            </li>
-          </ul>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="section-pad">
+  <main id="main-content" class="flex-grow-1">
+    <!-- Centered Confirmation + Fictional-Practice Disclosure -->
+    <section class="section-pad section-porcelain">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <div class="clinic-card text-center py-5 px-4 px-md-5">
-              <div class="mx-auto mb-3" aria-hidden="true">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                  <circle cx="30" cy="30" r="28" fill="#EAF3F5" stroke="#12525E" stroke-width="2" />
-                  <path d="M19 31L26.5 38.5L41.5 22.5" stroke="#12525E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-              <p class="eyebrow-text">Enquiry Received</p>
-              <h1 class="mb-3">Thank you for <em>getting in touch</em></h1>
-              <p class="mx-auto mb-4">
-                Your enquiry to Meadowside Clinic has been noted. Lydia reviews messages personally between clinic sessions and aims to respond within 1&ndash;2 working days.
-              </p>
+          <div class="col-lg-8">
+            <span class="badge rounded-pill clinic-pill mb-3">Message Received</span>
+            <h1 class="display-5 fw-semibold mb-3">Thank you for getting in touch</h1>
+            <p class="lead mb-4">
+              Your enquiry has been received—we look forward to welcoming you to Meadowside Clinic.
+            </p>
 
-              <div class="highlights-grid text-start my-4">
-                <div class="promise-panel-positive p-3">
-                  <span class="index-numeral" aria-hidden="true">01</span>
-                  <h2 class="h5 mb-1">Personal review</h2>
-                  <p class="small mb-0">Lydia reads your note to check your questions, preferred days, and any access requirements.</p>
-                </div>
-                <div class="promise-panel-positive p-3">
-                  <span class="index-numeral" aria-hidden="true">02</span>
-                  <h2 class="h5 mb-1">Direct reply</h2>
-                  <p class="small mb-0">She replies by email or phone within 1&ndash;2 working days to suggest suitable appointment times.</p>
-                </div>
-                <div class="promise-panel-positive p-3">
-                  <span class="index-numeral" aria-hidden="true">03</span>
-                  <h2 class="h5 mb-1">Arrival details</h2>
-                  <p class="small mb-0">Once a time is agreed, you receive full Meadowside Mews arrival and intercom instructions.</p>
-                </div>
-              </div>
+            <h2 class="h5 fw-semibold mb-2">What happens next</h2>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item px-0 py-3">
+                Lydia reads enquiries personally between appointments and aims to reply within one working day.
+              </li>
+              <li class="list-group-item px-0 py-3">
+                If you would rather speak sooner, feel free to telephone the clinic on <a class="fw-semibold" href="tel:+442085550142">020 8555 0142</a>.
+              </li>
+            </ul>
 
-              <p class="small text-muted mx-auto mb-4">
-                Note: Meadowside Clinic is a fictional osteopathic practice created for educational assessment, so no personal data has been transmitted or stored on an external server.
+            <aside class="clinic-callout clinic-callout-accent border-start border-4 rounded-end p-4 mb-4">
+              <h2 class="h5 fw-semibold mb-2">Fictional-practice educational disclosure</h2>
+              <p class="mb-0">
+                Meadowside Clinic and practitioner Lydia Selby are fictional and created for an educational front-end development portfolio. No form information was stored or transmitted to a live clinic.
               </p>
-              <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a class="btn btn-clinic-primary" href="index.html">Return to Home</a>
-                <a class="btn btn-clinic-outline" href="visiting.html">Directions &amp; Accessibility</a>
-              </div>
+            </aside>
+
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-clinic-primary" href="index.html">Return to Home</a>
+              <a class="btn btn-clinic-outline" href="treatments.html">Explore Treatments</a>
+              <a class="btn btn-clinic-outline" href="visiting.html">Visiting &amp; Map</a>
             </div>
           </div>
         </div>
@@ -109,38 +94,39 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <h2 class="mb-2">Meadowside Clinic</h2>
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
           <p class="mb-2">
-            Gentle cranial osteopathy with Lydia Selby, M.Ost. near Twickenham Green, Twickenham TW2.
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
           <p class="small mb-0">
-            General Osteopathic Council (GOsC) Registered &bull; Visits by appointment only.
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Explore the Clinic</h3>
-          <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Lydia</a></li>
-            <li><a href="treatments.html">Treatments &amp; FAQ</a></li>
-            <li><a href="visiting.html">Visiting the Clinic</a></li>
-            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Location &amp; Contact</h3>
-          <p class="mb-1">14 Meadowside Mews, Twickenham Green, TW2 5QA</p>
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
-        <p class="mb-0">Non-urgent musculoskeletal care &bull; In an emergency, call NHS 111 or 999.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>

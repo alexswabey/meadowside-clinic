@@ -4,235 +4,194 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Meet Lydia Selby, M.Ost., GOsC-registered cranial osteopath at Meadowside Clinic near Twickenham Green. Learn about her training, calm approach, and credentials.">
-  <title>About Lydia Selby, M.Ost. | Meadowside Clinic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <meta name="description" content="Meet Lydia Selby and discover the calm, unhurried approach behind Meadowside Clinic near Twickenham Green.">
+  <title>About Lydia &amp; the Clinic | Meadowside Clinic</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="utility-bar">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
-      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
-    </div>
-  </div>
-
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
-          <span>
-            <span class="brand-title">Meadowside Clinic</span>
-            <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
-          </span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about.html">About Lydia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="treatments.html">Treatments &amp; FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
-            </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" href="contact.html">Arrange a Visit</a>
-            </li>
-          </ul>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="page-intro">
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. Plain-English Editorial Opener (no credential abbreviations) + Wide 16:9 Scene -->
+    <section class="section-pad section-porcelain">
       <div class="container">
-        <p class="eyebrow-text">About the Practitioner</p>
-        <h1 class="mb-2">Meet Lydia Selby, <em>M.Ost.</em></h1>
-        <p class="lead mb-0">
-          GOsC-registered cranial osteopath offering calm, attentive musculoskeletal care for the Twickenham community.
-        </p>
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-semibold mb-3">A quiet clinic built around listening first</h1>
+            <p class="lead mb-0">
+              I opened Meadowside Clinic near Twickenham Green so local residents have a calm, one-to-one place to be heard, understand what their body is telling them, and move forward comfortably.
+            </p>
+          </div>
+        </div>
+        <!-- Image Slot (16:9, eager): Environmental portrait of Lydia conversing warmly in natural daylight -->
+        <div class="ratio ratio-16x9">
+          <div class="clinic-slot d-flex align-items-end p-4">
+            <p class="small mb-0"><strong>About image slot (16:9, eager):</strong> Environmental scene of Lydia welcoming or talking calmly in the sunlit consultation space.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section-pad">
+    <!-- 2. Philosophy & Experience Pillars on Warm Linen -->
+    <section class="section-pad section-linen section-divider">
       <div class="container">
-        <div class="row align-items-start g-4 g-lg-5">
+        <div class="row align-items-start gy-4">
           <div class="col-lg-5">
-            <figure class="artwork-frame">
-              <img
-                src="assets/images/lydia-selby-portrait.svg"
-                alt="Editorial portrait illustration of Lydia Selby, M.Ost., GOsC-registered cranial osteopath at Meadowside Clinic in Twickenham"
-                width="640"
-                height="760"
-                fetchpriority="high">
-              <figcaption class="artwork-caption">
-                Lydia Selby, M.Ost. &mdash; Principal Osteopath at Meadowside Clinic.
+            <h2 class="h2 fw-semibold mb-3">How we work together</h2>
+            <p class="mb-3">
+              Every person arrives with a different daily routine—long hours at a desk, physically demanding hobbies, pregnancy changes, or simply wanting to stay comfortable as the years pass.
+            </p>
+            <p class="mb-0">
+              Rather than rushing to a fixed routine, sessions adapt quietly to how you feel on the day, with clear explanations and your comfort checked at every stage.
+            </p>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <h3 class="h5 fw-semibold mb-3">What shapes each visit</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-0 py-3">
+                <strong>Unhurried conversation</strong> — plenty of space to ask questions without feeling rushed out the door.
+              </li>
+              <li class="list-group-item px-0 py-3">
+                <strong>Collaborative comfort</strong> — every movement test or gentle hands-on technique is explained and agreed together.
+              </li>
+              <li class="list-group-item px-0 py-3">
+                <strong>Continuity of care</strong> — you see Lydia directly at every appointment, from first visit onward.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Patient-Experience Trust Signals: 1 Deep Reflection + Visitor Highlights Flush List -->
+    <section class="section-pad section-porcelain section-divider">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-6">
+            <h2 class="h2 fw-semibold mb-4">In patients&rsquo; words</h2>
+            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+              <blockquote class="blockquote fs-5 mb-3">
+                <p class="mb-0">
+                  &ldquo;I felt nervous booking my first osteopathy session, but Lydia put me completely at ease within minutes. Nothing felt rushed, and the treatment room itself feels so peaceful.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                Claire R., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
               </figcaption>
             </figure>
-
-            <div class="credential-box mt-4">
-              <h2 class="h5 mb-2">Qualifications &amp; Registration</h2>
-              <ul class="mb-0 ps-3">
-                <li><strong>Master of Osteopathy (M.Ost.)</strong> &mdash; four-year integrated UK clinical degree</li>
-                <li><strong>Registered with the General Osteopathic Council (GOsC)</strong></li>
-                <li><strong>Postgraduate cranial &amp; paediatric osteopathy training</strong></li>
-                <li><strong>Enhanced DBS checked</strong> &amp; full professional indemnity insurance</li>
-              </ul>
-            </div>
           </div>
+          <div class="col-lg-5 offset-lg-1">
+            <h3 class="h5 fw-semibold mb-3">What visitors mention most</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-0 py-3">Feeling genuinely listened to before any hands-on care</li>
+              <li class="list-group-item px-0 py-3">Calm, natural-light room without busy waiting areas</li>
+              <li class="list-group-item px-0 py-3">Plain-English guidance they can actually use at home</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- 4. Quiet Background Reassurance + Closing CTA -->
+    <section class="section-pad section-mist section-divider">
+      <div class="container">
+        <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Background reassurance</h2>
+        <div class="row align-items-center gy-4">
           <div class="col-lg-7">
-            <p class="eyebrow-text">Practice Story</p>
-            <h2 class="mb-3">Why Lydia founded <em>Meadowside Clinic</em></h2>
-            <p>
-              Lydia established Meadowside Clinic near Twickenham Green to offer a calmer alternative to high-turnover appointments. After completing her four-year Master of Osteopathy degree in London and practising within multidisciplinary clinics across South West London, she saw how much patients valued having time to be properly heard before hands-on care begins.
-            </p>
-            <p>
-              Alongside structural and soft-tissue osteopathy, Lydia completed dedicated postgraduate study in cranial osteopathy. Cranial osteopathy is a refined, gentle branch of osteopathic care that uses light manual contact to feel for subtle patterns of tension and muscular guarding throughout the whole body&mdash;not only the head, as the name sometimes suggests.
-            </p>
-            <p>
-              Because the contact is calm and non-forceful, many people find it reassuring when they feel sore, fatigued, expectant, or hesitant about stronger joint manipulation. Lydia explains what she notices in plain English, checks comfort at every stage, and shares realistic home advice to support everyday ease.
-            </p>
-
-            <h2 class="mt-5 mb-3">Standards you can <em>rely on</em></h2>
-            <p>
-              In the UK, the title &ldquo;osteopath&rdquo; is protected by statute under the Osteopaths Act 1993. Every practising osteopath must be registered with the <strong>General Osteopathic Council (GOsC)</strong>, adhere to the Osteopathic Practice Standards, hold full professional indemnity insurance, and complete verified continuing professional development each year.
-            </p>
-            <div class="notice-box mt-3">
+            <aside class="clinic-callout border-start border-4 rounded-end p-4">
+              <h3 class="h5 fw-semibold mb-2">Training &amp; professional standards</h3>
               <p class="mb-0">
-                <strong>Clear clinical boundaries:</strong> Osteopathy complements conventional medical care rather than replacing it. Where symptoms fall outside osteopathic scope or would benefit from GP investigation, Lydia will always signpost you promptly and responsibly.
+                Lydia Selby holds a Master of Osteopathy (M.Ost.), is registered with the General Osteopathic Council (GOsC), maintains full professional indemnity insurance, and completes ongoing clinical development each year.
               </p>
+            </aside>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-grid gap-2 d-sm-flex justify-content-lg-end">
+              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-clinic-outline" href="treatments.html">Explore Treatments</a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad section-warm border-top border-bottom">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Clinical Philosophy</p>
-            <h2 class="mb-2">Three principles behind <em>every</em> session</h2>
-          </div>
-        </div>
-        <div class="highlights-grid">
-          <article class="clinic-card">
-            <span class="index-numeral" aria-hidden="true">01</span>
-            <h3 class="h4 mb-2">Listening before treating</h3>
-            <p class="mb-0">
-              Every appointment starts with an unhurried conversation about your symptoms, daily routines, and health history so care is grounded in context.
-            </p>
-          </article>
-          <article class="clinic-card">
-            <span class="index-numeral" aria-hidden="true">02</span>
-            <h3 class="h4 mb-2">Whole-person perspective</h3>
-            <p class="mb-0">
-              A stiff neck or aching lower back rarely exists in isolation; Lydia considers how breathing, posture, rib movement, and everyday habits interact.
-            </p>
-          </article>
-          <article class="clinic-card">
-            <span class="index-numeral" aria-hidden="true">03</span>
-            <h3 class="h4 mb-2">Respectful, gentle touch</h3>
-            <p class="mb-0">
-              Treatment works with your tissues rather than forcing them, making sessions suitable for sensitive adults, expectant mothers, babies, and older visitors.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Patient Reflections</p>
-            <h2 class="mb-0">What visitors appreciate at <em>Meadowside Clinic</em></h2>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-6 d-flex">
-            <figure class="testimonial-card">
-              <blockquote class="testimonial-quote">
-                <p class="mb-0">
-                  &ldquo;As someone in my seventies who was nervous about seeing an osteopath for the first time, I was struck by how patiently Lydia listened. Nothing felt forceful, and I left feeling much looser and well informed.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="testimonial-author">
-                Graham W.
-                <span class="testimonial-context">Teddington &bull; Sample Patient Review</span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-6 d-flex">
-            <figure class="testimonial-card">
-              <blockquote class="testimonial-quote">
-                <p class="mb-0">
-                  &ldquo;During my third trimester my lower back and ribs were constantly uncomfortable. Lydia checked in with me throughout and offered simple posture adjustments for home that made a real difference.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="testimonial-author">
-                Priya K.
-                <span class="testimonial-context">Twickenham &bull; Sample Patient Review</span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="mt-4 d-flex flex-wrap gap-3">
-          <a class="btn btn-clinic-primary" href="treatments.html">Explore Appointments &amp; FAQ</a>
-          <a class="btn btn-clinic-outline" href="contact.html">Ask Lydia a Question</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <h2 class="mb-2">Meadowside Clinic</h2>
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
           <p class="mb-2">
-            Gentle cranial osteopathy with Lydia Selby, M.Ost. near Twickenham Green, Twickenham TW2.
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
           <p class="small mb-0">
-            General Osteopathic Council (GOsC) Registered &bull; Visits by appointment only.
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Explore the Clinic</h3>
-          <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Lydia</a></li>
-            <li><a href="treatments.html">Treatments &amp; FAQ</a></li>
-            <li><a href="visiting.html">Visiting the Clinic</a></li>
-            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Location &amp; Contact</h3>
-          <p class="mb-1">14 Meadowside Mews, Twickenham Green, TW2 5QA</p>
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
-        <p class="mb-0">Non-urgent musculoskeletal care &bull; In an emergency, call NHS 111 or 999.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Arrange an appointment at Meadowside Clinic near Twickenham Green via enquiry or telephone while online calendar booking is prepared.">
+  <title>Book an Appointment | Meadowside Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta active" aria-current="page" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. Centered Embed-Ready Booking Hub (photo-free, no duration reminder) -->
+    <section class="section-pad section-porcelain">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-semibold mb-3">Book an appointment</h1>
+            <p class="lead mb-4">
+              Choose a straightforward way to request a visit at Meadowside Clinic—we will confirm a quiet time that suits your week.
+            </p>
+
+            <!-- Placeholder slot ready for future free third-party booking embed -->
+            <aside class="clinic-callout border-start border-4 rounded-end p-4 p-md-5 mb-4">
+              <h2 class="h4 fw-semibold mb-2">Request your preferred time</h2>
+              <p class="mb-4">
+                Direct online slot selection is being prepared for this page. In the meantime, Lydia arranges every appointment personally by message or telephone—no referral is required.
+              </p>
+              <div class="d-grid gap-2 d-sm-flex">
+                <a class="btn btn-clinic-cta" href="contact.html">Send Booking Enquiry</a>
+                <a class="btn btn-clinic-outline" href="tel:+442085550142">Call 020 8555 0142</a>
+              </div>
+            </aside>
+
+            <p class="mb-0">
+              Unsure what happens during a session? <a class="fw-semibold" href="treatments.html">Read about our appointments</a> or <a class="fw-semibold" href="visiting.html">check directions &amp; step-free access</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Patient-Experience Trust Band on Warm Linen -->
+    <section class="section-pad section-linen section-divider">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
+            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+              <blockquote class="blockquote fs-5 mb-3">
+                <p class="mb-0">
+                  &ldquo;Arranging my first session was easy and completely unpressured. Lydia answered my questions beforehand so I knew exactly what to expect.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clinic-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
+          <p class="mb-2">
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
+          </p>
+          <p class="small mb-0">
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
+          <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
+          <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+        </div>
+      </div>
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

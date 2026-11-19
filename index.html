@@ -4,440 +4,203 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Meadowside Clinic near Twickenham Green offers gentle, GOsC-registered cranial osteopathy with Lydia Selby, M.Ost. for adults, babies, children, pregnancy, and older adults.">
-  <title>Meadowside Clinic | Cranial Osteopathy near Twickenham Green</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <meta name="description" content="Meadowside Clinic near Twickenham Green offers calm, unhurried osteopathic care with Lydia Selby in a peaceful ground-floor space.">
+  <title>Meadowside Clinic | Calm Osteopathic Care in Twickenham</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="utility-bar">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <span>General Osteopathic Council (GOsC) Registered<span class="utility-dot" aria-hidden="true">&bull;</span>Lydia Selby, M.Ost.</span>
-      <span>14 Meadowside Mews, Twickenham Green, TW2<span class="utility-dot" aria-hidden="true">&bull;</span><a href="visiting.html#accessibility">Step-Free Ground-Floor Studio</a></span>
-    </div>
-  </div>
-
-  <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Primary navigation">
+  <!-- Global Header: Mineral Teal simplified bar + responsive offcanvas drawer -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img class="brand-mark" src="assets/images/brand-mark.svg" alt="" width="36" height="36">
-          <span>
-            <span class="brand-title">Meadowside Clinic</span>
-            <span class="brand-subtitle">Cranial Osteopathy &bull; Twickenham Green</span>
-          </span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Lydia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="treatments.html">Treatments &amp; FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="visiting.html">Visiting the Clinic</a>
-            </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-clinic-primary" href="contact.html">Arrange a Visit</a>
-            </li>
-          </ul>
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section class="hero-section">
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. Hero: 7/5 asymmetric split + 4:3 sunlit treatment room slot -->
+    <section class="section-pad section-porcelain">
       <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-lg-6">
-            <p class="eyebrow-text">Twickenham Green &bull; By Appointment Only</p>
-            <h1 class="mb-3">Quiet, <em>unhurried</em> cranial osteopathy for the whole person.</h1>
-            <p class="lead mb-4">
-              At Meadowside Clinic, Lydia Selby, M.Ost. offers attentive, gentle hands-on osteopathic care&mdash;helping adults, expectant parents, babies, children, and older adults ease everyday tension and move with greater comfort.
-            </p>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-clinic-primary" href="contact.html">Request an Appointment</a>
-              <a class="btn btn-clinic-outline" href="treatments.html">How Cranial Care Works</a>
-            </div>
-            <p class="small text-muted mt-3 mb-0">
-              Prefer to talk first? <a href="tel:+442085550142">Call 020 8555 0142 for a friendly chat</a> or send a brief enquiry.
-            </p>
-            <div class="trust-metrics">
-              <div>
-                <span class="metric-value">60 mins</span>
-                <span class="metric-label">Unhurried first adult consultation</span>
-              </div>
-              <div>
-                <span class="metric-value">GOsC</span>
-                <span class="metric-label">Statutorily regulated UK osteopath</span>
-              </div>
-              <div>
-                <span class="metric-value">Step-free</span>
-                <span class="metric-label">Quiet ground-floor mews studio</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <figure class="artwork-frame">
-              <svg viewBox="0 0 840 630" role="img" aria-labelledby="heroTitle heroDesc">
-                <title id="heroTitle">Sunlit ground-floor treatment room at Meadowside Clinic near Twickenham Green</title>
-                <desc id="heroDesc">Illustration of a serene osteopathic treatment room with an arched Georgian sash window overlooking Twickenham Green, a timber treatment plinth dressed in clinical teal and warm linen, and indoor plants.</desc>
-                <defs>
-                  <linearGradient id="wallLight" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FAFCFD" />
-                    <stop offset="65%" stop-color="#F5F2ED" />
-                    <stop offset="100%" stop-color="#ECE6DC" />
-                  </linearGradient>
-                  <linearGradient id="sunBeam" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
-                    <stop offset="100%" stop-color="#FAFCFD" stop-opacity="0" />
-                  </linearGradient>
-                  <linearGradient id="skyWash" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#DCECF0" />
-                    <stop offset="100%" stop-color="#FAFCFD" />
-                  </linearGradient>
-                </defs>
-                <rect width="840" height="630" fill="#F5F2ED" />
-                <rect x="0" y="0" width="840" height="495" fill="url(#wallLight)" />
-                <rect x="0" y="495" width="840" height="135" fill="#E3DDD3" />
-                <line x1="0" y1="495" x2="840" y2="495" stroke="#CCC3B6" stroke-width="2" />
-                <line x1="0" y1="538" x2="840" y2="538" stroke="#D7CFC3" stroke-width="1" />
-                <line x1="0" y1="582" x2="840" y2="582" stroke="#D7CFC3" stroke-width="1" />
-                <line x1="0" y1="370" x2="840" y2="370" stroke="#DDD6C9" stroke-width="2" />
-                <rect x="0" y="372" width="840" height="123" fill="#EEE9E0" opacity="0.65" />
-                <g transform="translate(88, 52)">
-                  <path d="M 0 135 A 135 135 0 0 1 270 135 L 270 355 L 0 355 Z" fill="#FFFFFF" stroke="#D4CCC0" stroke-width="4" />
-                  <path d="M 14 135 A 121 121 0 0 1 256 135 L 256 341 L 14 341 Z" fill="url(#skyWash)" />
-                  <circle cx="70" cy="240" r="68" fill="#C4DFE4" opacity="0.72" />
-                  <circle cx="195" cy="220" r="82" fill="#9BC3CA" opacity="0.68" />
-                  <circle cx="135" cy="275" r="70" fill="#6EA0A8" opacity="0.55" />
-                  <rect x="14" y="300" width="242" height="41" fill="#A9CDD3" />
-                  <line x1="135" y1="14" x2="135" y2="341" stroke="#FFFFFF" stroke-width="6" />
-                  <line x1="14" y1="135" x2="256" y2="135" stroke="#FFFFFF" stroke-width="6" />
-                  <line x1="14" y1="240" x2="256" y2="240" stroke="#FFFFFF" stroke-width="6" />
-                  <rect x="-8" y="348" width="286" height="14" rx="3" fill="#EAE4DB" stroke="#CEC6B9" stroke-width="1.5" />
-                </g>
-                <polygon points="102,185 358,185 760,630 290,630" fill="url(#sunBeam)" />
-                <g transform="translate(525, 92)">
-                  <rect x="0" y="0" width="146" height="190" rx="4" fill="#FFFFFF" stroke="#8C6C54" stroke-width="4" />
-                  <rect x="18" y="18" width="110" height="154" fill="#F3F8F9" stroke="#CFDFE3" stroke-width="1" />
-                  <path d="M 73 148 Q 73 95 85 46" stroke="#12525E" stroke-width="2.2" fill="none" stroke-linecap="round" />
-                  <path d="M 75 122 C 52 118 46 98 68 96 C 74 96 76 112 75 122 Z" fill="#5E959E" />
-                  <path d="M 77 98 C 102 92 106 72 84 72 C 78 72 77 88 77 98 Z" fill="#12525E" />
-                  <path d="M 81 72 C 60 66 58 48 77 48 C 82 48 82 62 81 72 Z" fill="#8A3C54" />
-                </g>
-                <ellipse cx="455" cy="562" rx="285" ry="42" fill="#EEE9E0" stroke="#D5CCC0" stroke-width="2" />
-                <g transform="translate(215, 340)">
-                  <ellipse cx="235" cy="212" rx="215" ry="16" fill="#C9C0B3" opacity="0.5" />
-                  <rect x="38" y="86" width="16" height="122" rx="4" fill="#8C6C54" />
-                  <rect x="412" y="86" width="16" height="122" rx="4" fill="#8C6C54" />
-                  <rect x="82" y="96" width="12" height="102" rx="3" fill="#A68267" />
-                  <rect x="372" y="96" width="12" height="102" rx="3" fill="#A68267" />
-                  <rect x="46" y="156" width="374" height="10" rx="3" fill="#8C6C54" />
-                  <rect x="28" y="78" width="410" height="14" rx="4" fill="#A68267" />
-                  <rect x="16" y="42" width="434" height="38" rx="12" fill="#FFFFFF" stroke="#CFDFE3" stroke-width="2" />
-                  <path d="M 330 42 L 432 42 A 12 12 0 0 1 444 54 L 444 68 A 12 12 0 0 1 432 80 L 330 80 Z" fill="#266A78" />
-                  <rect x="34" y="20" width="92" height="24" rx="12" fill="#EAF3F5" stroke="#B4CBCF" stroke-width="2" />
-                  <circle cx="146" cy="33" r="9" fill="#8A3C54" opacity="0.95" />
-                </g>
-                <g transform="translate(115, 428)">
-                  <ellipse cx="45" cy="126" rx="38" ry="8" fill="#C9C0B3" opacity="0.48" />
-                  <line x1="45" y1="36" x2="24" y2="122" stroke="#7A5B44" stroke-width="6" stroke-linecap="round" />
-                  <line x1="45" y1="36" x2="66" y2="122" stroke="#7A5B44" stroke-width="6" stroke-linecap="round" />
-                  <line x1="45" y1="36" x2="45" y2="124" stroke="#8C6C54" stroke-width="6" stroke-linecap="round" />
-                  <rect x="12" y="16" width="66" height="22" rx="11" fill="#12525E" />
-                </g>
-                <g transform="translate(690, 290)">
-                  <ellipse cx="52" cy="256" rx="46" ry="11" fill="#C9C0B3" opacity="0.55" />
-                  <polygon points="18,168 86,168 76,252 28,252" fill="#8A3C54" />
-                  <rect x="13" y="158" width="78" height="14" rx="5" fill="#A15169" />
-                  <path d="M 52 160 Q 48 105 58 45" stroke="#75523A" stroke-width="5" fill="none" stroke-linecap="round" />
-                  <path d="M 52 120 Q 22 95 15 72" stroke="#75523A" stroke-width="3.5" fill="none" stroke-linecap="round" />
-                  <path d="M 54 92 Q 82 72 92 48" stroke="#75523A" stroke-width="3.5" fill="none" stroke-linecap="round" />
-                  <ellipse cx="16" cy="66" rx="22" ry="12" transform="rotate(-20 16 66)" fill="#266A78" />
-                  <ellipse cx="36" cy="86" rx="18" ry="10" transform="rotate(15 36 86)" fill="#4E8A94" />
-                  <ellipse cx="58" cy="36" rx="24" ry="13" transform="rotate(-10 58 36)" fill="#12525E" />
-                  <ellipse cx="88" cy="46" rx="22" ry="11" transform="rotate(25 88 46)" fill="#4E8A94" />
-                  <ellipse cx="74" cy="76" rx="19" ry="10" transform="rotate(-18 74 76)" fill="#266A78" />
-                  <ellipse cx="34" cy="50" rx="19" ry="10" transform="rotate(20 34 50)" fill="#78ABB2" />
-                </g>
-              </svg>
-              <figcaption class="artwork-caption">
-                Calm ground-floor consultation room on Meadowside Mews, moments from Twickenham Green.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Practitioner-first introduction directly below Hero (inspired by Sora Health & Wellthy Clinic) -->
-    <section class="section-pad section-warm border-bottom">
-      <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-lg-5">
-            <figure class="artwork-frame">
-              <img
-                src="assets/images/lydia-selby-portrait.svg"
-                alt="Editorial portrait illustration of Lydia Selby, M.Ost., GOsC-registered cranial osteopath at Meadowside Clinic in Twickenham"
-                width="640"
-                height="760"
-                loading="lazy">
-              <figcaption class="artwork-caption">
-                Lydia Selby, M.Ost. &mdash; Principal Osteopath near Twickenham Green.
-              </figcaption>
-            </figure>
-          </div>
+        <div class="row align-items-center gy-4 gx-lg-5">
           <div class="col-lg-7">
-            <p class="eyebrow-text">Meet Your Osteopath</p>
-            <h2 class="mb-3">Attentive, one-to-one care with <em>Lydia Selby, M.Ost.</em></h2>
-            <p>
-              As a solo practitioner at Meadowside Clinic, Lydia sees every patient personally from first message to follow-up&mdash;giving you a calm, unhurried room rather than a busy multi-clinic conveyor belt.
+            <span class="badge rounded-pill clinic-pill mb-3">Twickenham Green · Meadowside Mews</span>
+            <h1 class="display-5 fw-semibold mb-3">Calm, unhurried osteopathic care shaped around you</h1>
+            <p class="lead mb-4">
+              At Meadowside Clinic, every appointment gives you space to talk things through, move comfortably, and receive gentle hands-on support—whether you are visiting for busy workdays, active routines, pregnancy, or quieter years.
             </p>
-            <p>
-              Trained to Master’s level in London with specialist postgraduate training in cranial and paediatric osteopathy, she looks beyond isolated sore spots to understand how posture, breathing, and daily strain interact across your whole body.
-            </p>
-            <div class="credential-box mb-4">
-              <p class="fw-bold mb-1">General Osteopathic Council (GOsC) Registered</p>
-              <p class="mb-0 small">
-                Statutorily regulated UK healthcare professional &bull; M.Ost. degree &bull; Postgraduate cranial &amp; paediatric training &bull; Enhanced DBS checked.
-              </p>
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-clinic-cta btn-lg" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-clinic-outline btn-lg" href="treatments.html">Explore Treatments</a>
             </div>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-clinic-primary" href="about.html">Read Lydia's Full Story</a>
-              <a class="btn btn-clinic-outline" href="contact.html">Write for a Friendly Chat</a>
+          </div>
+          <div class="col-lg-5">
+            <!-- Image Slot 1 (eager LCP): Sunlit peaceful clinic room; avoid clinical white or pain-clutching stock -->
+            <div class="ratio ratio-4x3">
+              <div class="clinic-slot d-flex align-items-end p-3">
+                <p class="small mb-0"><strong>Image slot 1 (4:3, eager):</strong> Sunlit, calm clinic space — immediate visual exhalation.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad">
+    <!-- 2. Meet Lydia & Visit Experience: 5 + offset-1 + 6 split + flush experience list -->
+    <section class="section-pad section-porcelain section-divider">
       <div class="container">
-        <div class="row mb-4 align-items-end">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Who We Welcome</p>
-            <h2 class="mb-2">Thoughtful care across <em>every</em> stage of life</h2>
-            <p class="mb-0">
-              Cranial osteopathy uses a refined, listening touch to sense muscular guarding and subtle restriction throughout the body&mdash;adapting naturally to your age, sensitivity, and daily demands.
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-5">
+            <!-- Image Slot 2 (lazy): Approachable daylight portrait of Lydia Selby; avoid lab coats or stiff poses -->
+            <div class="ratio ratio-4x3">
+              <div class="clinic-slot clinic-slot-warm d-flex align-items-end p-3">
+                <p class="small mb-0"><strong>Image slot 2 (4:3, lazy):</strong> Warm, relaxed portrait of Lydia Selby in natural daylight.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <h2 class="h2 fw-semibold mb-3">A welcoming, one-to-one space with Lydia Selby</h2>
+            <p class="mb-4">
+              Stepping into an osteopathy clinic for the first time should feel straightforward and reassuring. You see the same practitioner from first hello to follow-up, in a quiet ground-floor room just off Twickenham Green.
             </p>
-          </div>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="index-numeral mb-0" aria-hidden="true">01</span>
-                <span class="pill-tag">60-Min Initial</span>
-              </div>
-              <h3 class="h4 mb-2">Adults &amp; Everyday Strain</h3>
-              <p class="mb-0">
-                Support for neck, jaw, shoulder, and lower-back tension linked to desk posture, commuting, gardening, or busy routines.
-              </p>
-              <div class="card-link-bottom">
-                <a href="treatments.html#appointments">Adult consultations &rarr;</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="index-numeral mb-0" aria-hidden="true">02</span>
-                <span class="pill-tag">Side-Lying Safe</span>
-              </div>
-              <h3 class="h4 mb-2">Pregnancy &amp; Postnatal</h3>
-              <p class="mb-0">
-                Supported side-lying and seated techniques to ease rib, pelvic, and lower-back discomfort before and after birth.
-              </p>
-              <div class="card-link-bottom">
-                <a href="treatments.html#appointments">How sessions adapt &rarr;</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="index-numeral mb-0" aria-hidden="true">03</span>
-                <span class="pill-tag">45-Min Paced</span>
-              </div>
-              <h3 class="h4 mb-2">Babies &amp; Children</h3>
-              <p class="mb-0">
-                Very light, unhurried cranial contact in a calm room where babies can feed, rest, or stay held by a parent throughout.
-              </p>
-              <div class="card-link-bottom">
-                <a href="treatments.html#appointments">Paediatric visits &rarr;</a>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <article class="clinic-card">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="index-numeral mb-0" aria-hidden="true">04</span>
-                <span class="pill-tag">Step-Free Room</span>
-              </div>
-              <h3 class="h4 mb-2">Older Adults</h3>
-              <p class="mb-0">
-                Gentle joint and soft-tissue care focused on comfortable mobility and everyday confidence, with zero forceful clicking.
-              </p>
-              <div class="card-link-bottom">
-                <a href="visiting.html#accessibility">Step-free access &rarr;</a>
-              </div>
-            </article>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item px-0 py-3">
+                <strong>Time to listen first</strong> — unhurried appointments that start with your story, never a stopwatch.
+              </li>
+              <li class="list-group-item px-0 py-3">
+                <strong>Clear, plain-English care</strong> — every gentle check and treatment step is explained before we begin.
+              </li>
+              <li class="list-group-item px-0 py-3">
+                <strong>Step-free mews arrival</strong> — calm ground-floor room two minutes from Twickenham Green.
+              </li>
+            </ul>
+            <p class="small text-body-secondary mb-3">
+              General Osteopathic Council (GOsC) registered practitioner · Master of Osteopathy (M.Ost.).
+            </p>
+            <a class="fw-semibold" href="about.html">Read more about Lydia &amp; the clinic</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-warm border-top border-bottom">
+    <!-- 3. Two Appointment Pathways: horizontal cards linking to treatments.html first -->
+    <section class="section-pad section-mist section-divider">
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8">
-            <p class="eyebrow-text">Straightforward Clinical Care</p>
-            <h2 class="mb-2">What Meadowside Clinic is&mdash;and <em>what we aren't</em></h2>
+            <h2 class="h2 fw-semibold mb-2">Two clear ways to begin</h2>
             <p class="mb-0">
-              Choosing an osteopath for yourself or your child requires trust. Here is how Lydia approaches every appointment.
+              Take a look at what happens during each appointment before deciding when you would like to visit.
             </p>
           </div>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6 d-flex">
-            <article class="promise-panel-positive">
-              <span class="pill-tag mb-3">What You Can Expect</span>
-              <h3 class="h4 mb-3">Calm, regulated, one-to-one osteopathy</h3>
-              <ul class="check-list">
-                <li>
-                  <span class="list-marker" aria-hidden="true">&#10003;</span>
-                  <span><strong>Unhurried time with Lydia:</strong> A full 60 minutes for your first adult consultation so you never feel rushed through your medical history.</span>
-                </li>
-                <li>
-                  <span class="list-marker" aria-hidden="true">&#10003;</span>
-                  <span><strong>Gentle, clothed treatment:</strong> Refined cranial and soft-tissue work carried out within your comfort level.</span>
-                </li>
-                <li>
-                  <span class="list-marker" aria-hidden="true">&#10003;</span>
-                  <span><strong>GOsC statutory regulation:</strong> Full UK qualification (M.Ost.), continuing professional development, and clear collaboration with your GP or health visitor when needed.</span>
-                </li>
-              </ul>
-            </article>
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="card clinic-card-link overflow-hidden h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-4">
+                  <!-- Image Slot 3a (lazy): Quiet consultation corner detail -->
+                  <div class="ratio ratio-4x3 h-100">
+                    <div class="clinic-slot border-0 rounded-0 d-flex align-items-end p-2">
+                      <span class="small">Detail slot A</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column justify-content-center h-100 p-4">
+                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">90 mins · First Visit</span>
+                    <h3 class="h5 card-title mb-2">
+                      <a class="stretched-link text-decoration-none" href="treatments.html">Initial Consultation</a>
+                    </h3>
+                    <p class="card-text mb-0">
+                      Unhurried conversation, gentle movement assessment, and first hands-on treatment tailored to your comfort.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-6 d-flex">
-            <article class="promise-panel-boundary">
-              <span class="pill-tag mb-3">What We Never Do</span>
-              <h3 class="h4 mb-3">No hard selling, no exaggerated claims</h3>
-              <ul class="check-list">
-                <li>
-                  <span class="list-marker-boundary" aria-hidden="true">&mdash;</span>
-                  <span><strong>No pre-paid session blocks:</strong> Progress is reviewed honestly after each visit; you only book follow-ups when they are genuinely helpful.</span>
-                </li>
-                <li>
-                  <span class="list-marker-boundary" aria-hidden="true">&mdash;</span>
-                  <span><strong>No unexpected forceful manipulation:</strong> Lydia specialises in gentle cranial and functional techniques rather than high-velocity joint clicking.</span>
-                </li>
-                <li>
-                  <span class="list-marker-boundary" aria-hidden="true">&mdash;</span>
-                  <span><strong>No cure-all promises:</strong> Osteopathy supports musculoskeletal comfort and mobility; if your symptoms require medical investigation, Lydia will signpost you promptly to your GP.</span>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pre-CTA objection handling: FAQ preview + Patient Reflections (inspired by Sora Health) -->
-    <section class="section-pad border-bottom">
-      <div class="container">
-        <div class="row g-4 g-lg-5 align-items-start">
-          <div class="col-lg-5">
-            <p class="eyebrow-text">Common Questions</p>
-            <h2 class="mb-3">Answers before your <em>first visit</em></h2>
-            <p>
-              Unsure what cranial osteopathy feels like or how appointment-based visits work? Here are the three questions new visitors ask most often.
-            </p>
-            <a class="btn btn-clinic-outline" href="treatments.html#faq">Read All 7 FAQs &amp; Session Details</a>
-          </div>
-          <div class="col-lg-7">
-            <div class="faq-list" id="homeFaq">
-              <details class="faq-item" open>
-                <summary class="faq-summary">Does cranial osteopathy hurt or involve forceful joint clicking?</summary>
-                <div class="faq-answer">
-                  <p class="mb-0">
-                    No. Cranial osteopathy uses very light, steady manual contact while you rest comfortably clothed. Lydia does not perform sudden joint manipulation unless discussed and appropriate, making sessions reassuring even when you feel sore or sensitive.
-                  </p>
+          <div class="col-lg-6">
+            <div class="card clinic-card-link overflow-hidden h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-4">
+                  <!-- Image Slot 3b (lazy): Soft linen / warm supportive clinic detail -->
+                  <div class="ratio ratio-4x3 h-100">
+                    <div class="clinic-slot clinic-slot-warm border-0 rounded-0 d-flex align-items-end p-2">
+                      <span class="small">Detail slot B</span>
+                    </div>
+                  </div>
                 </div>
-              </details>
-
-              <details class="faq-item">
-                <summary class="faq-summary">Do I need a referral from my GP first?</summary>
-                <div class="faq-answer">
-                  <p class="mb-0">
-                    No referral is required to arrange an appointment for yourself or your child. If Lydia observes anything that would benefit from medical investigation, she will always recommend speaking with your GP.
-                  </p>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column justify-content-center h-100 p-4">
+                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">45 mins · Ongoing</span>
+                    <h3 class="h5 card-title mb-2">
+                      <a class="stretched-link text-decoration-none" href="treatments.html">Follow-Up Session</a>
+                    </h3>
+                    <p class="card-text mb-0">
+                      Reviewing how things have settled since your previous visit and continuing supportive, unhurried care.
+                    </p>
+                  </div>
                 </div>
-              </details>
-
-              <details class="faq-item">
-                <summary class="faq-summary">Can I talk through my situation before booking an appointment?</summary>
-                <div class="faq-answer">
-                  <p class="mb-0">
-                    Yes&mdash;you are welcome to <a href="contact.html">send a short question</a> or call <a href="tel:+442085550142">020 8555 0142</a> for a friendly chat before deciding whether to schedule a consultation.
-                  </p>
-                </div>
-              </details>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-warm">
+    <!-- 4. Patient-Experience Trust Band: open editorial figure/blockquote on Warm Linen -->
+    <section class="section-pad section-linen section-divider">
       <div class="container">
-        <div class="row mb-4 align-items-end">
-          <div class="col-lg-8">
-            <p class="eyebrow-text">Local Patient Reflections</p>
-            <h2 class="mb-0">What neighbours around Twickenham Green say about visiting <em>Lydia</em></h2>
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-6 d-flex">
-            <figure class="testimonial-card">
-              <blockquote class="testimonial-quote">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
+            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+              <blockquote class="blockquote fs-4 mb-3">
                 <p class="mb-0">
-                  &ldquo;I came in with lingering neck and upper-back tension after months at a home desk. Lydia explained everything clearly, never rushed, and the treatment felt remarkably gentle.&rdquo;
+                  &ldquo;I felt genuinely listened to from the moment I stepped into the mews. Lydia explained everything gently and moved completely at my pace.&rdquo;
                 </p>
               </blockquote>
-              <figcaption class="testimonial-author">
-                Catherine R.
-                <span class="testimonial-context">Twickenham &bull; Sample Patient Review</span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-6 d-flex">
-            <figure class="testimonial-card">
-              <blockquote class="testimonial-quote">
-                <p class="mb-0">
-                  &ldquo;The ground-floor room near Twickenham Green was peaceful and easy to reach with a buggy. Lydia made us feel completely at ease from the moment we arrived.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="testimonial-author">
-                Sam &amp; Ella T.
-                <span class="testimonial-context">Strawberry Hill &bull; Sample Patient Review</span>
+              <figcaption class="blockquote-footer mb-0">
+                Hannah T., Twickenham Green <span class="fw-normal">(illustrative patient reflection)</span>
               </figcaption>
             </figure>
           </div>
@@ -445,54 +208,60 @@
       </div>
     </section>
 
-    <section class="section-pad section-sage border-top">
-      <div class="container text-center">
-        <p class="eyebrow-text">Begin a Conversation</p>
-        <h2 class="mb-3">We’re here to listen &amp; help you <em>take that first step</em></h2>
-        <p class="mx-auto mb-4">
-          Whether you would like to request an appointment or simply talk through whether cranial osteopathy suits your needs, Lydia will reply personally within 1&ndash;2 working days.
-        </p>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a class="btn btn-clinic-accent" href="contact.html">Send an Enquiry</a>
-          <a class="btn btn-clinic-primary" href="tel:+442085550142">Call 020 8555 0142</a>
-          <a class="btn btn-clinic-outline" href="visiting.html">Directions, Parking &amp; Access</a>
+    <!-- 5. Closing Reassurance & Practical Next Step -->
+    <section class="section-pad section-porcelain section-divider">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <h2 class="h2 fw-semibold mb-2">Ready to visit, or simply have a question?</h2>
+            <p class="mb-0">
+              Arrange an appointment at a pace that suits you, or reach out for an informal chat before booking.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-grid gap-2 d-sm-flex justify-content-lg-end">
+              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-clinic-outline" href="contact.html">Ask a Question</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
-      <div class="row g-4 pb-4">
-        <div class="col-lg-4">
-          <h2 class="mb-2">Meadowside Clinic</h2>
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
           <p class="mb-2">
-            Gentle cranial osteopathy with Lydia Selby, M.Ost. near Twickenham Green, Twickenham TW2.
+            Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
           <p class="small mb-0">
-            General Osteopathic Council (GOsC) Registered &bull; Visits by appointment only.
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Explore the Clinic</h3>
-          <ul class="list-unstyled mb-0 d-flex flex-column gap-1">
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Lydia</a></li>
-            <li><a href="treatments.html">Treatments &amp; FAQ</a></li>
-            <li><a href="visiting.html">Visiting the Clinic</a></li>
-            <li><a href="contact.html">Contact &amp; Enquiries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h3 class="mb-2">Location &amp; Contact</h3>
-          <p class="mb-1">14 Meadowside Mews, Twickenham Green, TW2 5QA</p>
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
-        <p class="mb-0">Non-urgent musculoskeletal care &bull; In an emergency, call NHS 111 or 999.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>
