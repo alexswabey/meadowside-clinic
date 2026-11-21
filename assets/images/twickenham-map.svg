@@ -29,7 +29,7 @@
 
   <!-- Road labels placed clear of strokes -->
   <text x="128" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Staines Rd (A311)</text>
-  <text x="315" y="454" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Hampton Rd</text>
+  <text x="380" y="456" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Hampton Rd</text>
   <text x="692" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Heath Rd</text>
 
   <!-- Meadowside Mews pedestrian lane -->
