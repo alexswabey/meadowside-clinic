@@ -29,11 +29,15 @@
   /* 2. Bootstrap 5 global root token overrides (Layer 1) */
   --bs-body-bg: var(--clinic-porcelain);
   --bs-body-color: var(--clinic-text);
+  --bs-body-color-rgb: 20, 40, 44;
   --bs-secondary-color: var(--clinic-muted);
   --bs-primary: var(--clinic-primary);
   --bs-primary-rgb: 18, 82, 94;
+  /* Bootstrap 5.3 colors <a> via --bs-link-color-rgb; set RGB triplets to prevent default #0d6efd links */
   --bs-link-color: var(--clinic-primary);
+  --bs-link-color-rgb: 18, 82, 94;
   --bs-link-hover-color: var(--clinic-primary-dark);
+  --bs-link-hover-color-rgb: 12, 60, 69;
   --bs-border-color: var(--clinic-border);
   --bs-border-radius: 0.65rem;
   --bs-focus-ring-color: rgba(18, 82, 94, 0.25);
@@ -80,7 +84,8 @@ body {
    Header, Offcanvas Drawer & Footer (Mineral Teal dark bar)
    ========================================================================== */
 
-.clinic-navbar {
+/* [data-bs-theme="dark"] raises specificity (0,2,1) to beat Bootstrap's .navbar[data-bs-theme=dark] (0,2,0) */
+.clinic-navbar[data-bs-theme="dark"] {
   background-color: var(--clinic-primary);
   border-bottom: 1px solid var(--clinic-primary-dark);
   --bs-navbar-color: var(--clinic-inverse-text);
@@ -301,6 +306,7 @@ body {
   --bs-accordion-btn-bg: #ffffff;
   --bs-accordion-active-bg: var(--clinic-mist);
   --bs-accordion-active-color: var(--clinic-primary-dark);
+  --bs-accordion-btn-focus-border-color: var(--clinic-primary);
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.25);
   /* Inline SVG URIs override Bootstrap's compiled blue arrow icons without custom JS */
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312525E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
@@ -357,9 +363,14 @@ body {
   accent-color: var(--clinic-primary);
 }
 
+.clinic-form .form-check-input:focus {
+  border-color: var(--clinic-primary);
+  box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.22);
+}
+
 .clinic-form .form-check-input:checked {
   background-color: var(--clinic-primary);
-  border-color: var(--clinic-primary);
+  border-color: var(--clinic-primary-dark);
 }
 
 .clinic-error-hint {

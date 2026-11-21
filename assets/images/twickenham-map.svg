@@ -7,7 +7,7 @@
 
   <!-- Faint background street grid lines -->
   <g stroke="#E3ECEE" stroke-width="2" fill="none">
-    <line x1="95" y1="50" x2="95" y2="440" />
+    <line x1="48" y1="50" x2="48" y2="440" />
     <line x1="615" y1="50" x2="615" y2="440" />
     <line x1="50" y1="115" x2="750" y2="115" />
     <line x1="50" y1="415" x2="750" y2="415" />
@@ -17,8 +17,8 @@
   <polygon points="210,295 535,245 470,385" fill="#EAF3F5" stroke="#12525E" stroke-width="2.2" stroke-linejoin="round" />
   <text x="392" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#0C3C45" text-anchor="middle">Twickenham Green</text>
 
-  <!-- Primary road strokes -->
-  <g fill="none" stroke="#8CA6AC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Primary road strokes (>= 3:1 WCAG non-text contrast on #FAFCFD) -->
+  <g fill="none" stroke="#668991" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
     <!-- Staines Road (A311) -->
     <path d="M 45 322 L 210 295 L 535 245 L 755 205" />
     <!-- Hampton Road -->

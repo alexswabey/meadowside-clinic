@@ -75,8 +75,8 @@
               <div class="mb-3">
                 <label for="contactName" class="form-label mb-1">Your name <span aria-hidden="true">*</span></label>
                 <input type="text" class="form-control" id="contactName" name="name" required autocomplete="name" placeholder="e.g. Alex Taylor">
-                <!-- Kept out of static aria-describedby so screen readers do not announce hidden errors on page load -->
-                <div class="clinic-error-hint" aria-hidden="true">Please enter your name so we know how to address our reply.</div>
+                <!-- Kept out of static aria-describedby; display: none hides hints on load without blocking screen readers when revealed -->
+                <div class="clinic-error-hint">Please enter your name so we know how to address our reply.</div>
               </div>
 
               <div class="mb-3">
@@ -84,7 +84,7 @@
                 <!-- Format hints sit above inputs so browser autofill popovers and mobile keyboards do not cover them -->
                 <div id="emailHint" class="form-text mt-0 mb-2">We only use your email to reply to this enquiry.</div>
                 <input type="email" class="form-control" id="contactEmail" name="email" required autocomplete="email" inputmode="email" autocorrect="off" autocapitalize="none" spellcheck="false" aria-describedby="emailHint" placeholder="you@example.com">
-                <div class="clinic-error-hint" aria-hidden="true">Please enter an email address in the format you@example.com.</div>
+                <div class="clinic-error-hint">Please enter an email address in the format you@example.com.</div>
               </div>
 
               <div class="mb-3">
@@ -108,9 +108,9 @@
 
               <div class="mb-4">
                 <label for="contactMessage" class="form-label mb-1">How can we help? <span aria-hidden="true">*</span></label>
-                <div id="messageHint" class="form-text mt-0 mb-2">Please avoid sharing sensitive medical history here—a brief question or preferred days is plenty.</div>
+                <div id="messageHint" class="form-text mt-0 mb-2">Please avoid sharing sensitive medical history here—a brief question or preferred days (at least 10 characters) is plenty.</div>
                 <textarea class="form-control" id="contactMessage" name="message" rows="4" required minlength="10" aria-describedby="messageHint" placeholder="Share a brief question or preferred times..."></textarea>
-                <div class="clinic-error-hint" aria-hidden="true">Please write a short message (at least 10 characters) before sending.</div>
+                <div class="clinic-error-hint">Please write a short message (at least 10 characters) before sending.</div>
               </div>
 
               <div class="d-grid gap-2 d-sm-flex">
