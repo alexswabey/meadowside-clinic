@@ -84,6 +84,16 @@ Desktop (`1440x900`) and mobile (`390x844`) captures for all seven pages are sto
 | Contact (`contact.html`) | Native HTML5 validated enquiry form with direct clinic details | [Desktop](docs/screenshots/desktop/contact.png) | [Mobile](docs/screenshots/mobile/contact.png) |
 | Thank You (`thank-you.html`) | Immediate enquiry confirmation with next steps and fictional-practice notice | [Desktop](docs/screenshots/desktop/thank-you.png) | [Mobile](docs/screenshots/mobile/thank-you.png) |
 
+### Validation & Lighthouse Proof
+
+| Check | Result | Screenshot |
+| --- | --- | --- |
+| W3C Nu HTML Validator (`vnu 26.11.20`) | `0` errors / `0` warnings across all 7 HTML files | [W3C Nu HTML](docs/screenshots/validation/w3c-nu-html.png) |
+| W3C Jigsaw CSS Validator (`css3svg`, `warning=1`) | `0` errors / `0` warnings on `assets/css/style.css` | [W3C Jigsaw CSS](docs/screenshots/validation/w3c-jigsaw-css.png) |
+| Lighthouse (`13.6.0`) — Home (`index.html`, Desktop) | **100** Performance · **100** Accessibility · **100** Best Practices · **100** SEO | [Lighthouse Desktop](docs/screenshots/validation/lighthouse-index-desktop.png) |
+| Lighthouse (`13.6.0`) — Home (`index.html`, Mobile) | **99** Performance · **100** Accessibility · **100** Best Practices · **100** SEO | [Lighthouse Mobile](docs/screenshots/validation/lighthouse-index-mobile.png) |
+| Lighthouse (`13.6.0`) — Booking (`booking.html`, Desktop) | **100** Performance · **100** Accessibility · **100** Best Practices · **100** SEO | [Lighthouse Booking](docs/screenshots/validation/lighthouse-booking-desktop.png) |
+
 ---
 
 ## Validation & Testing Status
@@ -91,9 +101,9 @@ Desktop (`1440x900`) and mobile (`390x844`) captures for all seven pages are sto
 Automated QA checks live in the sibling governance repository (`../twickenham-osteopath-project-state` via `npm run qa:full`) alongside industry linters and Lighthouse:
 
 - **Colour contrast:** All `39` palette text (`>= 4.5:1`) and UI/focus boundary (`>= 3.0:1`) pairs verified by `check_contrast.py`, plus `13/13` live APCA perceptual contrast checks passing.
-- **HTML & CSS compliance:** Passed `html-validate` (`0` errors across all 7 HTML files), `Stylelint` (`0` errors), W3C Jigsaw CSS Validator (`css3svg`, `warning=1`: `0` errors / `0` warnings), and `modern-web-guidance legacy-scan` (`0` findings). *(Remote W3C Nu HTML previously passed `0/0`; re-check against the live GitHub Pages URL if the public Nu endpoint rate-limits.)*
+- **HTML & CSS compliance:** Passed W3C Nu HTML Validator (`0` errors / `0` warnings across all 7 HTML files), `html-validate` (`0` errors), `Stylelint` (`0` errors), W3C Jigsaw CSS Validator (`css3svg`, `warning=1`: `0` errors / `0` warnings), and `modern-web-guidance legacy-scan` (`0` findings).
 - **Cross-engine browser & accessibility QA:** Passed **WebKit** and **Chromium** Playwright checks (`qa:full` across `9` viewports from `320x568` to `3440x1440`, offcanvas drawer fit, pill tabs, stay-open FAQ, `:user-invalid` contact feedback, forced-colors, reduced-motion, `0` `axe-core` WCAG 2.1 A/AA violations), plus `Pa11y` (`WCAG2AA`: `0` issues on `index`, `treatments`, `visiting`, `contact`) and `Linkinator` (`0` broken links).
-- **Lighthouse (`13.6.0`):** Desktop `index.html` scored **100 / 100 / 100 / 100**; Mobile audits scored **98–99** Performance (`98` Home/Treatments/Visiting, `99` About/Contact) and **100 / 100 / 100** across Accessibility, Best Practices, and SEO.
+- **Lighthouse (`13.6.0`):** Desktop `index.html` and `booking.html` both scored **100 / 100 / 100 / 100**; Mobile `index.html` scored **99 / 100 / 100 / 100** (Accessibility, Best Practices, and SEO all `100`).
 
 ---
 
