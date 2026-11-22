@@ -23,9 +23,9 @@
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
+  <!-- Porcelain light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
@@ -35,7 +35,7 @@
           aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="clinicNav" role="group"
           aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -60,7 +60,7 @@
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
-                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+                <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Map-Led Asymmetric Opener (aligned comfortably near top) -->
+    <!-- 1. Map-Led Asymmetric Opener (Proposal C vertical rules skipped per preference) -->
     <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
       <div class="container">
         <div class="row align-items-center gy-4 gx-lg-5">
@@ -102,7 +102,7 @@
     </section>
 
     <!-- 2. Interactive .nav-pills Travel & Step-Free Access Switcher -->
-    <section id="accessibility" class="py-4 py-lg-5 section-mist border-top">
+    <section id="accessibility" class="py-4 py-lg-5 bg-primary-subtle border-top">
       <div class="container">
         <div class="row align-items-end justify-content-between gy-3 mb-4">
           <div class="col-lg-6">
@@ -110,7 +110,7 @@
             <p class="mb-0">Choose how you are travelling for straightforward local directions.</p>
           </div>
           <div class="col-lg-auto">
-            <ul class="nav nav-pills clinic-pills d-inline-flex flex-wrap gap-1 mb-0" id="travelTabs" role="tablist">
+            <ul class="nav nav-pills d-inline-flex flex-wrap gap-1 mb-0" id="travelTabs" role="tablist">
               <li class="nav-item" role="none">
                 <button class="nav-link active" id="rail-tab" data-bs-toggle="pill" data-bs-target="#rail-pane"
                   type="button" role="tab" aria-controls="rail-pane" aria-selected="true">
@@ -204,7 +204,7 @@
     </section>
 
     <!-- 3. Arrival Photo + Calm Arrival Reflection on Warm Linen -->
-    <section class="py-4 py-lg-5 section-linen border-top">
+    <section class="py-4 py-lg-5 bg-body-tertiary border-top">
       <div class="container">
         <div class="row align-items-center gy-4 gx-lg-5">
           <div class="col-lg-5">
@@ -233,7 +233,7 @@
             </p>
             <div class="card border-0 shadow-sm mb-4">
               <div class="card-body p-4">
-                <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <figure class="border-accent border-start border-4 ps-4 mb-0">
                   <blockquote class="blockquote fs-5 mb-2">
                     <p class="mb-0">
                       &ldquo;Easy to find just off The Green, completely step-free with our buggy, and peaceful the
@@ -247,7 +247,7 @@
               </div>
             </div>
             <div class="d-grid gap-2 d-sm-flex">
-              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
               <a class="btn btn-outline-primary" href="contact.html">Contact Us</a>
             </div>
           </div>
@@ -256,8 +256,8 @@
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
+  <!-- Global Footer on Sea-Glass Mist -->
+  <footer class="bg-primary-subtle border-top py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -265,7 +265,7 @@
           <p class="mb-2">
             Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
-          <p class="small mb-0">
+          <p class="small text-body-secondary mb-0">
             General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
@@ -289,7 +289,7 @@
         </div>
       </div>
       <div
-        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        class="border-top border-primary-subtle pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>

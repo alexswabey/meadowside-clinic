@@ -23,9 +23,9 @@
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
+  <!-- Porcelain light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
@@ -35,7 +35,7 @@
           aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="clinicNav" role="group"
           aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -60,7 +60,7 @@
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
-                <a class="btn btn-clinic-cta active" aria-current="page" href="booking.html">Book an Appointment</a>
+                <a class="btn btn-secondary active" aria-current="page" href="booking.html">Book an Appointment</a>
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- Balanced 7 / 5 Booking Hub + Helpful Pre-Visit Sidebar (eliminates sparse single-column voids) -->
+    <!-- Balanced 7 / 5 Booking Hub + Proposal B Card Anatomy & Proposal D Collapse Checklist -->
     <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
       <div class="container">
         <div class="row gy-4 gx-lg-5 align-items-start">
@@ -90,38 +90,54 @@
                 appointment personally by message or telephone—no referral is required.
               </p>
               <div class="d-grid gap-2 d-sm-flex">
-                <a class="btn btn-clinic-cta" href="contact.html">Send Booking Enquiry</a>
+                <a class="btn btn-secondary" href="contact.html">Send Booking Enquiry</a>
                 <a class="btn btn-outline-primary" href="tel:+442085550142">Call&nbsp;020&nbsp;8555&nbsp;0142</a>
               </div>
             </aside>
 
-            <p class="small text-body-secondary mb-0">
-              Unsure what happens during a session? <a class="fw-semibold" href="treatments.html">Read about our
-                appointments</a> or <a class="fw-semibold" href="visiting.html">check directions &amp; step-free
-                access</a>.
-            </p>
+            <!-- Proposal D: Standalone Bootstrap .collapse toggle (zero custom JS) -->
+            <div class="mt-3">
+              <button class="btn btn-link px-0 fw-semibold text-decoration-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#visitChecklist" aria-expanded="false" aria-controls="visitChecklist">
+                Quick visit checklist &darr;
+              </button>
+              <div class="collapse mt-2" id="visitChecklist">
+                <div class="card border-0 bg-primary-subtle p-3 small shadow-sm">
+                  <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li><strong>1. Arrive calmly:</strong> 5 minutes ahead is plenty; quiet ground-floor seating waits inside.</li>
+                    <li><strong>2. What to wear:</strong> Loose, comfortable clothing (joggers, leggings, or a soft T-shirt).</li>
+                    <li><strong>3. Company welcome:</strong> Feel free to bring a partner, friend, or family member along.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="col-lg-5">
-            <div class="card section-mist p-4 shadow-sm mb-3">
-              <h2 class="h5 fw-semibold mb-3">Before you arrange a time</h2>
+            <!-- Proposal B: Native .card-header + direct-child .list-group-flush + .card-footer -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-header bg-primary-subtle fw-semibold">Before you arrange a time</div>
               <ul class="list-group list-group-flush small">
-                <li class="list-group-item px-0 py-2">
+                <li class="list-group-item">
                   <strong>No referral needed:</strong> You can book directly without a GP letter.
                 </li>
-                <li class="list-group-item px-0 py-2">
+                <li class="list-group-item">
                   <strong>One-to-one continuity:</strong> Every session is directly with Lydia Selby, M.Ost.
                 </li>
-                <li class="list-group-item px-0 py-2">
+                <li class="list-group-item">
                   <strong>Step-free access:</strong> Ground-floor treatment room at 14 The Green.
                 </li>
               </ul>
+              <div class="card-footer bg-transparent small d-flex flex-wrap gap-3">
+                <a class="fw-semibold" href="treatments.html">Compare sessions &rarr;</a>
+                <a class="fw-semibold" href="visiting.html">Map &amp; directions &rarr;</a>
+              </div>
             </div>
 
             <div class="card border-0 shadow-sm">
               <div class="card-body p-4">
                 <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Patient experience</span>
-                <figure class="clinic-quote border-start border-4 ps-3 mb-0">
+                <figure class="border-accent border-start border-4 ps-3 mb-0">
                   <blockquote class="blockquote fs-6 mb-2">
                     <p class="mb-0">
                       &ldquo;Arranging my first session was easy and completely unpressured. Lydia answered my questions
@@ -140,8 +156,8 @@
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
+  <!-- Global Footer on Sea-Glass Mist -->
+  <footer class="bg-primary-subtle border-top py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -149,7 +165,7 @@
           <p class="mb-2">
             Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
-          <p class="small mb-0">
+          <p class="small text-body-secondary mb-0">
             General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
@@ -173,7 +189,7 @@
         </div>
       </div>
       <div
-        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        class="border-top border-primary-subtle pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>

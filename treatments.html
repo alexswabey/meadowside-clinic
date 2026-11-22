@@ -23,9 +23,9 @@
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
+  <!-- Porcelain light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
@@ -35,7 +35,7 @@
           aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="clinicNav" role="group"
           aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -60,7 +60,7 @@
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
-                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+                <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
               </li>
             </ul>
           </div>
@@ -70,11 +70,11 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Balanced Mist Opener with At-a-Glance Session List Group (fills empty right space usefully) -->
-    <section class="pt-3 pb-4 py-lg-4 section-mist">
+    <!-- 1. Mist Opener with Proposal A1: Responsive Session Comparison .table -->
+    <section class="pt-3 pb-4 py-lg-4 bg-primary-subtle">
       <div class="container">
-        <div class="row align-items-center gy-3 gx-lg-5">
-          <div class="col-lg-7">
+        <div class="row align-items-center gy-4 gx-lg-5">
+          <div class="col-lg-5">
             <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">What to expect</span>
             <h1 class="display-5 mb-2">Appointments &amp; <em>gentle care</em></h1>
             <p class="lead mb-0">
@@ -82,23 +82,52 @@
               one-to-one attention tailored to your pace and comfort.
             </p>
           </div>
-          <div class="col-lg-5">
-            <ul class="list-group shadow-sm">
-              <li class="list-group-item d-flex justify-content-between align-items-center py-2 px-3">
-                <span class="fw-semibold">Initial Consultation</span>
-                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">90
-                  mins</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center py-2 px-3">
-                <span class="fw-semibold">Follow-Up Session</span>
-                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">45
-                  mins</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center py-2 px-3">
-                <span class="fw-semibold">GP Referral</span>
-                <span class="text-body-secondary small fw-semibold">Not required</span>
-              </li>
-            </ul>
+          <div class="col-lg-7">
+            <section tabindex="0" aria-labelledby="sessionCompareCaption"
+              class="table-responsive rounded-4 border bg-white shadow-sm">
+              <table class="table table-hover align-middle mb-0 small">
+                <caption id="sessionCompareCaption" class="visually-hidden">
+                  Comparison of Initial Consultation and Follow-Up Session appointments
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-2 px-3">Detail</th>
+                    <th scope="col" class="py-2 px-3">Initial Consultation</th>
+                    <th scope="col" class="py-2 px-3">Follow-Up Session</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">Time set aside</th>
+                    <td class="py-2 px-3">
+                      <span
+                        class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">90
+                        mins</span>
+                    </td>
+                    <td class="py-2 px-3">
+                      <span
+                        class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">45
+                        mins</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">Main focus</th>
+                    <td class="py-2 px-3">Story, gentle checks &amp; first treatment</td>
+                    <td class="py-2 px-3">Progress check &amp; ongoing care</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">What to wear</th>
+                    <td class="py-2 px-3">Loose, comfortable clothing</td>
+                    <td class="py-2 px-3">Loose, comfortable clothing</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3 border-bottom-0">GP referral</th>
+                    <td class="py-2 px-3 border-bottom-0 text-body-secondary fw-semibold">Not required</td>
+                    <td class="py-2 px-3 border-bottom-0 text-body-secondary fw-semibold">Not required</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
           </div>
         </div>
       </div>
@@ -107,7 +136,7 @@
     <!-- 2. Interactive .nav-pills Appointment Switcher -->
     <section class="py-4 py-lg-5 border-top">
       <div class="container">
-        <ul class="nav nav-pills clinic-pills d-inline-flex flex-wrap gap-1 mb-4" id="appointmentTabs" role="tablist">
+        <ul class="nav nav-pills d-inline-flex flex-wrap gap-1 mb-4" id="appointmentTabs" role="tablist">
           <li class="nav-item" role="none">
             <button class="nav-link active" id="initial-tab" data-bs-toggle="pill" data-bs-target="#initial-pane"
               type="button" role="tab" aria-controls="initial-pane" aria-selected="true">
@@ -160,7 +189,7 @@
                   </li>
                 </ul>
                 <div class="d-grid gap-2 d-sm-flex">
-                  <a class="btn btn-clinic-cta" href="booking.html">Book Initial Consultation</a>
+                  <a class="btn btn-secondary" href="booking.html">Book Initial Consultation</a>
                   <a class="btn btn-outline-primary" href="contact.html">Ask a Question First</a>
                 </div>
               </div>
@@ -203,7 +232,7 @@
                   </li>
                 </ul>
                 <div class="d-grid gap-2 d-sm-flex">
-                  <a class="btn btn-clinic-cta" href="booking.html">Book Follow-Up Session</a>
+                  <a class="btn btn-secondary" href="booking.html">Book Follow-Up Session</a>
                   <a class="btn btn-outline-primary" href="visiting.html">Visiting Details</a>
                 </div>
               </div>
@@ -222,7 +251,7 @@
             <p class="text-center text-body-secondary mb-4">
               Open as many answers as you like—everything stays visible so you can compare easily.
             </p>
-            <div class="accordion clinic-accordion overflow-hidden shadow-sm" id="treatmentsFaq">
+            <div class="accordion overflow-hidden shadow-sm" id="treatmentsFaq">
               <div class="accordion-item">
                 <h3 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
@@ -289,15 +318,15 @@
       </div>
     </section>
 
-    <!-- 4. Balanced Warm Linen Trust + Next-Step Card -->
-    <section class="py-4 py-lg-5 section-linen border-top">
+    <!-- 4. Warm Linen Trust + Next-Step Card -->
+    <section class="py-4 py-lg-5 bg-body-tertiary border-top">
       <div class="container">
         <div class="row align-items-stretch gy-4">
           <div class="col-lg-7">
             <div class="card border-0 shadow-sm h-100">
               <div class="card-body p-4 d-flex flex-column justify-content-center">
                 <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</span>
-                <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <figure class="border-accent border-start border-4 ps-4 mb-0">
                   <blockquote class="blockquote fs-5 mb-3">
                     <p class="mb-0">
                       &ldquo;Having 90 minutes for the first session made all the difference—nothing was hurried and
@@ -319,7 +348,7 @@
                   Book directly or check directions and step-free access at 14 The Green before your visit.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex mt-auto">
-                  <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+                  <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
                   <a class="btn btn-outline-primary" href="visiting.html">Visiting Info</a>
                 </div>
               </div>
@@ -330,8 +359,8 @@
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
+  <!-- Global Footer on Sea-Glass Mist -->
+  <footer class="bg-primary-subtle border-top py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -339,7 +368,7 @@
           <p class="mb-2">
             Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
-          <p class="small mb-0">
+          <p class="small text-body-secondary mb-0">
             General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
@@ -363,7 +392,7 @@
         </div>
       </div>
       <div
-        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        class="border-top border-primary-subtle pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>

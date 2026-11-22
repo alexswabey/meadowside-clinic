@@ -23,9 +23,9 @@
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
+  <!-- Porcelain light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
@@ -35,7 +35,7 @@
           aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="clinicNav" role="group"
           aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -60,7 +60,7 @@
                 <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
               </li>
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
-                <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+                <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- Balanced 7 / 5 Enquiry Form & Sidebar (patient reflection sits cleanly inside sidebar to match form height) -->
+    <!-- Balanced 7 / 5 Enquiry Form & Proposal B Sidebar Card -->
     <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
       <div class="container">
         <div class="row gy-4 gx-lg-5 align-items-start">
@@ -85,7 +85,7 @@
             </p>
 
             <!-- Native HTML5 constraint validation; GET avoids GitHub Pages 405 errors -->
-            <form action="thank-you.html" method="get" class="clinic-form">
+            <form action="thank-you.html" method="get">
               <div class="mb-3">
                 <label for="contactName" class="form-label mb-1">Your name <span aria-hidden="true">*</span></label>
                 <input type="text" class="form-control" id="contactName" name="name" required autocomplete="name"
@@ -136,27 +136,30 @@
               </div>
 
               <div class="d-grid gap-2 d-sm-flex">
-                <button type="submit" class="btn btn-clinic-cta btn-lg">Send Enquiry</button>
+                <button type="submit" class="btn btn-secondary btn-lg">Send Enquiry</button>
               </div>
             </form>
           </div>
 
           <div class="col-lg-5">
-            <div class="card section-mist p-4 shadow-sm mb-3">
-              <h2 class="h5 fw-semibold mb-3">Direct clinic details</h2>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item px-0 py-2">
+            <!-- Proposal B: Native .card-header + direct-child .list-group-flush + .card-footer -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-header bg-primary-subtle fw-semibold">Direct clinic details</div>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
                   <strong>Phone:</strong> <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a>
                 </li>
-                <li class="list-group-item px-0 py-2">
+                <li class="list-group-item">
                   <strong>Email:</strong> <a
                     href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a>
                 </li>
-                <li class="list-group-item px-0 py-2">
-                  <strong>Clinic:</strong> 14 The Green, Twickenham TW2 5QA (<a href="visiting.html">view map &amp;
-                    access</a>)
+                <li class="list-group-item">
+                  <strong>Clinic:</strong> 14 The Green, Twickenham TW2 5QA
                 </li>
               </ul>
+              <div class="card-footer bg-transparent small">
+                <a class="fw-semibold" href="visiting.html">View map &amp; step-free access &rarr;</a>
+              </div>
             </div>
 
             <aside class="bg-body-tertiary border-start border-4 border-primary rounded-end-3 shadow-sm p-4 mb-3">
@@ -173,7 +176,7 @@
             <div class="card border-0 shadow-sm">
               <div class="card-body p-4">
                 <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Patient experience</span>
-                <figure class="clinic-quote border-start border-4 ps-3 mb-0">
+                <figure class="border-accent border-start border-4 ps-3 mb-0">
                   <blockquote class="blockquote fs-6 mb-2">
                     <p class="mb-0">
                       &ldquo;I sent a quick enquiry because I wasn&rsquo;t sure what to wear or expect. Lydia replied
@@ -192,8 +195,8 @@
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
+  <!-- Global Footer on Sea-Glass Mist -->
+  <footer class="bg-primary-subtle border-top py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -201,7 +204,7 @@
           <p class="mb-2">
             Calm, unhurried osteopathic care with Lydia Selby, M.Ost. near Twickenham Green.
           </p>
-          <p class="small mb-0">
+          <p class="small text-body-secondary mb-0">
             General Osteopathic Council (GOsC) registered · Visits by appointment.
           </p>
         </div>
@@ -225,7 +228,7 @@
         </div>
       </div>
       <div
-        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        class="border-top border-primary-subtle pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>

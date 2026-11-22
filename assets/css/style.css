@@ -57,7 +57,6 @@
   --clinic-border-input: #557880;
   --clinic-error: #9e243b;
   --clinic-error-bg: #fdf3f5;
-  --clinic-inverse-text: #f3f9fa;
   --clinic-ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* 2. Bootstrap 5 global root token overrides (Layer 1) */
@@ -69,6 +68,7 @@
   --bs-body-color-rgb: 20, 40, 44;
   --bs-secondary-color: var(--clinic-muted);
   --bs-tertiary-bg: var(--clinic-linen);
+  --bs-tertiary-bg-rgb: 245, 242, 237;
   --bs-primary: var(--clinic-primary);
   --bs-primary-rgb: 18, 82, 94;
   --bs-primary-text-emphasis: var(--clinic-primary-dark);
@@ -115,7 +115,7 @@ h6,
 .h4,
 .h5,
 .h6,
-.clinic-quote .blockquote {
+.blockquote {
   font-family: "Literata", "Literata Fallback", Georgia, "Times New Roman", serif;
   letter-spacing: -0.015em;
   text-wrap: balance;
@@ -150,14 +150,14 @@ li {
 }
 
 .clinic-eyebrow,
-.clinic-accordion .accordion-button {
+main .accordion .accordion-button {
   font-family: "Source Sans 3", "Source Sans Fallback", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-wrap: balance;
 }
 
 :focus-visible,
-.clinic-navbar :focus-visible,
-.clinic-offcanvas :focus-visible {
+header .navbar :focus-visible,
+header .offcanvas-lg :focus-visible {
   outline: 3px solid var(--clinic-accent);
   outline-offset: 2px;
   box-shadow: none;
@@ -178,10 +178,10 @@ li {
 }
 
 /* ==========================================================================
-   Porcelain/Mist Header, Light Offcanvas & Mineral Teal Footer
+   Porcelain/Mist Header, Light Offcanvas & Sea-Glass Mist Footer
    ========================================================================== */
 
-.clinic-navbar[data-bs-theme="light"] {
+header .navbar[data-bs-theme="light"] {
   background-color: rgba(250, 252, 253, 0.95);
   border-bottom: 1px solid rgba(18, 82, 94, 0.14);
   --bs-navbar-color: var(--clinic-text);
@@ -192,7 +192,7 @@ li {
   --bs-navbar-toggler-border-color: var(--clinic-border-ui);
 }
 
-.clinic-navbar[data-bs-theme="light"]::before {
+header .navbar[data-bs-theme="light"]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -200,12 +200,12 @@ li {
   backdrop-filter: blur(10px);
 }
 
-.clinic-navbar .navbar-toggler {
+header .navbar-toggler {
   min-width: 44px;
   min-height: 44px;
 }
 
-.clinic-navbar .nav-link {
+header .nav-link {
   position: relative;
   padding-inline: 0.75rem;
   border-radius: 0.45rem;
@@ -213,7 +213,7 @@ li {
 }
 
 @media (min-width: 992px) {
-  .clinic-navbar .nav-link::after {
+  header .nav-link::after {
     content: "";
     position: absolute;
     left: 0.75rem;
@@ -225,53 +225,35 @@ li {
     transform-origin: left center;
   }
 
-  .clinic-navbar .nav-link:hover::after,
-  .clinic-navbar .nav-link.active::after {
+  header .nav-link:hover::after,
+  header .nav-link.active::after {
     transform: scaleX(1);
   }
 }
 
-.clinic-navbar .nav-link.active {
+header .nav-link.active {
   font-weight: 700;
 }
 
 @media (max-width: 991.98px) {
-  .clinic-navbar .nav-link.active {
+  header .nav-link.active {
     text-decoration: underline;
     text-underline-offset: 0.35rem;
     text-decoration-thickness: 2px;
   }
 }
 
-.clinic-offcanvas {
+header .offcanvas-lg {
   --bs-offcanvas-bg: var(--clinic-porcelain);
   --bs-offcanvas-color: var(--clinic-text);
   --bs-offcanvas-border-color: var(--clinic-border);
 }
 
-.clinic-footer {
-  background-color: var(--clinic-primary);
-  color: var(--clinic-inverse-text);
-}
-
-.clinic-footer a {
-  color: var(--clinic-mist);
+footer a {
   text-underline-offset: 0.22rem;
 }
 
-.clinic-footer a:hover {
-  color: #ffffff;
-}
-
-.clinic-footer :focus-visible {
-  outline: 3px solid var(--clinic-porcelain);
-  outline-offset: 2px;
-}
-
-/* ==========================================================================
-   Ambient Section Surfaces (combined with Bootstrap py-* spacing utilities)
-   ========================================================================== */
-
+/* Soft radial daylight glow on primary page openers */
 .section-hero {
   background:
     radial-gradient(circle at 86% 18%, color-mix(in oklab, var(--clinic-mist) 90%, transparent), transparent 52%),
@@ -279,29 +261,13 @@ li {
     var(--clinic-porcelain);
 }
 
-.section-mist {
-  background: linear-gradient(
-    180deg,
-    var(--clinic-mist-soft),
-    color-mix(in oklab, var(--clinic-mist) 55%, var(--clinic-porcelain))
-  );
-}
-
-.section-linen {
-  background: linear-gradient(
-    180deg,
-    var(--clinic-linen),
-    color-mix(in oklab, var(--clinic-linen) 70%, var(--clinic-porcelain))
-  );
-}
-
 /* ==========================================================================
-   Bootstrap 5 Component Overrides (Layer 2 — native .btn-primary/.card/etc.)
+   Bootstrap 5 Component Overrides (Layer 2 — .btn-primary/.btn-secondary/etc.)
    ========================================================================== */
 
 .btn-primary,
-.btn-outline-primary,
-.btn-clinic-cta {
+.btn-secondary,
+.btn-outline-primary {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -311,7 +277,7 @@ li {
   border-radius: 0.65rem;
 }
 
-/* Theme Bootstrap's native .btn-primary and .btn-outline-primary in Mineral Teal */
+/* Mineral Teal primary button */
 .btn-primary {
   --bs-btn-color: var(--clinic-porcelain);
   --bs-btn-bg: var(--clinic-primary);
@@ -338,8 +304,8 @@ li {
   --bs-btn-focus-shadow-rgb: 18, 82, 94;
 }
 
-/* Rosewood primary CTA accent */
-.btn-clinic-cta {
+/* Rosewood primary CTA mapped directly onto Bootstrap .btn-secondary */
+.btn-secondary {
   --bs-btn-color: var(--clinic-porcelain);
   --bs-btn-bg: var(--clinic-accent);
   --bs-btn-border-color: var(--clinic-accent);
@@ -353,7 +319,7 @@ li {
   box-shadow: 0 4px 12px rgba(138, 60, 84, 0.16);
 }
 
-.clinic-navbar .btn-clinic-cta.active {
+header .navbar .btn-secondary.active {
   box-shadow: 0 0 0 2px var(--clinic-porcelain), 0 0 0 4px var(--clinic-accent);
 }
 
@@ -391,21 +357,21 @@ li {
   --bs-list-group-color: var(--clinic-text);
 }
 
-.clinic-quote,
-.clinic-accent-border {
+/* Single Rosewood border-start accent utility for quotes and educational disclosures */
+.border-accent {
   --bs-border-color: var(--clinic-accent);
 }
 
-.clinic-quote .blockquote {
+.blockquote {
   line-height: 1.5;
 }
 
-.clinic-quote .blockquote-footer {
+.blockquote-footer {
   color: var(--clinic-primary-dark);
   font-weight: 600;
 }
 
-.clinic-accordion {
+main .accordion {
   --bs-accordion-bg: #ffffff;
   --bs-accordion-color: var(--clinic-text);
   --bs-accordion-border-color: color-mix(in oklab, var(--clinic-primary) 22%, var(--clinic-border-warm));
@@ -421,12 +387,12 @@ li {
   border-radius: 0.9rem;
 }
 
-.clinic-accordion .accordion-button {
+main .accordion .accordion-button {
   font-weight: 600;
   min-height: 48px;
 }
 
-.clinic-pills {
+main .nav-pills {
   --bs-nav-link-color: var(--clinic-primary-dark);
   --bs-nav-link-hover-color: var(--clinic-primary);
   --bs-nav-pills-link-active-color: var(--clinic-porcelain);
@@ -437,22 +403,36 @@ li {
   border: 1px solid var(--clinic-border-ui);
 }
 
-.clinic-pills .nav-link {
+main .nav-pills .nav-link {
   min-height: 44px;
   font-weight: 600;
   border-radius: 0.52rem;
+}
+
+/* Bootstrap table theming for Treatments session comparison */
+main .table {
+  --bs-table-bg: #ffffff;
+  --bs-table-color: var(--clinic-text);
+  --bs-table-border-color: color-mix(in oklab, var(--clinic-primary) 16%, transparent);
+  --bs-table-hover-bg: var(--clinic-mist-soft);
+}
+
+main .table thead th {
+  background-color: var(--clinic-mist-soft);
+  color: var(--clinic-primary-dark);
+  font-weight: 600;
 }
 
 /* ==========================================================================
    Contact Form Controls & Post-Interaction (:user-invalid) Feedback
    ========================================================================== */
 
-.clinic-form .form-label {
+main form .form-label {
   font-weight: 600;
   color: var(--clinic-primary-dark);
 }
 
-.clinic-form .form-control {
+main form .form-control {
   font-size: max(1rem, 1em);
   min-height: 44px;
   border-color: var(--clinic-border-input);
@@ -460,22 +440,22 @@ li {
   color: var(--clinic-text);
 }
 
-.clinic-form .form-control:focus {
+main form .form-control:focus {
   border-color: var(--clinic-primary);
   box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.22);
 }
 
-.clinic-form .form-check-input {
+main form .form-check-input {
   border-color: var(--clinic-border-input);
   accent-color: var(--clinic-primary);
 }
 
-.clinic-form .form-check-input:focus {
+main form .form-check-input:focus {
   border-color: var(--clinic-primary);
   box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.22);
 }
 
-.clinic-form .form-check-input:checked {
+main form .form-check-input:checked {
   background-color: var(--clinic-primary);
   border-color: var(--clinic-primary-dark);
 }
@@ -488,17 +468,17 @@ li {
   margin-top: 0.35rem;
 }
 
-.clinic-form .form-control:user-invalid {
+main form .form-control:user-invalid {
   border-color: var(--clinic-error);
   background-color: var(--clinic-error-bg);
 }
 
-.clinic-form .form-control:user-invalid + .clinic-error-hint,
-.clinic-form div:has(> .form-control:user-invalid) > .clinic-error-hint {
+main form .form-control:user-invalid + .clinic-error-hint,
+main form div:has(> .form-control:user-invalid) > .clinic-error-hint {
   display: block;
 }
 
-.clinic-form .form-control:user-valid {
+main form .form-control:user-valid {
   border-color: var(--clinic-primary);
 }
 
@@ -512,10 +492,10 @@ li {
 
 @media (prefers-reduced-motion: no-preference) {
   .btn-primary,
+  .btn-secondary,
   .btn-outline-primary,
-  .btn-clinic-cta,
   .clinic-card-link,
-  .clinic-navbar .nav-link::after {
+  header .nav-link::after {
     transition:
       transform 0.3s var(--clinic-ease),
       box-shadow 0.3s var(--clinic-ease),
@@ -524,8 +504,8 @@ li {
   }
 
   .btn-primary:hover,
-  .btn-outline-primary:hover,
-  .btn-clinic-cta:hover {
+  .btn-secondary:hover,
+  .btn-outline-primary:hover {
     transform: translateY(-1px);
   }
 
@@ -554,9 +534,9 @@ li {
   .btn,
   .card,
   aside,
-  .clinic-pills,
-  .clinic-navbar,
-  .clinic-footer {
+  main .nav-pills,
+  header .navbar,
+  footer {
     border: 1px solid CanvasText;
   }
 
