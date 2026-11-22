@@ -54,8 +54,9 @@ html {
   scroll-padding-top: 5.5rem;
 }
 
+/* Restrict scroll-margin offset to landmark/section anchors so form fields and tab controls are unaffected */
 main[id],
-[id] {
+section[id] {
   scroll-margin-top: 5.5rem;
 }
 
@@ -79,24 +80,10 @@ h6,
 .h6,
 .clinic-quote .blockquote {
   font-family: "Literata", Georgia, "Times New Roman", serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
   letter-spacing: -0.01em;
 }
 
-/* Keep non-editorial UI controls & uppercase eyebrows inside heading tags in crisp sans */
+/* Keep UI eyebrows & accordion buttons in crisp sans; literal stack avoids W3C Jigsaw var() warning */
 .clinic-eyebrow,
 .clinic-accordion .accordion-button {
   font-family: "Source Sans 3", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -216,6 +203,17 @@ h6,
    Bootstrap Component Overrides (Layer 2 — component-scoped --bs-* tokens)
    ========================================================================== */
 
+/* Shared >= 44px touch-target layout across custom clinic button variants */
+.btn-clinic-cta,
+.btn-clinic-primary,
+.btn-clinic-outline {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
 /* Rosewood primary CTA button */
 .btn-clinic-cta {
   --bs-btn-color: #fafcfd;
@@ -228,11 +226,6 @@ h6,
   --bs-btn-active-bg: var(--clinic-accent-dark);
   --bs-btn-active-border-color: var(--clinic-accent-dark);
   --bs-btn-focus-shadow-rgb: 138, 60, 84;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
 }
 
 /* Rosewood (#8A3C54) directly on Mineral Teal (#12525E) is ~1.19:1; light border lifts UI contrast >= 6.5:1 */
@@ -258,11 +251,7 @@ h6,
   --bs-btn-active-color: #ffffff;
   --bs-btn-active-bg: var(--clinic-primary-dark);
   --bs-btn-active-border-color: var(--clinic-primary-dark);
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+  --bs-btn-focus-shadow-rgb: 18, 82, 94;
 }
 
 .btn-clinic-outline {
@@ -275,11 +264,7 @@ h6,
   --bs-btn-active-color: #fafcfd;
   --bs-btn-active-bg: var(--clinic-primary-dark);
   --bs-btn-active-border-color: var(--clinic-primary-dark);
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+  --bs-btn-focus-shadow-rgb: 18, 82, 94;
 }
 
 /* Restrained pill badges & subtle section eyebrows */
@@ -348,7 +333,7 @@ h6,
   --bs-accordion-bg: #ffffff;
   --bs-accordion-color: var(--clinic-text);
   --bs-accordion-border-color: var(--clinic-border-ui);
-  --bs-accordion-border-radius: 0.75rem;
+  --bs-accordion-border-radius: 0.85rem;
   --bs-accordion-btn-color: var(--clinic-primary-dark);
   --bs-accordion-btn-bg: #ffffff;
   --bs-accordion-active-bg: var(--clinic-mist);
@@ -444,19 +429,23 @@ h6,
 }
 
 /* ==========================================================================
-   Image Slot Placeholders (replaced with WebP <img> when imagery is sourced)
+   Clinic Photography & Media Frames
    ========================================================================== */
 
-.clinic-slot {
-  background-color: var(--clinic-mist);
-  border: 1px dashed var(--clinic-border-input);
+/* Container-scale visuals share 0.85rem radius matching .card */
+.clinic-photo {
   border-radius: 0.85rem;
-  color: var(--clinic-primary-dark);
+  border: 1px solid var(--clinic-border-warm);
 }
 
-.clinic-slot-warm {
-  background-color: var(--clinic-linen);
-  border-color: var(--clinic-border-warm);
+.clinic-map {
+  border-radius: 0.85rem;
+  border: 1px solid var(--clinic-border);
+}
+
+/* Bias consultation card crop slightly upward so faces stay framed when md+ cards narrow */
+.clinic-card-photo-top {
+  object-position: center 22%;
 }
 
 /* ==========================================================================

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="mapTitle mapDesc">
   <title id="mapTitle">Minimal line map of Meadowside Clinic beside Twickenham Green</title>
-  <desc id="mapDesc">Minimal architectural street diagram showing Twickenham Green between Staines Road and Hampton Road, with Meadowside Clinic at 14 Meadowside Mews just north of The Green.</desc>
+  <desc id="mapDesc">Minimal architectural street diagram showing Twickenham Green between Staines Road and Hampton Road, with Meadowside Clinic at 14 The Green along the northern edge.</desc>
 
   <!-- Warm Porcelain ground -->
   <rect width="800" height="500" fill="#FAFCFD" />
@@ -32,7 +32,7 @@
   <text x="380" y="456" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Hampton Rd</text>
   <text x="692" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Heath Rd</text>
 
-  <!-- Meadowside Mews pedestrian lane -->
+  <!-- Short approach path to 14 The Green clinic frontage -->
   <path d="M 325 277 L 325 168 L 375 168" fill="none" stroke="#12525E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,6" />
 
   <!-- Clinic Pin -->
@@ -42,7 +42,7 @@
   <!-- Clinic Label Card (completely clear of roads) -->
   <rect x="240" y="64" width="290" height="66" rx="10" fill="#F5F2ED" stroke="#12525E" stroke-width="1.8" />
   <text x="385" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0C3C45" text-anchor="middle">Meadowside Clinic</text>
-  <text x="385" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6E2C40" text-anchor="middle">14 Meadowside Mews, TW2 5QA</text>
+  <text x="385" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6E2C40" text-anchor="middle">14 The Green, TW2 5QA</text>
 
   <!-- Minimal Compass -->
   <g transform="translate(72, 74)">

@@ -6,9 +6,12 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Meadowside Clinic near Twickenham Green offers calm, unhurried osteopathic care with Lydia Selby in a peaceful ground-floor space.">
   <title>Meadowside Clinic | Calm Osteopathic Care in Twickenham</title>
+  <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
+  <!-- Preconnect to Google Fonts before requesting Literata (400/600) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,500..700;1,7..72,400..600&amp;family=Source+Sans+3:ital,wght@0,400..700;1,400..600&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -26,7 +29,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- role="group" gives static aria-labelledby a valid ARIA role until Bootstrap adds role="dialog" on mobile open -->
+        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
@@ -49,7 +52,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
-              <!-- d-grid makes CTA full-width inside the mobile drawer; d-lg-block restores auto width on desktop -->
+              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -61,12 +64,12 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Hero: 7/5 asymmetric split + 4:3 sunlit treatment room slot -->
+    <!-- 1. Hero: 7/5 asymmetric split + 4:3 private treatment room photo -->
     <section class="section-pad section-porcelain">
       <div class="container">
         <div class="row align-items-center gy-4 gx-lg-5">
           <div class="col-lg-7">
-            <span class="badge rounded-pill clinic-pill mb-3">Twickenham Green · Meadowside Mews</span>
+            <span class="badge rounded-pill clinic-pill mb-3">14 The Green · Twickenham</span>
             <h1 class="display-5 fw-semibold mb-3">Calm, unhurried osteopathic care shaped around you</h1>
             <p class="lead mb-4">
               At Meadowside Clinic, every appointment gives you space to talk things through, move comfortably, and receive gentle hands-on support—whether you are visiting for busy workdays, active routines, pregnancy, or quieter years.
@@ -78,11 +81,18 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <!-- Image Slot 1 (eager LCP): Sunlit peaceful clinic room; avoid clinical white or pain-clutching stock -->
             <div class="ratio ratio-4x3">
-              <div class="clinic-slot d-flex align-items-end p-3">
-                <p class="small mb-0"><strong>Image slot 1 (4:3, eager):</strong> Sunlit, calm clinic space — immediate visual exhalation.</p>
-              </div>
+              <!-- Above-the-fold hero LCP photo: fetchpriority="high" elevates loading priority; intrinsic sizes prevent CLS -->
+              <img
+                src="assets/images/hero-treatment-room-1200.webp"
+                srcset="assets/images/hero-treatment-room-640.webp 640w, assets/images/hero-treatment-room-800.webp 800w, assets/images/hero-treatment-room-1200.webp 1200w"
+                sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                alt="Private clinic treatment room with a pale padded plinth, stool, orchid on a small desk, and white painted brick wall"
+                class="clinic-photo object-fit-cover"
+                width="1200"
+                height="900"
+                fetchpriority="high"
+              >
             </div>
           </div>
         </div>
@@ -94,11 +104,18 @@
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-5">
-            <!-- Image Slot 2 (lazy): Approachable daylight portrait of Lydia Selby; avoid lab coats or stiff poses -->
             <div class="ratio ratio-4x3">
-              <div class="clinic-slot clinic-slot-warm d-flex align-items-end p-3">
-                <p class="small mb-0"><strong>Image slot 2 (4:3, lazy):</strong> Warm, relaxed portrait of Lydia Selby in natural daylight.</p>
-              </div>
+              <!-- Below-the-fold portrait: loading="lazy" defers download until scrolled near viewport -->
+              <img
+                src="assets/images/lydia-portrait-1200.webp"
+                srcset="assets/images/lydia-portrait-640.webp 640w, assets/images/lydia-portrait-800.webp 800w, assets/images/lydia-portrait-1200.webp 1200w"
+                sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                alt="Osteopath Lydia Selby smiling warmly in a relaxed navy cable-knit jumper against a soft daylight studio backdrop"
+                class="clinic-photo object-fit-cover"
+                width="1200"
+                height="900"
+                loading="lazy"
+              >
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
@@ -114,7 +131,7 @@
                 <strong>Clear, plain-English care</strong> — every gentle check and treatment step is explained before we begin.
               </li>
               <li class="list-group-item px-0 py-3">
-                <strong>Step-free mews arrival</strong> — calm ground-floor room two minutes from Twickenham Green.
+                <strong>Step-free street arrival</strong> — calm ground-floor frontage right on Twickenham Green.
               </li>
             </ul>
             <p class="small text-body-secondary mb-3">
@@ -143,11 +160,18 @@
             <div class="card clinic-card-link overflow-hidden h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-4">
-                  <!-- Image Slot 3a (lazy): Quiet consultation corner detail -->
                   <div class="ratio ratio-4x3 h-100">
-                    <div class="clinic-slot border-0 rounded-0 d-flex align-items-end p-2">
-                      <span class="small">Detail slot A</span>
-                    </div>
+                    <!-- Lazy-loaded thumbnail with upward crop bias so faces remain framed in md+ cards -->
+                    <img
+                      src="assets/images/consultation-conversation-960.webp"
+                      srcset="assets/images/consultation-conversation-480.webp 480w, assets/images/consultation-conversation-960.webp 960w"
+                      sizes="(max-width: 767.98px) calc(100vw - 1.5rem), 220px"
+                      alt="Practitioner and client seated together in a sunlit white-brick consultation room having a calm initial conversation"
+                      class="object-fit-cover clinic-card-photo-top"
+                      width="960"
+                      height="720"
+                      loading="lazy"
+                    >
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -169,11 +193,18 @@
             <div class="card clinic-card-link overflow-hidden h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-4">
-                  <!-- Image Slot 3b (lazy): Soft linen / warm supportive clinic detail -->
                   <div class="ratio ratio-4x3 h-100">
-                    <div class="clinic-slot clinic-slot-warm border-0 rounded-0 d-flex align-items-end p-2">
-                      <span class="small">Detail slot B</span>
-                    </div>
+                    <!-- Lazy-loaded thumbnail sized with srcset for sharp card rendering -->
+                    <img
+                      src="assets/images/osteopathic-lumbar-care-960.webp"
+                      srcset="assets/images/osteopathic-lumbar-care-480.webp 480w, assets/images/osteopathic-lumbar-care-960.webp 960w"
+                      sizes="(max-width: 767.98px) calc(100vw - 1.5rem), 220px"
+                      alt="Practitioner hands gently palpating an adult patient's lower back during a hands-on osteopathic session"
+                      class="object-fit-cover"
+                      width="960"
+                      height="720"
+                      loading="lazy"
+                    >
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -203,7 +234,7 @@
             <figure class="clinic-quote border-start border-4 ps-4 mb-0">
               <blockquote class="blockquote fs-4 mb-3">
                 <p class="mb-0">
-                  &ldquo;I felt genuinely listened to from the moment I stepped into the mews. Lydia explained everything gently and moved completely at my pace.&rdquo;
+                  &ldquo;I felt genuinely listened to from the moment I walked through the door. Lydia explained everything gently and moved completely at my pace.&rdquo;
                 </p>
               </blockquote>
               <figcaption class="blockquote-footer mb-0">
@@ -236,6 +267,7 @@
     </section>
   </main>
 
+  <!-- Global Footer: 3-column practice summary, site links, and local clinic details -->
   <footer class="clinic-footer py-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
@@ -261,8 +293,8 @@
         </div>
         <div class="col-sm-6 col-lg-4">
           <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
-          <p class="mb-1">14 Meadowside Mews, Twickenham TW2 5QA</p>
-          <p class="mb-1">Tel: <a href="tel:+442085550142">020 8555 0142</a></p>
+          <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
+          <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
           <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
@@ -273,6 +305,7 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </body>
 </html>
