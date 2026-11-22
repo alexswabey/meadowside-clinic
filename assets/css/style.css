@@ -353,6 +353,7 @@ header .navbar .btn-secondary.active {
   --bs-card-bg: #ffffff;
   --bs-card-border-color: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
   --bs-card-border-radius: 0.9rem;
+  --bs-card-inner-border-radius: calc(0.9rem - 1px);
 }
 
 .card-header {
@@ -392,6 +393,7 @@ main aside.border-accent {
 }
 
 .blockquote-footer {
+  margin-top: 0;
   color: var(--clinic-primary-dark);
   font-weight: 600;
 }

@@ -12,6 +12,7 @@ Responsive seven-page website for **Meadowside Clinic**, a fictional Twickenham 
 - [Features & User Benefits](#features--user-benefits)
 - [Design Tokens & Typography](#design-tokens--typography)
 - [Deployment & Local Preview](#deployment--local-preview)
+- [Screenshots](#screenshots)
 - [Validation & Testing Status](#validation--testing-status)
 - [Bugs & Quirks Resolved](#bugs--quirks-resolved)
 - [Attribution & Licences](#attribution--licences)
@@ -35,7 +36,7 @@ Meadowside Clinic gives local Twickenham and St Margarets residents a calm, plai
 - **Global Sticky Header & Mobile Offcanvas Drawer:** Uses Bootstrap `.navbar-expand-lg` and `.offcanvas-lg.offcanvas-end` so desktop navigation stays inline and mobile viewports get an accessible slide-over menu without custom JavaScript.
 - **Appointment Switcher & Stay-Open FAQ (`treatments.html`):** Bootstrap `.nav-pills` tabs separate **Initial Consultation · 90 mins** from **Follow-Up Session · 45 mins**, paired with a boxed FAQ `.accordion` intentionally omitting `data-bs-parent` so visitors can compare multiple answers simultaneously.
 - **Location Diagram & Step-Free Access Switcher (`visiting.html`):** Pairs a custom line-drawing SVG street diagram (`twickenham-map.svg`) and Google Maps link with `.nav-pills` travel tabs (*Rail & Bus*, *By Car & Parking*, *Step-Free Access*).
-- **Embed-Ready Booking Hub (`booking.html`):** Concentrates clear next steps (Send Booking Enquiry or Call `020 8555 0142`) while preparing space for a future online scheduling calendar.
+- **Online Booking Hub (`booking.html`):** Embeds a live Koalendar scheduling calendar (`?embed=true` zero-JS `<iframe>`) alongside pre-visit reassurance, direct enquiry/telephone options, and a Bootstrap `.collapse` quick visit checklist.
 - **Native Contact Validation & Confirmation Flow (`contact.html` & `thank-you.html`):** Uses HTML5 constraint attributes (`required`, `minlength`, `type="email"`, `inputmode`, `autocomplete`) plus CSS `:user-invalid` styling so inline error hints stay quiet until field blur, routing via `method="get"` to a static `thank-you.html` confirmation page with fictional-practice disclosure.
 
 ---
@@ -69,15 +70,30 @@ Then visit `http://127.0.0.1:8000/index.html`.
 
 ---
 
+## Screenshots
+
+Desktop (`1440x900`) and mobile (`390x844`) captures for all seven pages are stored in `docs/screenshots/`:
+
+| Page | Purpose & User Value | Desktop (`1440x900`) | Mobile (`390x844`) |
+| --- | --- | --- | --- |
+| Home (`index.html`) | Calm first impression, Lydia introduction, and clear pathway to treatments and booking | [Desktop](docs/screenshots/desktop/index.png) | [Mobile](docs/screenshots/mobile/index.png) |
+| About (`about.html`) | Care philosophy pillars, patient reflections, and quiet background credentials | [Desktop](docs/screenshots/desktop/about.png) | [Mobile](docs/screenshots/mobile/about.png) |
+| Treatments (`treatments.html`) | Session comparison table, `.nav-pills` switcher, and stay-open FAQ accordion | [Desktop](docs/screenshots/desktop/treatments.png) | [Mobile](docs/screenshots/mobile/treatments.png) |
+| Visiting (`visiting.html`) | Custom Twickenham Green SVG map, travel tabs, and step-free access details | [Desktop](docs/screenshots/desktop/visiting.png) | [Mobile](docs/screenshots/mobile/visiting.png) |
+| Booking (`booking.html`) | Live Koalendar scheduling embed, fallback contact options, and `.collapse` visit checklist | [Desktop](docs/screenshots/desktop/booking.png) | [Mobile](docs/screenshots/mobile/booking.png) |
+| Contact (`contact.html`) | Native HTML5 validated enquiry form with direct clinic details | [Desktop](docs/screenshots/desktop/contact.png) | [Mobile](docs/screenshots/mobile/contact.png) |
+| Thank You (`thank-you.html`) | Immediate enquiry confirmation with next steps and fictional-practice notice | [Desktop](docs/screenshots/desktop/thank-you.png) | [Mobile](docs/screenshots/mobile/thank-you.png) |
+
+---
+
 ## Validation & Testing Status
 
 Automated QA checks live in the sibling governance repository (`../twickenham-osteopath-project-state` via `npm run qa:full`) alongside industry linters and Lighthouse:
 
-- **Colour contrast:** All 34 palette text (`>= 4.5:1`) and UI/focus boundary (`>= 3.0:1`) pairs verified by `check_contrast.py`.
-- **HTML & CSS compliance:** Passed `html-validate` (`0` errors across all 7 HTML files), W3C Jigsaw CSS Validator (`css3svg`, `warning=1`: `0` errors / `0` warnings), and `modern-web-guidance legacy-scan` (`0` findings). *(W3C Nu HTML previously passed `0/0`; a final post-polish Nu re-check hit W3C's `HTTP 429` rate limit and is queued once clear.)*
-- **Cross-engine browser & accessibility QA:** Passed **WebKit** and **Chromium** Playwright checks (`1440x900`, `390x844`, `320x700`, offcanvas drawer fit, pill tabs, stay-open FAQ, `:user-invalid` contact feedback, forced-colors, reduced-motion, `0` `axe-core` WCAG 2.1 A/AA violations), plus `Pa11y` (`WCAG2AA`: `0` issues on `index`, `treatments`, `visiting`, `contact`) and `Linkinator` (`0` broken links).
+- **Colour contrast:** All `39` palette text (`>= 4.5:1`) and UI/focus boundary (`>= 3.0:1`) pairs verified by `check_contrast.py`, plus `13/13` live APCA perceptual contrast checks passing.
+- **HTML & CSS compliance:** Passed `html-validate` (`0` errors across all 7 HTML files), `Stylelint` (`0` errors), W3C Jigsaw CSS Validator (`css3svg`, `warning=1`: `0` errors / `0` warnings), and `modern-web-guidance legacy-scan` (`0` findings). *(Remote W3C Nu HTML previously passed `0/0`; re-check against the live GitHub Pages URL if the public Nu endpoint rate-limits.)*
+- **Cross-engine browser & accessibility QA:** Passed **WebKit** and **Chromium** Playwright checks (`qa:full` across `9` viewports from `320x568` to `3440x1440`, offcanvas drawer fit, pill tabs, stay-open FAQ, `:user-invalid` contact feedback, forced-colors, reduced-motion, `0` `axe-core` WCAG 2.1 A/AA violations), plus `Pa11y` (`WCAG2AA`: `0` issues on `index`, `treatments`, `visiting`, `contact`) and `Linkinator` (`0` broken links).
 - **Lighthouse (`13.6.0`):** Desktop `index.html` scored **100 / 100 / 100 / 100**; Mobile audits scored **98–99** Performance (`98` Home/Treatments/Visiting, `99` About/Contact) and **100 / 100 / 100** across Accessibility, Best Practices, and SEO.
-- **Remaining before final coursework submission:** Push `main`, choose and wire a zero-JS booking tool into `booking.html` if desired, and embed final desktop/mobile, W3C Nu/Jigsaw, and Lighthouse screenshots.
 
 ---
 
@@ -125,6 +141,4 @@ Automated QA checks live in the sibling governance repository (`../twickenham-os
 
 ## Planned Future Updates
 
-- Wire `booking.html` to a live third-party clinic scheduling embed once an integration is selected.
 - Connect `contact.html` (`method="get"`) to a live form handler endpoint for production deployment beyond static GitHub Pages.
-- Capture and link post-merge desktop/mobile screenshots, W3C validation proof, and Lighthouse audit reports under `docs/screenshots/`.

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description"
-    content="Arrange an appointment at Meadowside Clinic near Twickenham Green via enquiry or telephone while online calendar booking is prepared.">
+    content="Book an osteopathy appointment at Meadowside Clinic near Twickenham Green online, or arrange a visit by enquiry or telephone.">
   <title>Book an Appointment | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,34 +82,11 @@
               suits your week.
             </p>
 
-            <!-- Placeholder slot ready for future free third-party booking embed (e.g. Cal.com iframe) -->
-            <aside class="bg-body-tertiary shadow-sm p-4 mb-3">
-              <h2 class="h4 fw-semibold mb-2">Request your preferred time</h2>
-              <p class="mb-4">
-                Direct online slot selection is being prepared for this page. In the meantime, Lydia arranges every
-                appointment personally by message or telephone—no referral is required.
-              </p>
-              <div class="d-grid gap-2 d-sm-flex">
-                <a class="btn btn-secondary" href="contact.html">Send Booking Enquiry</a>
-                <a class="btn btn-outline-primary" href="tel:+442085550142">Call&nbsp;020&nbsp;8555&nbsp;0142</a>
-              </div>
-            </aside>
-
-            <!-- Proposal D: Standalone Bootstrap .collapse toggle (zero custom JS) -->
-            <div class="mt-3">
-              <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse"
-                data-bs-target="#visitChecklist" aria-expanded="false" aria-controls="visitChecklist">
-                Quick visit checklist &darr;
-              </button>
-              <div class="collapse mt-2" id="visitChecklist">
-                <div class="card bg-primary-subtle p-3 small shadow-sm">
-                  <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li><strong>1. Arrive calmly:</strong> 5 minutes ahead is plenty; quiet ground-floor seating waits inside.</li>
-                    <li><strong>2. What to wear:</strong> Loose, comfortable clothing (joggers, leggings, or a soft T-shirt).</li>
-                    <li><strong>3. Company welcome:</strong> Feel free to bring a partner, friend, or family member along.</li>
-                  </ul>
-                </div>
-              </div>
+            <!-- Online booking embed (zero custom JS via Koalendar ?embed=true iframe) -->
+            <div class="card shadow-sm overflow-hidden">
+              <iframe class="w-100 border-0 d-block" height="720"
+                src="https://koalendar.com/e/book-with-meadowside?embed=true"
+                title="Online appointment booking calendar for Meadowside Clinic"></iframe>
             </div>
           </div>
 
@@ -134,8 +111,20 @@
               </div>
             </div>
 
-            <div class="card shadow-sm">
-              <div class="card-body p-4">
+            <aside class="bg-body-tertiary shadow-sm p-3 p-sm-4 mb-3">
+              <h2 class="h5 fw-semibold mb-2">Prefer to arrange by message or phone?</h2>
+              <p class="small mb-3">
+                If you have questions before booking or cannot see a suitable slot, Lydia is happy to help directly—no
+                referral is required.
+              </p>
+              <div class="d-grid gap-2 d-sm-flex">
+                <a class="btn btn-outline-primary btn-sm" href="contact.html">Send Booking Enquiry</a>
+                <a class="btn btn-outline-primary btn-sm" href="tel:+442085550142">Call&nbsp;020&nbsp;8555&nbsp;0142</a>
+              </div>
+            </aside>
+
+            <div class="card shadow-sm mb-3">
+              <div class="card-body p-3 p-sm-4">
                 <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Patient experience</span>
                 <figure class="border-accent border-start border-4 ps-3 mb-0">
                   <blockquote class="blockquote fs-6 mb-2">
@@ -148,6 +137,23 @@
                     Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
                   </figcaption>
                 </figure>
+              </div>
+            </div>
+
+            <!-- Proposal D: Standalone Bootstrap .collapse toggle (zero custom JS) -->
+            <div>
+              <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse"
+                data-bs-target="#visitChecklist" aria-expanded="false" aria-controls="visitChecklist">
+                Quick visit checklist &darr;
+              </button>
+              <div class="collapse mt-2" id="visitChecklist">
+                <div class="card bg-primary-subtle p-3 small shadow-sm">
+                  <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li><strong>1. Arrive calmly:</strong> 5 minutes ahead is plenty; quiet ground-floor seating waits inside.</li>
+                    <li><strong>2. What to wear:</strong> Loose, comfortable clothing (joggers, leggings, or a soft T-shirt).</li>
+                    <li><strong>3. Company welcome:</strong> Feel free to bring a partner, friend, or family member along.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
