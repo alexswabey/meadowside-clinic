@@ -1,9 +1,8 @@
 /* ==========================================================================
-   Meadowside Clinic — Editorial Bootstrap 5 Design System
+   Meadowside Clinic — Bootstrap 5.3 Theme Layer & Editorial Polish
    Palette: 190° Mineral Teal (#12525E / #0C3C45), Porcelain (#FAFCFD),
             Sea-Glass Mist (#EAF3F5 / #F3F8F9), Warm Linen (#F5F2ED),
             Rosewood (#8A3C54 / #6E2C40)
-   Typography: Literata (400 italic, 400/500/600 display) + Source Sans 3 (UI)
    ========================================================================== */
 
 /* Metric-matched local fallback faces align box metrics before Google Fonts swap in (prevents CLS) */
@@ -59,25 +58,22 @@
   --clinic-error: #9e243b;
   --clinic-error-bg: #fdf3f5;
   --clinic-inverse-text: #f3f9fa;
-  --clinic-inverse-border: rgba(250, 252, 253, 0.55);
-
-  /* Editorial easing token */
   --clinic-ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* 2. Bootstrap 5 global root token overrides (Layer 1) */
   --bs-font-sans-serif: "Source Sans 3", "Source Sans Fallback", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --bs-body-font-family: var(--bs-font-sans-serif);
-
-  /* 1.0625rem (17px) improves comfort for body reading while keeping root html at 16px */
   --bs-body-font-size: 1.0625rem;
   --bs-body-bg: var(--clinic-porcelain);
   --bs-body-color: var(--clinic-text);
   --bs-body-color-rgb: 20, 40, 44;
   --bs-secondary-color: var(--clinic-muted);
+  --bs-tertiary-bg: var(--clinic-linen);
   --bs-primary: var(--clinic-primary);
   --bs-primary-rgb: 18, 82, 94;
-
-  /* Bootstrap 5.3 colors <a> via --bs-link-color-rgb; set triplets to override default #0d6efd */
+  --bs-primary-text-emphasis: var(--clinic-primary-dark);
+  --bs-primary-bg-subtle: var(--clinic-mist);
+  --bs-primary-border-subtle: var(--clinic-border);
   --bs-link-color: var(--clinic-primary);
   --bs-link-color-rgb: 18, 82, 94;
   --bs-link-hover-color: var(--clinic-primary-dark);
@@ -90,24 +86,23 @@
 /* Smooth in-page navigation with sticky-navbar offset restricted to main & section anchors */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 5.25rem;
 }
 
 main[id],
 section[id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 5.25rem;
 }
 
 body {
-  line-height: 1.68;
+  line-height: 1.65;
   overflow-wrap: break-word;
 }
 
 /* ==========================================================================
-   Editorial Typography, Fluid Scale & Line-Break Craft
+   Editorial Typography & Accessible Focus Rings
    ========================================================================== */
 
-/* Optical serif voice on display headings & quotes; literal stack avoids W3C Jigsaw var() warning */
 h1,
 h2,
 h3,
@@ -126,21 +121,19 @@ h6,
   text-wrap: balance;
 }
 
-/* Fluid clamp() keeps 2-line hero balance on 1200-1440px screens and <= 2.5x zoom growth */
 .display-5 {
-  font-size: clamp(2.05rem, 1.4rem + 1.45vw, 2.85rem);
+  font-size: clamp(2rem, 1.35rem + 1.4vw, 2.75rem);
   font-weight: 500;
-  line-height: 1.13;
+  line-height: 1.14;
   letter-spacing: -0.02em;
 }
 
 main h2.h2 {
-  font-size: clamp(1.65rem, 1.3rem + 1vw, 2.25rem);
+  font-size: clamp(1.6rem, 1.25rem + 0.95vw, 2.15rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
-/* Editorial italic emphasis accent inside serif display headings */
 h1 em,
 h2 em,
 .h1 em,
@@ -150,33 +143,26 @@ h2 em,
   color: var(--clinic-primary);
 }
 
-/* Limit measure with rem (stable across font swap) and enable pretty wrapping */
 p,
 blockquote,
 li {
   text-wrap: pretty;
 }
 
-.lead {
-  max-width: 34rem;
-  color: var(--clinic-text);
-  line-height: 1.62;
-}
-
-/* Keep UI eyebrows & accordion buttons in crisp sans; literal stack avoids W3C Jigsaw var() warning */
 .clinic-eyebrow,
 .clinic-accordion .accordion-button {
   font-family: "Source Sans 3", "Source Sans Fallback", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-wrap: balance;
 }
 
-/* High-contrast keyboard focus ring across light surfaces */
-:focus-visible {
+:focus-visible,
+.clinic-navbar :focus-visible,
+.clinic-offcanvas :focus-visible {
   outline: 3px solid var(--clinic-accent);
   outline-offset: 2px;
+  box-shadow: none;
 }
 
-/* Skip link styling when focused */
 .skip-link:focus {
   position: fixed;
   top: 0.75rem;
@@ -192,23 +178,21 @@ li {
 }
 
 /* ==========================================================================
-   Frosted Header, Offcanvas Drawer & Footer
+   Porcelain/Mist Header, Light Offcanvas & Mineral Teal Footer
    ========================================================================== */
 
-/* [data-bs-theme="dark"] raises specificity (0,2,1) above Bootstrap's compiled navbar rule;
-   background stays directly on nav for WCAG static contrast audits while ::before blurs behind */
-.clinic-navbar[data-bs-theme="dark"] {
-  background-color: rgba(18, 82, 94, 0.95);
-  border-bottom: 1px solid rgba(250, 252, 253, 0.14);
-  --bs-navbar-color: var(--clinic-inverse-text);
-  --bs-navbar-hover-color: #ffffff;
-  --bs-navbar-active-color: #ffffff;
-  --bs-navbar-brand-color: #ffffff;
-  --bs-navbar-brand-hover-color: #ffffff;
-  --bs-navbar-toggler-border-color: var(--clinic-inverse-border);
+.clinic-navbar[data-bs-theme="light"] {
+  background-color: rgba(250, 252, 253, 0.95);
+  border-bottom: 1px solid rgba(18, 82, 94, 0.14);
+  --bs-navbar-color: var(--clinic-text);
+  --bs-navbar-hover-color: var(--clinic-primary-dark);
+  --bs-navbar-active-color: var(--clinic-primary-dark);
+  --bs-navbar-brand-color: var(--clinic-primary-dark);
+  --bs-navbar-brand-hover-color: var(--clinic-primary);
+  --bs-navbar-toggler-border-color: var(--clinic-border-ui);
 }
 
-.clinic-navbar[data-bs-theme="dark"]::before {
+.clinic-navbar[data-bs-theme="light"]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -225,9 +209,9 @@ li {
   position: relative;
   padding-inline: 0.75rem;
   border-radius: 0.45rem;
+  font-weight: 500;
 }
 
-/* Subtle architectural bottom hairline on hover and active navigation state */
 @media (min-width: 992px) {
   .clinic-navbar .nav-link::after {
     content: "";
@@ -236,7 +220,7 @@ li {
     right: 0.75rem;
     bottom: 0.25rem;
     height: 2px;
-    background-color: #ffffff;
+    background-color: var(--clinic-primary);
     transform: scaleX(0);
     transform-origin: left center;
   }
@@ -248,10 +232,9 @@ li {
 }
 
 .clinic-navbar .nav-link.active {
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Preserve full underlined active feedback inside the collapsed mobile drawer */
 @media (max-width: 991.98px) {
   .clinic-navbar .nav-link.active {
     text-decoration: underline;
@@ -260,20 +243,19 @@ li {
   }
 }
 
-/* Mobile slide-over drawer inherits Mineral Teal cleanly */
 .clinic-offcanvas {
-  --bs-offcanvas-bg: var(--clinic-primary);
-  --bs-offcanvas-color: var(--clinic-inverse-text);
-  --bs-offcanvas-border-color: var(--clinic-primary-dark);
+  --bs-offcanvas-bg: var(--clinic-porcelain);
+  --bs-offcanvas-color: var(--clinic-text);
+  --bs-offcanvas-border-color: var(--clinic-border);
 }
 
 .clinic-footer {
-  background: linear-gradient(180deg, var(--clinic-primary-dark), #082d34);
+  background-color: var(--clinic-primary);
   color: var(--clinic-inverse-text);
 }
 
 .clinic-footer a {
-  color: #dff0f3;
+  color: var(--clinic-mist);
   text-underline-offset: 0.22rem;
 }
 
@@ -281,31 +263,15 @@ li {
   color: #ffffff;
 }
 
-.clinic-footer-divider {
-  border-top: 1px solid rgba(250, 252, 253, 0.2);
-}
-
-/* Light high-contrast focus ring on dark header, offcanvas, and footer bars */
-.clinic-navbar :focus-visible,
-.clinic-offcanvas :focus-visible,
 .clinic-footer :focus-visible {
-  outline: 3px solid #fafcfd;
+  outline: 3px solid var(--clinic-porcelain);
   outline-offset: 2px;
 }
 
 /* ==========================================================================
-   Ambient Section Surfaces & Editorial Rhythm
+   Ambient Section Surfaces (combined with Bootstrap py-* spacing utilities)
    ========================================================================== */
 
-.section-pad {
-  padding-block: clamp(3.25rem, 5.5vw, 5.25rem);
-}
-
-.section-porcelain {
-  background-color: var(--clinic-porcelain);
-}
-
-/* Soft radial daylight glow anchored behind focal hero openers without reducing text contrast */
 .section-hero {
   background:
     radial-gradient(circle at 86% 18%, color-mix(in oklab, var(--clinic-mist) 90%, transparent), transparent 52%),
@@ -329,58 +295,25 @@ li {
   );
 }
 
-.section-divider {
-  border-top: 1px solid color-mix(in oklab, var(--clinic-primary) 13%, transparent);
-}
-
 /* ==========================================================================
-   Bootstrap Component Overrides (Layer 2 — component-scoped --bs-* tokens)
+   Bootstrap 5 Component Overrides (Layer 2 — native .btn-primary/.card/etc.)
    ========================================================================== */
 
-/* Shared >= 44px touch-target layout & tactile surface depth across clinic buttons */
-.btn-clinic-cta,
-.btn-clinic-primary,
-.btn-clinic-outline {
+.btn-primary,
+.btn-outline-primary,
+.btn-clinic-cta {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 1.25rem;
+  padding-inline: 1.2rem;
   font-weight: 600;
   border-radius: 0.65rem;
 }
 
-/* Rosewood primary CTA button */
-.btn-clinic-cta {
-  --bs-btn-color: #fafcfd;
-  --bs-btn-bg: var(--clinic-accent);
-  --bs-btn-border-color: var(--clinic-accent);
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-hover-bg: var(--clinic-accent-dark);
-  --bs-btn-hover-border-color: var(--clinic-accent-dark);
-  --bs-btn-active-color: #ffffff;
-  --bs-btn-active-bg: var(--clinic-accent-dark);
-  --bs-btn-active-border-color: var(--clinic-accent-dark);
-  --bs-btn-focus-shadow-rgb: 138, 60, 84;
-  box-shadow: 0 4px 12px rgba(138, 60, 84, 0.18);
-}
-
-/* Rosewood (#8A3C54) directly on Mineral Teal (#12525E) needs a crisp light border to lift UI contrast */
-.clinic-navbar .btn-clinic-cta,
-.clinic-offcanvas .btn-clinic-cta {
-  --bs-btn-border-color: var(--clinic-mist);
-  --bs-btn-hover-border-color: #ffffff;
-  --bs-btn-active-border-color: #ffffff;
-  box-shadow: none;
-}
-
-.clinic-navbar .btn-clinic-cta.active {
-  box-shadow: 0 0 0 2px #fafcfd;
-}
-
-/* Mineral Teal solid and outline buttons */
-.btn-clinic-primary {
-  --bs-btn-color: #fafcfd;
+/* Theme Bootstrap's native .btn-primary and .btn-outline-primary in Mineral Teal */
+.btn-primary {
+  --bs-btn-color: var(--clinic-porcelain);
   --bs-btn-bg: var(--clinic-primary);
   --bs-btn-border-color: var(--clinic-primary);
   --bs-btn-hover-color: #ffffff;
@@ -390,29 +323,38 @@ li {
   --bs-btn-active-bg: var(--clinic-primary-dark);
   --bs-btn-active-border-color: var(--clinic-primary-dark);
   --bs-btn-focus-shadow-rgb: 18, 82, 94;
-  box-shadow: 0 4px 12px rgba(18, 82, 94, 0.16);
 }
 
-.btn-clinic-outline {
+.btn-outline-primary {
   --bs-btn-color: var(--clinic-primary);
-  --bs-btn-bg: rgba(255, 255, 255, 0.7);
+  --bs-btn-bg: rgba(255, 255, 255, 0.72);
   --bs-btn-border-color: var(--clinic-primary);
-  --bs-btn-hover-color: #fafcfd;
+  --bs-btn-hover-color: var(--clinic-porcelain);
   --bs-btn-hover-bg: var(--clinic-primary);
   --bs-btn-hover-border-color: var(--clinic-primary);
-  --bs-btn-active-color: #fafcfd;
+  --bs-btn-active-color: var(--clinic-porcelain);
   --bs-btn-active-bg: var(--clinic-primary-dark);
   --bs-btn-active-border-color: var(--clinic-primary-dark);
   --bs-btn-focus-shadow-rgb: 18, 82, 94;
 }
 
-/* Restrained pill badges & tracked eyebrow with signature Rosewood rule */
-.clinic-pill {
-  background-color: var(--clinic-mist);
-  color: var(--clinic-primary-dark);
-  border: 1px solid var(--clinic-border);
-  font-weight: 600;
-  letter-spacing: 0.015em;
+/* Rosewood primary CTA accent */
+.btn-clinic-cta {
+  --bs-btn-color: var(--clinic-porcelain);
+  --bs-btn-bg: var(--clinic-accent);
+  --bs-btn-border-color: var(--clinic-accent);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--clinic-accent-dark);
+  --bs-btn-hover-border-color: var(--clinic-accent-dark);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--clinic-accent-dark);
+  --bs-btn-active-border-color: var(--clinic-accent-dark);
+  --bs-btn-focus-shadow-rgb: 138, 60, 84;
+  box-shadow: 0 4px 12px rgba(138, 60, 84, 0.16);
+}
+
+.clinic-navbar .btn-clinic-cta.active {
+  box-shadow: 0 0 0 2px var(--clinic-porcelain), 0 0 0 4px var(--clinic-accent);
 }
 
 .clinic-eyebrow {
@@ -425,63 +367,36 @@ li {
 
 .clinic-eyebrow::before {
   content: "";
-  width: 1.75rem;
+  width: 1.5rem;
   height: 2px;
   background-color: var(--clinic-accent);
   flex-shrink: 0;
 }
 
-/* Scannable Hero trust strip (minimal geometric SVG icons + crisp typography) */
-.clinic-trust-strip {
-  border-top: 1px solid color-mix(in oklab, var(--clinic-primary) 15%, transparent);
-}
-
-.clinic-trust-icon {
-  color: var(--clinic-primary);
-  flex-shrink: 0;
-}
-
-/* Cards & layered ambient hover affordance */
 .card {
   --bs-card-bg: #ffffff;
   --bs-card-border-color: color-mix(in oklab, var(--clinic-primary) 22%, var(--clinic-border-warm));
   --bs-card-border-radius: 0.9rem;
 }
 
-/* Literal shadow tokens on grouped surfaces keep W3C Jigsaw warning=1 clean (avoids dynamic var() warnings) */
-.card,
-.clinic-quote-card,
-.clinic-callout,
-.clinic-accordion {
-  box-shadow: 0 2px 6px rgba(18, 82, 94, 0.04), 0 12px 28px -8px rgba(18, 82, 94, 0.08);
-}
-
-.clinic-card-link:hover,
-.clinic-card-link:focus-within,
-.clinic-photo,
-.clinic-map {
-  box-shadow: 0 4px 14px rgba(18, 82, 94, 0.07), 0 24px 48px -12px rgba(12, 60, 69, 0.15);
-}
-
 .clinic-card-link:hover,
 .clinic-card-link:focus-within {
   border-color: var(--clinic-primary);
+  box-shadow: 0 6px 20px rgba(12, 60, 69, 0.14);
 }
 
-/* Flush hairline lists */
 .list-group-flush {
   --bs-list-group-bg: transparent;
   --bs-list-group-border-color: color-mix(in oklab, var(--clinic-primary) 16%, transparent);
   --bs-list-group-color: var(--clinic-text);
 }
 
-/* Editorial pull-quote card & decorative serif glyph */
-.clinic-quote {
-  border-left-color: var(--clinic-accent);
+.clinic-quote,
+.clinic-accent-border {
+  --bs-border-color: var(--clinic-accent);
 }
 
 .clinic-quote .blockquote {
-  max-width: 40rem;
   line-height: 1.5;
 }
 
@@ -490,34 +405,6 @@ li {
   font-weight: 600;
 }
 
-.clinic-quote-card {
-  background-color: #ffffff;
-  border: 1px solid var(--clinic-border-warm);
-  border-radius: 0.9rem;
-}
-
-.clinic-quote-mark {
-  display: block;
-  font-family: "Literata", "Literata Fallback", Georgia, "Times New Roman", serif;
-  font-size: 3.25rem;
-  line-height: 0.7;
-  color: var(--clinic-accent);
-  user-select: none;
-}
-
-/* Calm border-start callout (replaces generic .alert banners) */
-.clinic-callout {
-  background-color: var(--clinic-linen);
-  border: 1px solid var(--clinic-border-warm);
-  border-left: 4px solid var(--clinic-primary);
-  border-radius: 0 0.85rem 0.85rem 0;
-}
-
-.clinic-callout-accent {
-  border-left-color: var(--clinic-accent);
-}
-
-/* Boxed stay-open FAQ accordion (recolours Bootstrap's default blue SVG chevron to Mineral Teal) */
 .clinic-accordion {
   --bs-accordion-bg: #ffffff;
   --bs-accordion-color: var(--clinic-text);
@@ -529,8 +416,6 @@ li {
   --bs-accordion-active-color: var(--clinic-primary-dark);
   --bs-accordion-btn-focus-border-color: var(--clinic-primary);
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.25);
-
-  /* Inline SVG URIs override Bootstrap's compiled blue arrow icons without custom JS */
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312525E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230C3C45' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   border-radius: 0.9rem;
@@ -541,11 +426,10 @@ li {
   min-height: 48px;
 }
 
-/* Nav pills (Treatments appointments & Visiting travel modes) */
 .clinic-pills {
   --bs-nav-link-color: var(--clinic-primary-dark);
   --bs-nav-link-hover-color: var(--clinic-primary);
-  --bs-nav-pills-link-active-color: #fafcfd;
+  --bs-nav-pills-link-active-color: var(--clinic-porcelain);
   --bs-nav-pills-link-active-bg: var(--clinic-primary);
   background-color: var(--clinic-mist);
   padding: 0.35rem;
@@ -568,7 +452,6 @@ li {
   color: var(--clinic-primary-dark);
 }
 
-/* Keep >= 1rem font size so iOS Safari does not auto-zoom on focus, and >= 44px touch height */
 .clinic-form .form-control {
   font-size: max(1rem, 1em);
   min-height: 44px;
@@ -605,7 +488,6 @@ li {
   margin-top: 0.35rem;
 }
 
-/* Defer visual error feedback until after interaction/blur (zero JS); :has() ensures WebKit repaints on Tab blur */
 .clinic-form .form-control:user-invalid {
   border-color: var(--clinic-error);
   background-color: var(--clinic-error-bg);
@@ -620,48 +502,6 @@ li {
   border-color: var(--clinic-primary);
 }
 
-/* ==========================================================================
-   Sculpted Clinic Photography & Architectural Media Frames
-   ========================================================================== */
-
-/* Offset backdrop plate gives standalone photos gallery depth without horizontal overflow */
-.clinic-photo-stage {
-  position: relative;
-  isolation: isolate;
-  padding: 0 0.65rem 0.65rem 0;
-}
-
-.clinic-photo-stage::before {
-  content: "";
-  position: absolute;
-  inset: 0.65rem 0 0 0.65rem;
-  z-index: -1;
-  border-radius: 0.9rem;
-  background-color: var(--clinic-linen);
-  border: 1px solid var(--clinic-border-warm);
-}
-
-.clinic-photo-stage-mist::before {
-  background-color: var(--clinic-mist);
-  border-color: var(--clinic-border);
-}
-
-.clinic-photo-stage-white::before {
-  background-color: #ffffff;
-  border-color: var(--clinic-border-warm);
-}
-
-.clinic-photo {
-  border-radius: 0.9rem;
-  border: 1px solid var(--clinic-border-warm);
-}
-
-.clinic-map {
-  border-radius: 0.9rem;
-  border: 1px solid var(--clinic-border);
-}
-
-/* Bias consultation card crop slightly upward so faces stay framed when md+ cards narrow */
 .clinic-card-photo-top {
   object-position: center 22%;
 }
@@ -670,33 +510,32 @@ li {
    Motion Opt-In (Compositor-Only) & Windows Forced Colors Fallbacks
    ========================================================================== */
 
-/* Opt in to micro-interactions only when motion is not reduced */
 @media (prefers-reduced-motion: no-preference) {
+  .btn-primary,
+  .btn-outline-primary,
   .btn-clinic-cta,
-  .btn-clinic-primary,
-  .btn-clinic-outline,
   .clinic-card-link,
   .clinic-navbar .nav-link::after {
     transition:
-      transform 0.35s var(--clinic-ease),
-      box-shadow 0.35s var(--clinic-ease),
+      transform 0.3s var(--clinic-ease),
+      box-shadow 0.3s var(--clinic-ease),
       border-color 0.25s ease,
       background-color 0.25s ease;
   }
 
-  .btn-clinic-cta:hover,
-  .btn-clinic-primary:hover,
-  .btn-clinic-outline:hover {
+  .btn-primary:hover,
+  .btn-outline-primary:hover,
+  .btn-clinic-cta:hover {
     transform: translateY(-1px);
   }
 
   .clinic-card-link:hover,
   .clinic-card-link:focus-within {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
   .clinic-card-link img {
-    transition: transform 0.65s var(--clinic-ease);
+    transition: transform 0.6s var(--clinic-ease);
   }
 
   .clinic-card-link:hover img,
@@ -711,19 +550,16 @@ li {
   }
 }
 
-/* Windows Forced Colors Mode strips background tints/shadows; restore crisp system borders and focus rings */
 @media (forced-colors: active) {
   .btn,
   .card,
-  .clinic-callout,
-  .clinic-quote-card,
+  aside,
   .clinic-pills,
   .clinic-navbar,
   .clinic-footer {
     border: 1px solid CanvasText;
   }
 
-  .clinic-photo-stage::before,
   .clinic-eyebrow::before {
     display: none;
   }

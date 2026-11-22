@@ -9,13 +9,11 @@
     content="Arrange an appointment at Meadowside Clinic near Twickenham Green via enquiry or telephone while online calendar booking is prepared.">
   <title>Book an Appointment | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
     rel="stylesheet" referrerpolicy="no-referrer">
-  <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
     referrerpolicy="no-referrer">
@@ -25,9 +23,9 @@
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Global Header: Mineral Teal simplified bar + responsive offcanvas drawer -->
+  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
@@ -37,10 +35,9 @@
           aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
         <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
           aria-labelledby="clinicNavLabel">
-          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+          <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
               aria-label="Close menu"></button>
@@ -62,7 +59,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
-              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta active" aria-current="page" href="booking.html">Book an Appointment</a>
               </li>
@@ -74,20 +70,20 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Centered Embed-Ready Booking Hub (photo-free, no duration reminder) -->
-    <section class="section-pad section-hero">
+    <!-- Balanced 7 / 5 Booking Hub + Helpful Pre-Visit Sidebar (eliminates sparse single-column voids) -->
+    <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">Arrange a session</span>
-            <h1 class="display-5 mb-3">Book an <em>appointment</em></h1>
+        <div class="row gy-4 gx-lg-5 align-items-start">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Arrange a session</span>
+            <h1 class="display-5 mb-2">Book an <em>appointment</em></h1>
             <p class="lead mb-4">
               Choose a straightforward way to request a visit at Meadowside Clinic—we will confirm a quiet time that
               suits your week.
             </p>
 
             <!-- Placeholder slot ready for future free third-party booking embed (e.g. Cal.com iframe) -->
-            <aside class="clinic-callout p-4 p-md-5 mb-4">
+            <aside class="bg-body-tertiary border-start border-4 border-primary rounded-end-3 shadow-sm p-4 mb-3">
               <h2 class="h4 fw-semibold mb-2">Request your preferred time</h2>
               <p class="mb-4">
                 Direct online slot selection is being prepared for this page. In the meantime, Lydia arranges every
@@ -95,39 +91,48 @@
               </p>
               <div class="d-grid gap-2 d-sm-flex">
                 <a class="btn btn-clinic-cta" href="contact.html">Send Booking Enquiry</a>
-                <a class="btn btn-clinic-outline" href="tel:+442085550142">Call&nbsp;020&nbsp;8555&nbsp;0142</a>
+                <a class="btn btn-outline-primary" href="tel:+442085550142">Call&nbsp;020&nbsp;8555&nbsp;0142</a>
               </div>
             </aside>
 
-            <p class="mb-0">
+            <p class="small text-body-secondary mb-0">
               Unsure what happens during a session? <a class="fw-semibold" href="treatments.html">Read about our
                 appointments</a> or <a class="fw-semibold" href="visiting.html">check directions &amp; step-free
                 access</a>.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- 2. Patient-Experience Trust Band on Warm Linen -->
-    <section class="section-pad section-linen section-divider">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
-            <div class="clinic-quote-card p-4 p-md-5">
-              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
-              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-                <blockquote class="blockquote fs-5 mb-3">
-                  <p class="mb-0">
-                    Arranging my first session was easy and completely unpressured. Lydia answered my questions
-                    beforehand so I knew exactly what to expect.&rdquo;
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
-                </figcaption>
-              </figure>
+          <div class="col-lg-5">
+            <div class="card section-mist p-4 shadow-sm mb-3">
+              <h2 class="h5 fw-semibold mb-3">Before you arrange a time</h2>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item px-0 py-2">
+                  <strong>No referral needed:</strong> You can book directly without a GP letter.
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <strong>One-to-one continuity:</strong> Every session is directly with Lydia Selby, M.Ost.
+                </li>
+                <li class="list-group-item px-0 py-2">
+                  <strong>Step-free access:</strong> Ground-floor treatment room at 14 The Green.
+                </li>
+              </ul>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Patient experience</span>
+                <figure class="clinic-quote border-start border-4 ps-3 mb-0">
+                  <blockquote class="blockquote fs-6 mb-2">
+                    <p class="mb-0">
+                      &ldquo;Arranging my first session was easy and completely unpressured. Lydia answered my questions
+                      beforehand so I knew exactly what to expect.&rdquo;
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer mb-0">
+                    Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
@@ -135,8 +140,8 @@
     </section>
   </main>
 
-  <!-- Global Footer: 3-column practice summary, site links, and local clinic details -->
-  <footer class="clinic-footer py-5 mt-auto">
+  <!-- Global Footer -->
+  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -167,14 +172,14 @@
               href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div
+        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
     referrerpolicy="no-referrer" defer></script>

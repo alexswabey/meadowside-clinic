@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Meet Lydia Selby and discover the calm, unhurried approach behind Meadowside Clinic near Twickenham Green.">
+  <meta name="description"
+    content="Meet Lydia Selby and discover the calm, unhurried approach behind Meadowside Clinic near Twickenham Green.">
   <title>About Lydia &amp; the Clinic | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
-  <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Global Header: Mineral Teal simplified bar + responsive offcanvas drawer -->
+  <!-- Porcelain/Mist light sticky header + Bootstrap offcanvas mobile drawer -->
   <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="dark" aria-label="Primary">
+    <nav class="navbar navbar-expand-lg clinic-navbar py-2" data-bs-theme="light" aria-label="Primary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
           <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav"
+          aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
-          <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+          aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
+              aria-label="Close menu"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
@@ -52,7 +59,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
-              <!-- d-grid makes CTA full-width in mobile drawer; d-lg-block restores auto width on desktop -->
               <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
                 <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
               </li>
@@ -64,88 +70,118 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Plain-English Editorial Opener (no credential abbreviations) + Offset 16:9 Scene -->
-    <section class="section-pad section-hero">
+    <!-- 1. Compact Split Opener: eliminates giant empty right gap and lifts Section 2 cleanly into view -->
+    <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">Meadowside Clinic · Lydia Selby</span>
-            <h1 class="display-5 mb-3">A quiet clinic built around <em>listening first</em></h1>
-            <p class="lead mb-0">
-              I opened Meadowside Clinic near Twickenham Green so local residents have a calm, one-to-one place to be heard, understand what their body is telling them, and move forward comfortably.
-            </p>
-          </div>
-        </div>
-        <div class="clinic-photo-stage">
-          <div class="ratio ratio-16x9">
-            <!-- Above-the-fold 16:9 opener photo (LCP candidate): fetchpriority="high" without lazy loading -->
-            <img
-              src="assets/images/clinic-waiting-room-1440.webp"
-              srcset="assets/images/clinic-waiting-room-800.webp 800w, assets/images/clinic-waiting-room-1440.webp 1440w"
-              sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 1296px"
-              alt="Bright clinic waiting room with pale sofas, tan armchairs, indoor greenery, and tall windows looking onto trees"
-              class="clinic-photo object-fit-cover"
-              width="1440"
-              height="810"
-              fetchpriority="high"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. Philosophy & Experience Pillars on Warm Linen -->
-    <section class="section-pad section-linen section-divider">
-      <div class="container">
-        <div class="row align-items-start gy-4">
-          <div class="col-lg-5">
-            <h2 class="h2 mb-3">How we work <em>together</em></h2>
-            <p class="mb-3">
-              Every person arrives with a different daily routine—long hours at a desk, physically demanding hobbies, pregnancy changes, or simply wanting to stay comfortable as the years pass.
-            </p>
-            <p class="mb-0">
-              Rather than rushing to a fixed routine, sessions adapt quietly to how you feel on the day, with clear explanations and your comfort checked at every stage.
-            </p>
-          </div>
-          <div class="col-lg-6 offset-lg-1">
-            <h3 class="h5 fw-semibold mb-3">What shapes each visit</h3>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item px-0 py-3">
-                <strong>Unhurried conversation</strong> — plenty of space to ask questions without feeling rushed out the door.
-              </li>
-              <li class="list-group-item px-0 py-3">
-                <strong>Collaborative comfort</strong> — every movement test or gentle hands-on technique is explained and agreed together.
-              </li>
-              <li class="list-group-item px-0 py-3">
-                <strong>Continuity of care</strong> — you see Lydia directly at every appointment, from first visit onward.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Patient-Experience Trust Signals: Sculpted Reflection + Visitor Highlights Flush List -->
-    <section class="section-pad section-porcelain section-divider">
-      <div class="container">
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-center gy-4 gx-lg-5">
           <div class="col-lg-6">
-            <h2 class="h2 mb-4">In patients&rsquo; <em>words</em></h2>
-            <div class="clinic-quote-card p-4">
-              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
-              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-                <blockquote class="blockquote fs-5 mb-3">
-                  <p class="mb-0">
-                    I felt nervous booking my first osteopathy session, but Lydia put me completely at ease within minutes. Nothing felt rushed, and the treatment room itself feels so peaceful.&rdquo;
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0">
-                  Claire R., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
-                </figcaption>
-              </figure>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Meadowside Clinic · Lydia Selby</span>
+            <h1 class="display-5 mb-3">A quiet clinic built around <em>listening first</em></h1>
+            <p class="lead mb-4">
+              I opened Meadowside Clinic near Twickenham Green so local residents have a calm, one-to-one place to be
+              heard, understand what their body is telling them, and move forward comfortably.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex">
+              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+              <a class="btn btn-outline-primary" href="treatments.html">Explore Treatments</a>
             </div>
           </div>
-          <div class="col-lg-5 offset-lg-1">
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <img src="assets/images/clinic-waiting-room-1440.webp"
+                srcset="assets/images/clinic-waiting-room-800.webp 800w, assets/images/clinic-waiting-room-1440.webp 1440w"
+                sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 636px"
+                alt="Bright clinic waiting room with pale sofas, tan armchairs, indoor greenery, and tall windows looking onto trees"
+                class="img-fluid object-fit-cover rounded-4 shadow border" width="1440" height="810"
+                fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Philosophy + Bootstrap row-cols-md-3 Equal-Height Pillar Cards on Warm Linen -->
+    <section class="py-4 py-lg-5 section-linen border-top">
+      <div class="container">
+        <div class="row align-items-end gy-3 mb-4">
+          <div class="col-lg-5">
+            <h2 class="h2 mb-0">How we work <em>together</em></h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="mb-0">
+              Every person arrives with a different daily routine—long hours at a desk, physically demanding hobbies,
+              pregnancy changes, or staying comfortable as the years pass. Sessions adapt quietly to how you feel on
+              the day, with clear explanations and your comfort checked at every stage.
+            </p>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3 g-lg-4">
+          <div class="col">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <span
+                  class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2">01
+                  · Listen</span>
+                <h3 class="h5 fw-semibold mb-2">Unhurried conversation</h3>
+                <p class="card-text mb-0">
+                  Plenty of space to ask questions and explain how things feel without feeling rushed out the door.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <span
+                  class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2">02
+                  · Agree</span>
+                <h3 class="h5 fw-semibold mb-2">Collaborative comfort</h3>
+                <p class="card-text mb-0">
+                  Every movement test or gentle hands-on technique is explained clearly and agreed together first.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <span
+                  class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2">03
+                  · Continuity</span>
+                <h3 class="h5 fw-semibold mb-2">One practitioner throughout</h3>
+                <p class="card-text mb-0">
+                  You see Lydia directly at every appointment, from your first hello through ongoing follow-ups.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Patient-Experience Trust Signals -->
+    <section class="py-4 py-lg-5 border-top">
+      <div class="container">
+        <div class="row align-items-center gy-4 gx-lg-5">
+          <div class="col-lg-7">
+            <h2 class="h2 mb-3">In patients&rsquo; <em>words</em></h2>
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                  <blockquote class="blockquote fs-5 mb-3">
+                    <p class="mb-0">
+                      &ldquo;I felt nervous booking my first osteopathy session, but Lydia put me completely at ease
+                      within minutes. Nothing felt rushed, and the treatment room itself feels so peaceful.&rdquo;
+                    </p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer mb-0">
+                    Claire R., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
             <h3 class="h5 fw-semibold mb-3">What visitors mention most</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item px-0 py-3">Feeling genuinely listened to before any hands-on care</li>
@@ -157,23 +193,33 @@
       </div>
     </section>
 
-    <!-- 4. Quiet Background Reassurance + Closing CTA -->
-    <section class="section-pad section-mist section-divider">
+    <!-- 4. Quiet Background Reassurance + Balanced Next-Step Card -->
+    <section class="py-4 py-lg-5 section-mist border-top">
       <div class="container">
-        <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Background reassurance</h2>
-        <div class="row align-items-center gy-4">
+        <div class="row align-items-stretch gy-4">
           <div class="col-lg-7">
-            <aside class="clinic-callout p-4">
-              <h3 class="h5 fw-semibold mb-2">Training &amp; professional standards</h3>
+            <aside class="bg-body-tertiary border-start border-4 border-primary rounded-end-3 shadow-sm p-4 h-100">
+              <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Background reassurance</span>
+              <h2 class="h4 fw-semibold mb-2">Training &amp; professional standards</h2>
               <p class="mb-0">
-                Lydia Selby holds a Master of Osteopathy (M.Ost.), is registered with the General Osteopathic Council (GOsC), maintains full professional indemnity insurance, and completes ongoing clinical development each year.
+                Lydia Selby holds a Master of Osteopathy (M.Ost.), is registered with the General Osteopathic Council
+                (GOsC), maintains full professional indemnity insurance, and completes ongoing clinical development
+                each year.
               </p>
             </aside>
           </div>
           <div class="col-lg-5">
-            <div class="d-grid gap-2 d-sm-flex justify-content-lg-end">
-              <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
-              <a class="btn btn-clinic-outline" href="treatments.html">Explore Treatments</a>
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4 d-flex flex-column">
+                <h2 class="h5 fw-semibold mb-2">Arrange your first visit</h2>
+                <p class="text-body-secondary mb-3">
+                  Read what happens during a session or request a quiet appointment time that suits your week.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex mt-auto">
+                  <a class="btn btn-clinic-cta" href="booking.html">Book an Appointment</a>
+                  <a class="btn btn-outline-primary" href="treatments.html">Explore Treatments</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -181,8 +227,8 @@
     </section>
   </main>
 
-  <!-- Global Footer: 3-column practice summary, site links, and local clinic details -->
-  <footer class="clinic-footer py-5 mt-auto">
+  <!-- Global Footer -->
+  <footer class="clinic-footer py-4 py-lg-5 mt-auto">
     <div class="container">
       <div class="row gy-4 pb-4">
         <div class="col-lg-5">
@@ -209,17 +255,21 @@
           <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
           <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
-          <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+          <p class="mb-0">Email: <a
+              href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
-      <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <div
+        class="border-top border-light border-opacity-25 pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
         <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
         <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
 </body>
+
 </html>
