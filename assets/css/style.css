@@ -341,8 +341,12 @@ header .navbar .btn-secondary.active {
 
 .card {
   --bs-card-bg: #ffffff;
-  --bs-card-border-color: color-mix(in oklab, var(--clinic-primary) 22%, var(--clinic-border-warm));
+  --bs-card-border-color: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
   --bs-card-border-radius: 0.9rem;
+}
+
+.card-header {
+  border-bottom-color: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
 }
 
 .clinic-card-link:hover,
@@ -357,8 +361,19 @@ header .navbar .btn-secondary.active {
   --bs-list-group-color: var(--clinic-text);
 }
 
-/* Single Rosewood border-start accent utility for quotes and educational disclosures */
-.border-accent {
+/* Unified rounded callouts matching .card corner geometry with 4px left accent bar */
+main aside {
+  border: 1px solid color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
+  border-left: 4px solid var(--clinic-primary);
+  border-radius: 0.9rem;
+}
+
+main aside.border-accent {
+  border-left-color: var(--clinic-accent);
+}
+
+/* Single Rosewood border-start accent utility for quotes */
+.border-start.border-accent {
   --bs-border-color: var(--clinic-accent);
 }
 
@@ -409,6 +424,13 @@ main .nav-pills .nav-link {
   border-radius: 0.52rem;
 }
 
+@media (max-width: 575.98px) {
+  main .nav-pills .nav-link {
+    padding-inline: 0.65rem;
+    font-size: 0.9375rem;
+  }
+}
+
 /* Bootstrap table theming for Treatments session comparison */
 main .table {
   --bs-table-bg: #ffffff;
@@ -421,6 +443,14 @@ main .table thead th {
   background-color: var(--clinic-mist-soft);
   color: var(--clinic-primary-dark);
   font-weight: 600;
+}
+
+main .table thead th:first-child {
+  border-top-left-radius: calc(0.9rem - 1px);
+}
+
+main .table thead th:last-child {
+  border-top-right-radius: calc(0.9rem - 1px);
 }
 
 /* ==========================================================================
