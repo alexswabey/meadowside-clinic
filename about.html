@@ -7,10 +7,10 @@
   <meta name="description" content="Meet Lydia Selby and discover the calm, unhurried approach behind Meadowside Clinic near Twickenham Green.">
   <title>About Lydia &amp; the Clinic | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/600) & Source Sans 3 (400/600/700) -->
+  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
   <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -64,29 +64,32 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Plain-English Editorial Opener (no credential abbreviations) + Wide 16:9 Scene -->
-    <section class="section-pad section-porcelain">
+    <!-- 1. Plain-English Editorial Opener (no credential abbreviations) + Offset 16:9 Scene -->
+    <section class="section-pad section-hero">
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8">
-            <h1 class="display-5 fw-semibold mb-3">A quiet clinic built around listening first</h1>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">Meadowside Clinic · Lydia Selby</span>
+            <h1 class="display-5 mb-3">A quiet clinic built around <em>listening first</em></h1>
             <p class="lead mb-0">
               I opened Meadowside Clinic near Twickenham Green so local residents have a calm, one-to-one place to be heard, understand what their body is telling them, and move forward comfortably.
             </p>
           </div>
         </div>
-        <div class="ratio ratio-16x9">
-          <!-- Above-the-fold 16:9 opener photo (LCP candidate): fetchpriority="high" without lazy loading -->
-          <img
-            src="assets/images/clinic-waiting-room-1440.webp"
-            srcset="assets/images/clinic-waiting-room-800.webp 800w, assets/images/clinic-waiting-room-1440.webp 1440w"
-            sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 1296px"
-            alt="Bright clinic waiting room with pale sofas, tan armchairs, indoor greenery, and tall windows looking onto trees"
-            class="clinic-photo object-fit-cover"
-            width="1440"
-            height="810"
-            fetchpriority="high"
-          >
+        <div class="clinic-photo-stage">
+          <div class="ratio ratio-16x9">
+            <!-- Above-the-fold 16:9 opener photo (LCP candidate): fetchpriority="high" without lazy loading -->
+            <img
+              src="assets/images/clinic-waiting-room-1440.webp"
+              srcset="assets/images/clinic-waiting-room-800.webp 800w, assets/images/clinic-waiting-room-1440.webp 1440w"
+              sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 1296px"
+              alt="Bright clinic waiting room with pale sofas, tan armchairs, indoor greenery, and tall windows looking onto trees"
+              class="clinic-photo object-fit-cover"
+              width="1440"
+              height="810"
+              fetchpriority="high"
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -96,7 +99,7 @@
       <div class="container">
         <div class="row align-items-start gy-4">
           <div class="col-lg-5">
-            <h2 class="h2 fw-semibold mb-3">How we work together</h2>
+            <h2 class="h2 mb-3">How we work <em>together</em></h2>
             <p class="mb-3">
               Every person arrives with a different daily routine—long hours at a desk, physically demanding hobbies, pregnancy changes, or simply wanting to stay comfortable as the years pass.
             </p>
@@ -122,22 +125,25 @@
       </div>
     </section>
 
-    <!-- 3. Patient-Experience Trust Signals: 1 Deep Reflection + Visitor Highlights Flush List -->
+    <!-- 3. Patient-Experience Trust Signals: Sculpted Reflection + Visitor Highlights Flush List -->
     <section class="section-pad section-porcelain section-divider">
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-6">
-            <h2 class="h2 fw-semibold mb-4">In patients&rsquo; words</h2>
-            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-              <blockquote class="blockquote fs-5 mb-3">
-                <p class="mb-0">
-                  &ldquo;I felt nervous booking my first osteopathy session, but Lydia put me completely at ease within minutes. Nothing felt rushed, and the treatment room itself feels so peaceful.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0">
-                Claire R., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
-              </figcaption>
-            </figure>
+            <h2 class="h2 mb-4">In patients&rsquo; <em>words</em></h2>
+            <div class="clinic-quote-card p-4">
+              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
+              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <blockquote class="blockquote fs-5 mb-3">
+                  <p class="mb-0">
+                    I felt nervous booking my first osteopathy session, but Lydia put me completely at ease within minutes. Nothing felt rushed, and the treatment room itself feels so peaceful.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Claire R., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+                </figcaption>
+              </figure>
+            </div>
           </div>
           <div class="col-lg-5 offset-lg-1">
             <h3 class="h5 fw-semibold mb-3">What visitors mention most</h3>
@@ -157,7 +163,7 @@
         <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Background reassurance</h2>
         <div class="row align-items-center gy-4">
           <div class="col-lg-7">
-            <aside class="clinic-callout border-start border-4 rounded-end p-4">
+            <aside class="clinic-callout p-4">
               <h3 class="h5 fw-semibold mb-2">Training &amp; professional standards</h3>
               <p class="mb-0">
                 Lydia Selby holds a Master of Osteopathy (M.Ost.), is registered with the General Osteopathic Council (GOsC), maintains full professional indemnity insurance, and completes ongoing clinical development each year.

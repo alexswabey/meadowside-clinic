@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Arrange an appointment at Meadowside Clinic near Twickenham Green via enquiry or telephone while online calendar booking is prepared.">
+  <meta name="description"
+    content="Arrange an appointment at Meadowside Clinic near Twickenham Green via enquiry or telephone while online calendar booking is prepared.">
   <title>Book an Appointment | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/600) & Source Sans 3 (400/600/700) -->
+  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" referrerpolicy="no-referrer">
   <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
@@ -26,14 +33,17 @@
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
           <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav"
+          aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+          aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
+              aria-label="Close menu"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
@@ -65,20 +75,23 @@
 
   <main id="main-content" class="flex-grow-1">
     <!-- 1. Centered Embed-Ready Booking Hub (photo-free, no duration reminder) -->
-    <section class="section-pad section-porcelain">
+    <section class="section-pad section-hero">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h1 class="display-5 fw-semibold mb-3">Book an appointment</h1>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">Arrange a session</span>
+            <h1 class="display-5 mb-3">Book an <em>appointment</em></h1>
             <p class="lead mb-4">
-              Choose a straightforward way to request a visit at Meadowside Clinic—we will confirm a quiet time that suits your week.
+              Choose a straightforward way to request a visit at Meadowside Clinic—we will confirm a quiet time that
+              suits your week.
             </p>
 
-            <!-- Placeholder slot ready for future free third-party booking embed -->
-            <aside class="clinic-callout border-start border-4 rounded-end p-4 p-md-5 mb-4">
+            <!-- Placeholder slot ready for future free third-party booking embed (e.g. Cal.com iframe) -->
+            <aside class="clinic-callout p-4 p-md-5 mb-4">
               <h2 class="h4 fw-semibold mb-2">Request your preferred time</h2>
               <p class="mb-4">
-                Direct online slot selection is being prepared for this page. In the meantime, Lydia arranges every appointment personally by message or telephone—no referral is required.
+                Direct online slot selection is being prepared for this page. In the meantime, Lydia arranges every
+                appointment personally by message or telephone—no referral is required.
               </p>
               <div class="d-grid gap-2 d-sm-flex">
                 <a class="btn btn-clinic-cta" href="contact.html">Send Booking Enquiry</a>
@@ -87,7 +100,9 @@
             </aside>
 
             <p class="mb-0">
-              Unsure what happens during a session? <a class="fw-semibold" href="treatments.html">Read about our appointments</a> or <a class="fw-semibold" href="visiting.html">check directions &amp; step-free access</a>.
+              Unsure what happens during a session? <a class="fw-semibold" href="treatments.html">Read about our
+                appointments</a> or <a class="fw-semibold" href="visiting.html">check directions &amp; step-free
+                access</a>.
             </p>
           </div>
         </div>
@@ -100,16 +115,20 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
-            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-              <blockquote class="blockquote fs-5 mb-3">
-                <p class="mb-0">
-                  &ldquo;Arranging my first session was easy and completely unpressured. Lydia answered my questions beforehand so I knew exactly what to expect.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0">
-                Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
-              </figcaption>
-            </figure>
+            <div class="clinic-quote-card p-4 p-md-5">
+              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
+              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <blockquote class="blockquote fs-5 mb-3">
+                  <p class="mb-0">
+                    Arranging my first session was easy and completely unpressured. Lydia answered my questions
+                    beforehand so I knew exactly what to expect.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Priya S., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -144,7 +163,8 @@
           <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
           <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
-          <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+          <p class="mb-0">Email: <a
+              href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
       <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
@@ -155,6 +175,9 @@
   </footer>
 
   <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
 </body>
+
 </html>

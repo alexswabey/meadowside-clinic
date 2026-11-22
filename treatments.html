@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Explore what happens during an Initial Consultation (90 mins) and Follow-Up Session (45 mins) at Meadowside Clinic in Twickenham.">
+  <meta name="description"
+    content="Explore what happens during an Initial Consultation (90 mins) and Follow-Up Session (45 mins) at Meadowside Clinic in Twickenham.">
   <title>Treatments &amp; Appointments | Meadowside Clinic</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/600) & Source Sans 3 (400/600/700) -->
+  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
   <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
@@ -26,14 +31,17 @@
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
           <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav"
+          aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+          aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
+              aria-label="Close menu"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
@@ -69,9 +77,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h1 class="display-5 fw-semibold mb-3">Appointments &amp; gentle care</h1>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">What to expect</span>
+            <h1 class="display-5 mb-3">Appointments &amp; <em>gentle care</em></h1>
             <p class="lead mb-0">
-              Whether you are booking your first visit or returning for ongoing support, every session gives you calm, one-to-one attention tailored to your pace and comfort.
+              Whether you are booking your first visit or returning for ongoing support, every session gives you calm,
+              one-to-one attention tailored to your pace and comfort.
             </p>
           </div>
         </div>
@@ -83,50 +93,59 @@
       <div class="container">
         <ul class="nav nav-pills clinic-pills d-inline-flex flex-wrap gap-1 mb-4" id="appointmentTabs" role="tablist">
           <li class="nav-item" role="none">
-            <button class="nav-link active" id="initial-tab" data-bs-toggle="pill" data-bs-target="#initial-pane" type="button" role="tab" aria-controls="initial-pane" aria-selected="true">
+            <button class="nav-link active" id="initial-tab" data-bs-toggle="pill" data-bs-target="#initial-pane"
+              type="button" role="tab" aria-controls="initial-pane" aria-selected="true">
               Initial Consultation &middot; 90 mins
             </button>
           </li>
           <li class="nav-item" role="none">
-            <button class="nav-link" id="followup-tab" data-bs-toggle="pill" data-bs-target="#followup-pane" type="button" role="tab" aria-controls="followup-pane" aria-selected="false">
+            <button class="nav-link" id="followup-tab" data-bs-toggle="pill" data-bs-target="#followup-pane"
+              type="button" role="tab" aria-controls="followup-pane" aria-selected="false">
               Follow-Up Session &middot; 45 mins
             </button>
           </li>
         </ul>
 
         <div class="tab-content" id="appointmentTabsContent">
-          <div class="tab-pane fade show active" id="initial-pane" role="tabpanel" aria-labelledby="initial-tab" tabindex="0">
+          <div class="tab-pane fade show active" id="initial-pane" role="tabpanel" aria-labelledby="initial-tab"
+            tabindex="0">
             <div class="row align-items-center gy-4 gx-lg-5">
               <div class="col-lg-5">
-                <div class="ratio ratio-4x3">
-                  <!-- Active tab photo: fetchpriority="high" supports initial viewport LCP -->
-                  <img
-                    src="assets/images/initial-assessment-1200.webp"
-                    srcset="assets/images/initial-assessment-640.webp 640w, assets/images/initial-assessment-800.webp 800w, assets/images/initial-assessment-1200.webp 1200w"
-                    sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
-                    alt="Osteopath taking notes on a clipboard while listening attentively to a client in a calm plant-lit consultation room"
-                    class="clinic-photo object-fit-cover"
-                    width="1200"
-                    height="900"
-                    fetchpriority="high"
-                  >
+                <div class="clinic-photo-stage">
+                  <div class="ratio ratio-4x3">
+                    <!-- Active tab photo: fetchpriority="high" supports initial viewport LCP -->
+                    <img
+                      src="assets/images/initial-assessment-1200.webp"
+                      srcset="assets/images/initial-assessment-640.webp 640w, assets/images/initial-assessment-800.webp 800w, assets/images/initial-assessment-1200.webp 1200w"
+                      sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                      alt="Osteopath taking notes on a clipboard while listening attentively to a client in a calm plant-lit consultation room"
+                      class="clinic-photo object-fit-cover"
+                      width="1200"
+                      height="900"
+                      fetchpriority="high"
+                    >
+                  </div>
                 </div>
               </div>
               <div class="col-lg-7">
                 <span class="badge rounded-pill clinic-pill mb-2">90 mins · First Visit</span>
                 <h2 class="h3 fw-semibold mb-3">Initial Consultation</h2>
                 <p class="mb-3">
-                  Your first appointment gives us generous time to listen properly, understand your daily routine, and begin gentle treatment at a pace that feels comfortable for you.
+                  Your first appointment gives us generous time to listen properly, understand your daily routine, and
+                  begin gentle treatment at a pace that feels comfortable for you.
                 </p>
                 <ul class="list-group list-group-flush mb-4">
                   <li class="list-group-item px-0 py-3">
-                    <strong>Conversation first</strong> — we talk through what brought you in, your general wellbeing, and what you hope to feel easier doing.
+                    <strong>Conversation first</strong> — we talk through what brought you in, your general wellbeing,
+                    and what you hope to feel easier doing.
                   </li>
                   <li class="list-group-item px-0 py-3">
-                    <strong>Gentle movement check</strong> — simple, comfortable movements to notice where things feel tight or restricted.
+                    <strong>Gentle movement check</strong> — simple, comfortable movements to notice where things feel
+                    tight or restricted.
                   </li>
                   <li class="list-group-item px-0 py-3">
-                    <strong>Tailored hands-on care</strong> — gentle osteopathic techniques explained step by step, plus clear ideas to support yourself between visits.
+                    <strong>Tailored hands-on care</strong> — gentle osteopathic techniques explained step by step, plus
+                    clear ideas to support yourself between visits.
                   </li>
                 </ul>
                 <div class="d-grid gap-2 d-sm-flex">
@@ -140,36 +159,42 @@
           <div class="tab-pane fade" id="followup-pane" role="tabpanel" aria-labelledby="followup-tab" tabindex="0">
             <div class="row align-items-center gy-4 gx-lg-5">
               <div class="col-lg-5">
-                <div class="ratio ratio-4x3">
-                  <!-- Hidden inactive tab photo: fetchpriority="low" and loading="lazy" defer download until tab activation -->
-                  <img
-                    src="assets/images/followup-thoracic-care-1200.webp"
-                    srcset="assets/images/followup-thoracic-care-640.webp 640w, assets/images/followup-thoracic-care-800.webp 800w, assets/images/followup-thoracic-care-1200.webp 1200w"
-                    sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
-                    alt="Practitioner performing mid-back manual osteopathic work on a clothed adult patient lying on a white plinth"
-                    class="clinic-photo object-fit-cover"
-                    width="1200"
-                    height="900"
-                    fetchpriority="low"
-                    loading="lazy"
-                  >
+                <div class="clinic-photo-stage clinic-photo-stage-mist">
+                  <div class="ratio ratio-4x3">
+                    <!-- Hidden inactive tab photo: fetchpriority="low" and loading="lazy" defer download until tab activation -->
+                    <img
+                      src="assets/images/followup-thoracic-care-1200.webp"
+                      srcset="assets/images/followup-thoracic-care-640.webp 640w, assets/images/followup-thoracic-care-800.webp 800w, assets/images/followup-thoracic-care-1200.webp 1200w"
+                      sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                      alt="Practitioner performing mid-back manual osteopathic work on a clothed adult patient lying on a white plinth"
+                      class="clinic-photo object-fit-cover"
+                      width="1200"
+                      height="900"
+                      fetchpriority="low"
+                      loading="lazy"
+                    >
+                  </div>
                 </div>
               </div>
               <div class="col-lg-7">
                 <span class="badge rounded-pill clinic-pill mb-2">45 mins · Ongoing Care</span>
                 <h2 class="h3 fw-semibold mb-3">Follow-Up Session</h2>
                 <p class="mb-3">
-                  Returning visits focus on how you have felt since your last appointment, adjusting treatment gently around how your body responds over time.
+                  Returning visits focus on how you have felt since your last appointment, adjusting treatment gently
+                  around how your body responds over time.
                 </p>
                 <ul class="list-group list-group-flush mb-4">
                   <li class="list-group-item px-0 py-3">
-                    <strong>Progress check-in</strong> — reviewing what eased, what still feels tender, and any changes in your week.
+                    <strong>Progress check-in</strong> — reviewing what eased, what still feels tender, and any changes
+                    in your week.
                   </li>
                   <li class="list-group-item px-0 py-3">
-                    <strong>Focused hands-on treatment</strong> — unhurried manual care paced to your comfort on the day.
+                    <strong>Focused hands-on treatment</strong> — unhurried manual care paced to your comfort on the
+                    day.
                   </li>
                   <li class="list-group-item px-0 py-3">
-                    <strong>Practical everyday guidance</strong> — simple pacing, breathing, or gentle mobility ideas for home and work.
+                    <strong>Practical everyday guidance</strong> — simple pacing, breathing, or gentle mobility ideas
+                    for home and work.
                   </li>
                 </ul>
                 <div class="d-grid gap-2 d-sm-flex">
@@ -188,59 +213,68 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="h2 fw-semibold text-center mb-2">Common questions before booking</h2>
+            <h2 class="h2 text-center mb-2">Common questions <em>before booking</em></h2>
             <p class="text-center text-body-secondary mb-4">
               Open as many answers as you like—everything stays visible so you can compare easily.
             </p>
-            <div class="accordion clinic-accordion" id="treatmentsFaq">
+            <div class="accordion clinic-accordion overflow-hidden" id="treatmentsFaq">
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
+                    aria-expanded="true" aria-controls="faqOne">
                     Do I need a GP referral before booking an appointment?
                   </button>
                 </h3>
                 <div id="faqOne" class="accordion-collapse collapse show">
                   <div class="accordion-body">
-                    No referral is needed. You can contact or book directly whenever you feel ready, and if sharing a note with your GP or another clinician would ever be helpful, we discuss that openly with your permission.
+                    No referral is needed. You can contact or book directly whenever you feel ready, and if sharing a
+                    note with your GP or another clinician would ever be helpful, we discuss that openly with your
+                    permission.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
                     How gentle are osteopathic appointments here?
                   </button>
                 </h3>
                 <div id="faqTwo" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Comfort and consent guide every step. Lydia talks you through what she notices and checks in regularly during hands-on work, choosing calm, supportive techniques suited to how you feel.
+                    Comfort and consent guide every step. Lydia talks you through what she notices and checks in
+                    regularly during hands-on work, choosing calm, supportive techniques suited to how you feel.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
                     What should I wear to my visit?
                   </button>
                 </h3>
                 <div id="faqThree" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Loose, comfortable clothing—such as joggers, leggings, or a soft T-shirt—works well so you can move easily without feeling rushed or self-conscious.
+                    Loose, comfortable clothing—such as joggers, leggings, or a soft T-shirt—works well so you can move
+                    easily without feeling rushed or self-conscious.
                   </div>
                 </div>
               </div>
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
                     May I bring a partner, friend, or family member?
                   </button>
                 </h3>
                 <div id="faqFour" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Yes, you are always welcome to bring someone along to wait with you or join you in the consultation room if that helps you feel more relaxed.
+                    Yes, you are always welcome to bring someone along to wait with you or join you in the consultation
+                    room if that helps you feel more relaxed.
                   </div>
                 </div>
               </div>
@@ -256,16 +290,19 @@
         <div class="row align-items-center gy-4">
           <div class="col-lg-7">
             <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
-            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-              <blockquote class="blockquote fs-5 mb-3">
-                <p class="mb-0">
-                  &ldquo;Having 90 minutes for the first session made all the difference—nothing was hurried and every question was answered calmly.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0">
-                Martin P., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
-              </figcaption>
-            </figure>
+            <div class="clinic-quote-card p-4">
+              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
+              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <blockquote class="blockquote fs-5 mb-3">
+                  <p class="mb-0">
+                    Having 90 minutes for the first session made all the difference—nothing was hurried and every question was answered calmly.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Martin P., Twickenham <span class="fw-normal">(illustrative patient reflection)</span>
+                </figcaption>
+              </figure>
+            </div>
           </div>
           <div class="col-lg-5">
             <div class="d-grid gap-2 d-sm-flex justify-content-lg-end">
@@ -306,7 +343,8 @@
           <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
           <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
-          <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+          <p class="mb-0">Email: <a
+              href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
       <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
@@ -317,6 +355,9 @@
   </footer>
 
   <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
 </body>
+
 </html>

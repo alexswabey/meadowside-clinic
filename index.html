@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Meadowside Clinic near Twickenham Green offers calm, unhurried osteopathic care with Lydia Selby in a peaceful ground-floor space.">
+  <meta name="description"
+    content="Meadowside Clinic near Twickenham Green offers calm, unhurried osteopathic care with Lydia Selby in a peaceful ground-floor space.">
   <title>Meadowside Clinic | Calm Osteopathic Care in Twickenham</title>
   <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
-  <!-- Preconnect to Google Fonts before requesting Literata (400/600) & Source Sans 3 (400/600/700) -->
+  <!-- Preconnect to Google Fonts before requesting Literata (400/500/600 + 400 italic) & Source Sans 3 (400/600/700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" referrerpolicy="no-referrer">
   <!-- Load Bootstrap 5.3.9 with SRI integrity before style.css so Layer-2 custom properties override defaults cleanly -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 
@@ -26,14 +33,17 @@
           <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
           <span>Meadowside Clinic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav" aria-controls="clinicNav" aria-label="Open menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav"
+          aria-controls="clinicNav" aria-label="Open menu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- role="group" satisfies Nu HTML for static aria-labelledby until Bootstrap sets role="dialog" on mobile open -->
-        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group" aria-labelledby="clinicNavLabel">
+        <div class="offcanvas-lg offcanvas-end clinic-offcanvas" tabindex="-1" id="clinicNav" role="group"
+          aria-labelledby="clinicNavLabel">
           <div class="offcanvas-header d-lg-none border-bottom border-light border-opacity-25">
             <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav" aria-label="Close menu"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
+              aria-label="Close menu"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
@@ -64,35 +74,71 @@
   </header>
 
   <main id="main-content" class="flex-grow-1">
-    <!-- 1. Hero: 7/5 asymmetric split + 4:3 private treatment room photo -->
-    <section class="section-pad section-porcelain">
+    <!-- 1. Hero: soft radial daylight ambiance, editorial serif voice, trust strip, and offset photo frame -->
+    <section class="section-pad section-hero">
       <div class="container">
         <div class="row align-items-center gy-4 gx-lg-5">
           <div class="col-lg-7">
-            <span class="badge rounded-pill clinic-pill mb-3">14 The Green · Twickenham</span>
-            <h1 class="display-5 fw-semibold mb-3">Calm, unhurried osteopathic care shaped around you</h1>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-3">14 The Green · Twickenham</span>
+            <h1 class="display-5 mb-3">Calm, <em>unhurried</em> osteopathic care shaped around you</h1>
             <p class="lead mb-4">
-              At Meadowside Clinic, every appointment gives you space to talk things through, move comfortably, and receive gentle hands-on support—whether you are visiting for busy workdays, active routines, pregnancy, or quieter years.
+              At Meadowside Clinic, every appointment gives you space to talk things through, move comfortably, and
+              receive gentle hands-on support—whether you are visiting for busy workdays, active routines, pregnancy, or
+              quieter years.
             </p>
             <!-- d-grid stacks CTAs full-width on narrow phones, then snaps inline at sm+ (576px) -->
             <div class="d-grid gap-2 d-sm-flex">
               <a class="btn btn-clinic-cta btn-lg" href="booking.html">Book an Appointment</a>
               <a class="btn btn-clinic-outline btn-lg" href="treatments.html">Explore Treatments</a>
             </div>
+
+            <!-- Compact 3-pillar reassurance strip replaces plain white tail space cleanly -->
+            <div class="clinic-trust-strip mt-4 pt-4">
+              <div class="row g-3">
+                <div class="col-sm-4 d-flex align-items-start gap-2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="clinic-trust-icon mt-1">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <div class="small">
+                    <div class="fw-semibold">GOsC Registered</div>
+                    <div class="text-body-secondary">Lydia Selby, M.Ost.</div>
+                  </div>
+                </div>
+                <div class="col-sm-4 d-flex align-items-start gap-2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="clinic-trust-icon mt-1">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                  <div class="small">
+                    <div class="fw-semibold">90 &amp; 45 min Pace</div>
+                    <div class="text-body-secondary">Unhurried appointments</div>
+                  </div>
+                </div>
+                <div class="col-sm-4 d-flex align-items-start gap-2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="clinic-trust-icon mt-1">
+                    <path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z"></path>
+                    <circle cx="12" cy="11" r="2.2"></circle>
+                  </svg>
+                  <div class="small">
+                    <div class="fw-semibold">Ground Floor</div>
+                    <div class="text-body-secondary">Step-free entry on The Green</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-lg-5">
-            <div class="ratio ratio-4x3">
-              <!-- Above-the-fold hero LCP photo: fetchpriority="high" elevates loading priority; intrinsic sizes prevent CLS -->
-              <img
-                src="assets/images/hero-treatment-room-1200.webp"
-                srcset="assets/images/hero-treatment-room-640.webp 640w, assets/images/hero-treatment-room-800.webp 800w, assets/images/hero-treatment-room-1200.webp 1200w"
-                sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
-                alt="Private clinic treatment room with a pale padded plinth, stool, orchid on a small desk, and white painted brick wall"
-                class="clinic-photo object-fit-cover"
-                width="1200"
-                height="900"
-                fetchpriority="high"
-              >
+            <!-- Offset backdrop stage adds tactile print depth without risking horizontal overflow -->
+            <div class="clinic-photo-stage">
+              <div class="ratio ratio-4x3">
+                <!-- Above-the-fold hero LCP photo: fetchpriority="high" elevates loading priority; intrinsic sizes prevent CLS -->
+                <img src="assets/images/hero-treatment-room-1200.webp"
+                  srcset="assets/images/hero-treatment-room-640.webp 640w, assets/images/hero-treatment-room-800.webp 800w, assets/images/hero-treatment-room-1200.webp 1200w"
+                  sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                  alt="Private clinic treatment room with a pale padded plinth, stool, orchid on a small desk, and white painted brick wall"
+                  class="clinic-photo object-fit-cover" width="1200" height="900" fetchpriority="high">
+              </div>
             </div>
           </div>
         </div>
@@ -104,31 +150,33 @@
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-5">
-            <div class="ratio ratio-4x3">
-              <!-- Below-the-fold portrait: loading="lazy" defers download until scrolled near viewport -->
-              <img
-                src="assets/images/lydia-portrait-1200.webp"
-                srcset="assets/images/lydia-portrait-640.webp 640w, assets/images/lydia-portrait-800.webp 800w, assets/images/lydia-portrait-1200.webp 1200w"
-                sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
-                alt="Osteopath Lydia Selby smiling warmly in a relaxed navy cable-knit jumper against a soft daylight studio backdrop"
-                class="clinic-photo object-fit-cover"
-                width="1200"
-                height="900"
-                loading="lazy"
-              >
+            <div class="clinic-photo-stage clinic-photo-stage-mist">
+              <div class="ratio ratio-4x3">
+                <!-- Below-the-fold portrait: loading="lazy" defers download until scrolled near viewport -->
+                <img src="assets/images/lydia-portrait-1200.webp"
+                  srcset="assets/images/lydia-portrait-640.webp 640w, assets/images/lydia-portrait-800.webp 800w, assets/images/lydia-portrait-1200.webp 1200w"
+                  sizes="(max-width: 575.98px) calc(100vw - 1.5rem), (max-width: 991.98px) 696px, 526px"
+                  alt="Osteopath Lydia Selby smiling warmly in a relaxed navy cable-knit jumper against a soft daylight studio backdrop"
+                  class="clinic-photo object-fit-cover" width="1200" height="900" loading="lazy">
+              </div>
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
-            <h2 class="h2 fw-semibold mb-3">A welcoming, one-to-one space with Lydia Selby</h2>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Meet your osteopath</span>
+            <h2 class="h2 mb-3">A welcoming, <em>one-to-one</em> space with Lydia Selby</h2>
             <p class="mb-4">
-              Stepping into an osteopathy clinic for the first time should feel straightforward and reassuring. You see the same practitioner from first hello to follow-up, in a quiet ground-floor room just off Twickenham Green.
+              Stepping into an osteopathy clinic for the first time should feel straightforward and reassuring. You see
+              the same practitioner from first hello to follow-up, in a quiet ground-floor room just off Twickenham
+              Green.
             </p>
             <ul class="list-group list-group-flush mb-4">
               <li class="list-group-item px-0 py-3">
-                <strong>Time to listen first</strong> — unhurried appointments that start with your story, never a stopwatch.
+                <strong>Time to listen first</strong> — unhurried appointments that start with your story, never a
+                stopwatch.
               </li>
               <li class="list-group-item px-0 py-3">
-                <strong>Clear, plain-English care</strong> — every gentle check and treatment step is explained before we begin.
+                <strong>Clear, plain-English care</strong> — every gentle check and treatment step is explained before
+                we begin.
               </li>
               <li class="list-group-item px-0 py-3">
                 <strong>Step-free street arrival</strong> — calm ground-floor frontage right on Twickenham Green.
@@ -148,7 +196,8 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8">
-            <h2 class="h2 fw-semibold mb-2">Two clear ways to begin</h2>
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Appointment pathways</span>
+            <h2 class="h2 mb-2">Two clear ways <em>to begin</em></h2>
             <p class="mb-0">
               Take a look at what happens during each appointment before deciding when you would like to visit.
             </p>
@@ -156,33 +205,30 @@
         </div>
         <div class="row gy-4">
           <div class="col-lg-6">
-            <!-- overflow-hidden clips card photo corners; stretched-link sits only on the short title link for clean screen-reader labels -->
+            <!-- overflow-hidden clips hover image zoom inside the card; stretched-link stays on the concise title -->
             <div class="card clinic-card-link overflow-hidden h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-4">
-                  <div class="ratio ratio-4x3 h-100">
+                  <div class="ratio ratio-4x3 h-100 overflow-hidden">
                     <!-- Lazy-loaded thumbnail with upward crop bias so faces remain framed in md+ cards -->
-                    <img
-                      src="assets/images/consultation-conversation-960.webp"
+                    <img src="assets/images/consultation-conversation-960.webp"
                       srcset="assets/images/consultation-conversation-480.webp 480w, assets/images/consultation-conversation-960.webp 960w"
                       sizes="(max-width: 767.98px) calc(100vw - 1.5rem), 220px"
                       alt="Practitioner and client seated together in a sunlit white-brick consultation room having a calm initial conversation"
-                      class="object-fit-cover clinic-card-photo-top"
-                      width="960"
-                      height="720"
-                      loading="lazy"
-                    >
+                      class="object-fit-cover clinic-card-photo-top" width="960" height="720" loading="lazy">
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body d-flex flex-column justify-content-center h-100 p-4">
-                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">90 mins · First Visit</span>
-                    <h3 class="h5 card-title mb-2">
+                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">01 · First Visit · 90 mins</span>
+                    <h3 class="h5 card-title fw-semibold mb-2">
                       <a class="stretched-link text-decoration-none" href="treatments.html">Initial Consultation</a>
                     </h3>
-                    <p class="card-text mb-0">
-                      Unhurried conversation, gentle movement assessment, and first hands-on treatment tailored to your comfort.
+                    <p class="card-text mb-2">
+                      Unhurried conversation, gentle movement assessment, and first hands-on treatment tailored to your
+                      comfort.
                     </p>
+                    <span class="small fw-semibold text-primary">Explore what happens &rarr;</span>
                   </div>
                 </div>
               </div>
@@ -193,29 +239,26 @@
             <div class="card clinic-card-link overflow-hidden h-100">
               <div class="row g-0 h-100">
                 <div class="col-md-4">
-                  <div class="ratio ratio-4x3 h-100">
+                  <div class="ratio ratio-4x3 h-100 overflow-hidden">
                     <!-- Lazy-loaded thumbnail sized with srcset for sharp card rendering -->
-                    <img
-                      src="assets/images/osteopathic-lumbar-care-960.webp"
+                    <img src="assets/images/osteopathic-lumbar-care-960.webp"
                       srcset="assets/images/osteopathic-lumbar-care-480.webp 480w, assets/images/osteopathic-lumbar-care-960.webp 960w"
                       sizes="(max-width: 767.98px) calc(100vw - 1.5rem), 220px"
                       alt="Practitioner hands gently palpating an adult patient's lower back during a hands-on osteopathic session"
-                      class="object-fit-cover"
-                      width="960"
-                      height="720"
-                      loading="lazy"
-                    >
+                      class="object-fit-cover" width="960" height="720" loading="lazy">
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body d-flex flex-column justify-content-center h-100 p-4">
-                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">45 mins · Ongoing</span>
-                    <h3 class="h5 card-title mb-2">
+                    <span class="badge rounded-pill clinic-pill align-self-start mb-2">02 · Ongoing · 45 mins</span>
+                    <h3 class="h5 card-title fw-semibold mb-2">
                       <a class="stretched-link text-decoration-none" href="treatments.html">Follow-Up Session</a>
                     </h3>
-                    <p class="card-text mb-0">
-                      Reviewing how things have settled since your previous visit and continuing supportive, unhurried care.
+                    <p class="card-text mb-2">
+                      Reviewing how things have settled since your previous visit and continuing supportive, unhurried
+                      care.
                     </p>
+                    <span class="small fw-semibold text-primary">See session structure &rarr;</span>
                   </div>
                 </div>
               </div>
@@ -225,22 +268,26 @@
       </div>
     </section>
 
-    <!-- 4. Patient-Experience Trust Band: open editorial figure/blockquote on Warm Linen -->
+    <!-- 4. Patient-Experience Trust Band: sculpted white pull-quote card on Warm Linen -->
     <section class="section-pad section-linen section-divider">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h2 class="h6 text-uppercase fw-semibold clinic-eyebrow mb-3">Patient experience</h2>
-            <figure class="clinic-quote border-start border-4 ps-4 mb-0">
-              <blockquote class="blockquote fs-4 mb-3">
-                <p class="mb-0">
-                  &ldquo;I felt genuinely listened to from the moment I walked through the door. Lydia explained everything gently and moved completely at my pace.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0">
-                Hannah T., Twickenham Green <span class="fw-normal">(illustrative patient reflection)</span>
-              </figcaption>
-            </figure>
+            <div class="clinic-quote-card p-4 p-md-5">
+              <span class="clinic-quote-mark mb-2" aria-hidden="true">&ldquo;</span>
+              <figure class="clinic-quote border-start border-4 ps-4 mb-0">
+                <blockquote class="blockquote fs-4 mb-3">
+                  <p class="mb-0">
+                    I felt genuinely listened to from the moment I walked through the door. Lydia explained everything
+                    gently and moved completely at my pace.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Hannah T., Twickenham Green <span class="fw-normal">(illustrative patient reflection)</span>
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -251,7 +298,7 @@
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-7">
-            <h2 class="h2 fw-semibold mb-2">Ready to visit, or simply have a question?</h2>
+            <h2 class="h2 mb-2">Ready to visit, or simply <em>have a question</em>?</h2>
             <p class="mb-0">
               Arrange an appointment at a pace that suits you, or reach out for an informal chat before booking.
             </p>
@@ -295,7 +342,8 @@
           <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
           <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
           <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
-          <p class="mb-0">Email: <a href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+          <p class="mb-0">Email: <a
+              href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
         </div>
       </div>
       <div class="clinic-footer-divider pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small">
@@ -306,6 +354,9 @@
   </footer>
 
   <!-- Bootstrap 5 bundle powers the offcanvas drawer, pill tabs, and collapse accordions (zero custom JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
 </body>
+
 </html>
