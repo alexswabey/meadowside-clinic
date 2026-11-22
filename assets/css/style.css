@@ -50,7 +50,7 @@
   --clinic-accent: #8a3c54;
   --clinic-accent-dark: #6e2c40;
   --clinic-text: #14282c;
-  --clinic-muted: #456268;
+  --clinic-muted: #385257;
   --clinic-border: #b8ced3;
   --clinic-border-ui: #668991;
   --clinic-border-warm: #ddd5c9;
@@ -147,6 +147,16 @@ p,
 blockquote,
 li {
   text-wrap: pretty;
+}
+
+main p:not(.lead):not(.text-center),
+main li {
+  max-width: 65ch;
+}
+
+main p.text-center {
+  max-width: 65ch;
+  margin-inline: auto;
 }
 
 .clinic-eyebrow,
@@ -466,7 +476,7 @@ main form .form-control {
   font-size: max(1rem, 1em);
   min-height: 44px;
   border-color: var(--clinic-border-input);
-  background-color: #ffffff;
+  background-color: var(--bs-white);
   color: var(--clinic-text);
 }
 
@@ -503,8 +513,8 @@ main form .form-control:user-invalid {
   background-color: var(--clinic-error-bg);
 }
 
-main form .form-control:user-invalid + .clinic-error-hint,
-main form div:has(> .form-control:user-invalid) > .clinic-error-hint {
+form :has(> .form-control:user-invalid) > .clinic-error-hint,
+main form .form-control:user-invalid + .clinic-error-hint {
   display: block;
 }
 
