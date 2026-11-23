@@ -1,6 +1,6 @@
 # Testing — Meadowside Clinic
 
-How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling governance repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:design | qa:w3c`.
+How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling governance repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:design | qa:links | qa:lighthouse | qa:w3c`.
 
 ---
 
@@ -99,11 +99,13 @@ Desktop = `1440x900`, Mobile = `390x844` (minimum-width `320x568` also covered b
 | `npm run qa:css` (Stylelint) | `assets/css/style.css` token/specificity/no-`!important` hygiene | `0` errors |
 | `npm run qa:html` (html-validate) | All 8 HTML files, offline | `0` errors |
 | `npm run qa:fast` | Contrast + Stylelint + html-validate + Chromium/axe (4 viewports + interactive states) | PASS |
-| `npm run qa:full` | WebKit + Chromium, 9 viewports, offcanvas/pills/FAQ/`:user-invalid`/forced-colors/reduced-motion/overflow/links/axes | PASS, `0` violations |
+| `npm run qa:full` | WebKit + Chromium, 9 viewports, offcanvas/pills/FAQ/`:user-invalid`/forced-colors/reduced-motion/overflow/links/axes + link integrity & pa11y (`qa:links`) | PASS, `0` violations |
 | `npm run qa:design` | `wallace` complexity, Bootstrap-vs-custom class ratio, APCA, DevTools CSS coverage | `97.9%` Bootstrap classes, `8` custom classes, `13/13` APCA pass, `77.6%` coverage, `0` dead rules |
 | `npm run qa:w3c` | W3C Nu HTML + Jigsaw CSS (live validators) | `0` errors / `0` warnings across all 8 HTML files + CSS |
 | `npx modern-web-guidance legacy-scan` | Legacy API/pattern scan | `0` findings |
-| Lighthouse `13.6.0` (mobile / desktop presets) | `index.html`, `booking.html` | Mobile `99` / `98` Perf, `100` A11y/BP/SEO · Desktop `100/100/100/100` (see §5) |
+| `npm run qa:links` (linkinator) | All `8` pages as crawl starts: same-origin links, `#fragment` targets, CSS `url()`, `redirects: "error"` | `32` OK, `30` third-party skips, `0` broken |
+| `npm run qa:links` (pa11y) | `WCAG2AA` via HTML_CodeSniffer (independent of the axe-core engine), all `8` pages | `0` issues |
+| `npm run qa:lighthouse` | Lighthouse `13.6.0`, milestone preset: `index.html` + `booking.html` × mobile + desktop | Mobile `99` / `98` Perf, `100` A11y/BP/SEO · Desktop `100/100/100/100` (see §5) |
 
 Screenshots of every page (desktop `1440x900`, mobile `390x844`) and the validator/Lighthouse reports are stored in [`docs/screenshots/`](docs/screenshots/).
 
@@ -111,7 +113,7 @@ Screenshots of every page (desktop `1440x900`, mobile `390x844`) and the validat
 
 ## 5. Known Limitations & Deliberate Trade-offs
 
-- **Lighthouse runs against a local `python http.server` preview** (no cache headers, single machine). GitHub Pages serves the same assets from a global CDN with long `max-age` values, so production Core Web Vitals should be at least as good. Mobile Performance scores `98–99` due to sub-second LCP/FCP timing variance under Lighthouse's 4× CPU throttling; desktop scores `100`.
+- **Lighthouse runs against a local static-server preview** (no cache headers, single machine) — `lighthouse_qa.mjs` serves the exact `main` tree and reuses Playwright's Chrome for Testing. GitHub Pages serves the same assets from a global CDN with long `max-age` values, so production Core Web Vitals should be at least as good. Mobile Performance scores `98–99` due to sub-second LCP/FCP timing variance under Lighthouse's 4× CPU throttling; desktop scores `100`.
 - **`style.css` is intentionally not minified** (Lighthouse's `unminified-css` insight). Readable, commented code is a course requirement; the file is `71` rules / ~16 kB.
 - **~90% of CDN Bootstrap CSS is unused** (Lighthouse's `unused-css-rules` insight). Inherent to the locked decision to ship unmodified Bootstrap 5.3.9 via CDN rather than a custom build.
 - **The booking calendar is a third-party embed** (`<iframe>`); its internals are outside axe/overflow/validator reach. The page's own markup, fallback actions, and checklist are fully covered.
