@@ -83,15 +83,10 @@
   --bs-focus-ring-color: rgba(18, 82, 94, 0.25);
 }
 
-/* Smooth in-page navigation with sticky-navbar offset restricted to main & section anchors */
+/* Smooth in-page navigation; scroll-padding-top keeps anchored sections clear of the sticky header */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.25rem;
-}
-
-main[id],
-section[id] {
-  scroll-margin-top: 5.25rem;
 }
 
 body {
@@ -149,13 +144,17 @@ li {
   text-wrap: pretty;
 }
 
-main p:not(.lead):not(.text-center),
+main p,
 main li {
   max-width: 65ch;
 }
 
+/* Lead intros may run the full column width */
+main p.lead {
+  max-width: none;
+}
+
 main p.text-center {
-  max-width: 65ch;
   margin-inline: auto;
 }
 
@@ -388,6 +387,22 @@ main aside.border-accent {
   --bs-border-color: var(--clinic-accent);
 }
 
+/* Numbered step circles for the Treatments "What happens in a session" roadmap */
+.clinic-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border: 1px solid var(--clinic-border-ui);
+  border-radius: 50%;
+  background-color: var(--clinic-mist);
+  color: var(--clinic-primary-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .blockquote {
   line-height: 1.5;
 }
@@ -515,7 +530,6 @@ main form .form-control:user-invalid {
   background-color: var(--clinic-error-bg);
 }
 
-form :has(> .form-control:user-invalid) > .clinic-error-hint,
 main form .form-control:user-invalid + .clinic-error-hint {
   display: block;
 }
