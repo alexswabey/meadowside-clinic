@@ -1,6 +1,6 @@
 # Meadowside Clinic — Twickenham
 
-**Live site (`main`):** <https://alexswabey.github.io/meadowside-clinic/> *(Bootstrap `5.3.9` rebuild promoted to local `main`)*
+**Live site:** <https://alexswabey.github.io/meadowside-clinic/> *(served from the `main` branch)*
 
 Responsive website for **Meadowside Clinic**, a fictional Twickenham osteopathic clinic led by Lydia Selby, M.Ost. — seven content pages plus a branded `404.html` — built with semantic HTML5, custom CSS variables, and Bootstrap `5.3.9` using zero custom JavaScript.
 
@@ -76,7 +76,7 @@ Then visit `http://127.0.0.1:8000/index.html`.
 
 ### GitHub Pages Deployment
 
-1. Push the updated `main` branch (`git push origin main` — the previous custom-CSS release `f7103b9` remains archived on `archive/v4-custom-css`).
+1. Push the updated `main` branch (`git push origin main`).
 2. In the GitHub repository settings under **Pages**, deploy from branch **`main`** and folder **`/ (root)`**.
 3. Open `https://alexswabey.github.io/meadowside-clinic/` and verify navigation links, images, interactive Bootstrap tabs/accordions, and form confirmation parity with the local build.
 
@@ -114,19 +114,14 @@ Desktop (`1440x900`) and mobile (`390x844`) captures for all eight pages are sto
 
 ## Validation & Testing Status
 
-Automated QA checks live in the sibling governance repository (`../twickenham-osteopath-project-state` via `npm run qa:full`) alongside industry linters and Lighthouse:
-
-- **Colour contrast:** All `39` palette text (`>= 4.5:1`) and UI/focus boundary (`>= 3.0:1`) pairs verified by `check_contrast.py`, plus `13/13` live APCA perceptual contrast checks passing.
-- **HTML & CSS compliance:** Passed W3C Nu HTML Validator (`0` errors / `0` warnings across all 8 HTML files), `html-validate` (`0` errors), `Stylelint` (`0` errors), W3C Jigsaw CSS Validator (`css3svg`, `warning=1`: `0` errors / `0` warnings), and `modern-web-guidance legacy-scan` (`0` findings).
-- **Cross-engine browser & accessibility QA:** Passed **WebKit** and **Chromium** Playwright checks (`qa:full` across `9` viewports from `320x568` to `3440x1440`, offcanvas drawer fit, pill tabs, stay-open FAQ, `:user-invalid` contact feedback, forced-colors, reduced-motion, `0` `axe-core` WCAG 2.1 A/AA violations), plus `Pa11y` (`WCAG2AA`: `0` issues on `index`, `treatments`, `visiting`, `contact`) and `Linkinator` (`0` broken links).
-- **Lighthouse (`13.6.0`):** Desktop `index.html` and `booking.html` both scored **100 / 100 / 100 / 100**; Mobile `index.html` scored **99 / 100 / 100 / 100** and Mobile `booking.html` **98 / 100 / 100 / 100** (Accessibility, Best Practices, and SEO `100` on every run). The mobile Performance `98–99` range is sub-second LCP/FCP variance under `4×` CPU throttling against the local preview server; GitHub Pages serves the same assets via its global CDN. Full user-story walkthroughs, the test matrix, and test environments live in [`TESTING.md`](TESTING.md).
+Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `39/39` WCAG contrast pairs plus `13/13` live APCA checks, `0` `axe-core` WCAG 2.1 A/AA violations (WebKit & Chromium across `9` viewports, static + interactive states), `Pa11y` WCAG2AA `0` issues, `Linkinator` `0` broken links, and the Lighthouse scores in the table above. Test environments, user-story walkthroughs, the `18`-row test matrix, and per-command automated evidence live in [`TESTING.md`](TESTING.md).
 
 ---
 
 ## Bugs & Quirks Resolved
 
 - **Bootstrap 5.3 link colour regression (`#0d6efd`):** Defining `--bs-link-color` alone left compiled links Bootstrap-blue; overriding `--bs-link-color-rgb` (`18, 82, 94`) and `--bs-link-hover-color-rgb` (`12, 60, 69`) restored compliant Mineral Teal link contrast across all surfaces.
-- **Dark navbar specificity:** Bootstrap's `.navbar[data-bs-theme=dark]` selector outranked `.clinic-navbar`; raising specificity via `.clinic-navbar[data-bs-theme="dark"]` fixed contrast across active, hover, and toggler tokens.
+- **Bootstrap theme-attribute specificity:** Compiled Bootstrap component tokens are declared on theme-scoped selectors (e.g. `.navbar[data-bs-theme="light"]`), which outrank plain custom class selectors—theme overrides must repeat the `data-bs-theme` attribute in the selector to win the cascade (applied to the header's navbar colour/toggler tokens).
 - **Nu HTML ARIA validation on responsive `.offcanvas-lg`:** Added `role="group"` to `#clinicNav` so `aria-labelledby="clinicNavLabel"` remains valid before Bootstrap JS promotes the drawer to `role="dialog"` on mobile toggle.
 - **WebKit `:user-invalid` hint reveal:** An early `:has()` fallback was added for hint reveal, then removed once `qa:full` confirmed the plain sibling combinator works alone — the shipped rule is only `main form .form-control:user-invalid + .clinic-error-hint`, with hints revealing consistently on blur in both WebKit and Chromium.
 - **Hidden Bootstrap `.tab-pane` image verification:** Updated the automated Playwright runner to skip `scrollIntoViewIfNeeded()` on `display: none` tab images during initial load and explicitly verify `#followup-pane` `.webp` decoding after clicking `#followup-tab`.
