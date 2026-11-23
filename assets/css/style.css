@@ -160,7 +160,7 @@ main p.text-center {
 
 .clinic-eyebrow,
 main .accordion .accordion-button {
-  font-family: "Source Sans 3", "Source Sans Fallback", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--bs-font-sans-serif);
   text-wrap: balance;
 }
 
@@ -199,14 +199,6 @@ header .navbar[data-bs-theme="light"] {
   --bs-navbar-brand-color: var(--clinic-primary-dark);
   --bs-navbar-brand-hover-color: var(--clinic-primary);
   --bs-navbar-toggler-border-color: var(--clinic-border-ui);
-}
-
-header .navbar[data-bs-theme="light"]::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  backdrop-filter: blur(10px);
 }
 
 header .navbar-toggler {
@@ -536,10 +528,6 @@ main form .form-control:user-invalid + .clinic-error-hint {
 
 main form .form-control:user-valid {
   border-color: var(--clinic-primary);
-}
-
-.clinic-card-photo-top {
-  object-position: center 22%;
 }
 
 /* ==========================================================================
