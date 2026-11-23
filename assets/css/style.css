@@ -149,13 +149,16 @@ main li {
   max-width: 65ch;
 }
 
+/* Centered intro paragraphs inherit the 65ch measure cap, but a capped box is
+   placed at the start edge of the column — so center the capped box as well. */
+main .text-center p,
+main p.text-center {
+  margin-inline: auto;
+}
+
 /* Lead intros may run the full column width */
 main p.lead {
   max-width: none;
-}
-
-main p.text-center {
-  margin-inline: auto;
 }
 
 .clinic-eyebrow,
@@ -419,6 +422,9 @@ main .accordion {
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312525E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230C3C45' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   border-radius: 0.9rem;
+
+  /* Close the box: item borders draw only top/bottom edges and dividers */
+  border-inline: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
 }
 
 main .accordion .accordion-button {
