@@ -114,7 +114,7 @@ Desktop (`1440x900`) and mobile (`390x844`) captures for all eight pages are sto
 
 ## Validation & Testing Status
 
-Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `39/39` WCAG contrast pairs plus `13/13` live APCA checks, `0` `axe-core` WCAG 2.1 A/AA violations (WebKit & Chromium across `9` viewports, static + interactive states), `Pa11y` WCAG2AA `0` issues, `Linkinator` `0` broken links, and the Lighthouse scores in the table above. Test environments, user-story walkthroughs, the `18`-row test matrix, and per-command automated evidence live in [`TESTING.md`](TESTING.md).
+Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `0` `axe-core` WCAG 2.1 A/AA violations (WebKit & Chromium across desktop, tablet, and mobile breakpoints, static + interactive states), `Linkinator` `0` broken links, and the Lighthouse scores in the table above. Test environments, user-story walkthroughs, the `18`-row test matrix, and per-command automated evidence live in [`TESTING.md`](TESTING.md).
 
 ---
 

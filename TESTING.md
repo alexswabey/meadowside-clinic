@@ -1,6 +1,6 @@
 # Testing — Meadowside Clinic
 
-How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling governance repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:design | qa:links | qa:lighthouse | qa:unused | qa:visual | qa:w3c`.
+How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling project-state repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:links | qa:lighthouse | qa:w3c`.
 
 ---
 
@@ -8,11 +8,12 @@ How the site was verified before submission. This document covers **how** we tes
 
 | Layer | Setup |
 | --- | --- |
-| Automated browsers | Playwright **WebKit** (headless) + **Chromium** (`chromium-1255`), both engines run for every check |
-| Viewports | 9 profiles: `1440x900`, `390x844`, `320x700`, `3440x1440`, `1024x768`, `992x768`, `768x1024`, `576x768`, `320x568` |
-| Accessibility | `axe-core` WCAG 2.1 A/AA (both engines, static + interactive states), `Pa11y` WCAG2AA, live `apca-w3` perceptual contrast, `check_contrast.py` WCAG ratio audit |
+| Automated browsers | Playwright **WebKit** (headless) + **Chromium**, both engines run for every check |
+| Viewports | Core Bootstrap breakpoints: `1440x900` (desktop), `768x1024` (tablet `md`), `390x844` (phone), `320x568` (minimum mobile width) |
+| Accessibility | `axe-core` WCAG 2.1 A/AA (both engines, static + interactive states) |
 | Validation | W3C Nu HTML (`vnu 26.11.20`), W3C Jigsaw CSS (`profile=css3svg`, `warning=1`), `html-validate`, `Stylelint` |
-| Performance | `Lighthouse 13.6.0` (Chrome for Testing; mobile + desktop presets) against a local HTTP preview of the exact `main` tree |
+| Link integrity | `linkinator` across all 8 pages (same-origin links, `#fragment` targets, CSS `url()`, no redirects) |
+| Performance | `Lighthouse 13.6.0` (mobile + desktop presets) against a local HTTP preview of the exact `main` tree |
 | Cross-device spot checks | Safari 18 (macOS 15), Chrome (macOS 15), iPhone-class 390x844, Windows High Contrast via `forced-colors: active` emulation |
 
 ---
@@ -66,7 +67,7 @@ Each story was walked end-to-end in WebKit and Chromium at `1440x900` and `390x8
 
 ## 3. Test Matrix
 
-Desktop = `1440x900`, Mobile = `390x844` (minimum-width `320x568` also covered by the automated suite).
+Desktop = `1440x900`, Mobile = `390x844` (tablet `768x1024` and minimum-width `320x568` also covered by the automated suite).
 
 | # | Feature | Steps | Desktop | Mobile | Expected | Result |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -81,32 +82,26 @@ Desktop = `1440x900`, Mobile = `390x844` (minimum-width `320x568` also covered b
 | 9 | Enquiry flow (Contact → Thank You) | Submit valid form | ✅ | ✅ | `thank-you.html` shown with next steps + disclosure | PASS (GET action; live-site check) |
 | 10 | Tap-to-call | Click/tap header + body `tel:` links | ✅ | ✅ | Dialer invoked on mobile; number never wraps mid-digit (`&nbsp;` joins) | PASS (link check + html-validate `tel-non-breaking`) |
 | 11 | Branded 404 | Visit unknown URL on the live site | ✅ | ✅ | GitHub Pages serves `404.html` (home / book / contact CTAs + phone) | PASS (live-site check) |
-| 12 | Focus rings | `Tab` through nav, buttons, form fields | ✅ | ✅ | 3px Rosewood outline, `≥ 3:1` against Porcelain/Mist/white | PASS (focus-visible + contrast audit) |
+| 12 | Focus rings | `Tab` through nav, buttons, form fields | ✅ | ✅ | 3px Rosewood outline, `≥ 3:1` against Porcelain/Mist/white | PASS (focus-visible check) |
 | 13 | Windows High Contrast | Emulate `forced-colors: active` | ✅ | ✅ | Card/button/nav borders and focus outlines render in system colours | PASS (emulated media check) |
 | 14 | Reduced motion | Emulate `prefers-reduced-motion: reduce` | ✅ | ✅ | No transforms/transitions; smooth scroll becomes `auto` | PASS (emulated media check) |
-| 15 | Horizontal overflow | Measure at all 9 viewports | ✅ | ✅ | `scrollWidth == clientWidth` on every page | PASS (overflow check, both engines) |
+| 15 | Horizontal overflow | Measure at all 4 breakpoints (`1440`, `768`, `390`, `320`) | ✅ | ✅ | `scrollWidth == clientWidth` on every page | PASS (overflow check, both engines) |
 | 16 | Anchor clearance | Load `treatments.html#faq`, `visiting.html#accessibility` | ✅ | ✅ | Target section clears the sticky header (~23px gap, no occlusion) | PASS (clearance check) |
 | 17 | axe-core WCAG 2.1 A/AA | Audit static + interactive states, both engines | ✅ | ✅ | 0 violations | PASS (`qa:full`) |
 | 18 | Imagery | Inspect every `<img>` / SVG | ✅ | ✅ | No broken images, all `alt` present, no zero-sized SVGs, no `#0d6efd` default-blue leaks | PASS (asset checks, both engines) |
 
 ---
 
-## 4. Automated Evidence (2026-11-23)
+## 4. Automated Evidence (2026-11-24)
 
-| Command (governance repo) | Scope | Result |
+| Command (project-state repo) | Scope | Result |
 | --- | --- | --- |
-| `npm run qa:contrast` | `:root` WCAG text `≥ 4.5:1`, UI/focus `≥ 3:1` pairs | `39/39` pass |
 | `npm run qa:css` (Stylelint) | `assets/css/style.css` token/specificity/no-`!important` hygiene | `0` errors |
 | `npm run qa:html` (html-validate) | All 8 HTML files, offline | `0` errors |
-| `npm run qa:fast` | Contrast + Stylelint + html-validate + Chromium/axe (4 viewports + interactive states) | PASS |
-| `npm run qa:full` | WebKit + Chromium, 9 viewports, offcanvas/pills/FAQ/`:user-invalid`/forced-colors/reduced-motion/overflow/links/axes + link integrity & pa11y (`qa:links`) + unused CSS + visual regression | PASS, `0` violations |
-| `npm run qa:unused` (PurgeCSS) | Dead-selector scan of `assets/css/style.css` against all 8 HTML files | `89/89` selectors used, `0` dead rules |
-| `npm run qa:visual` (Playwright `toHaveScreenshot`) | Full-page screenshot baselines: 8 pages × desktop `1440x900` + mobile `390x844` (baselines committed in the governance repo; Koalendar embed substituted with a deterministic placeholder) | `16/16` match committed baselines |
-| `npm run qa:design` | `wallace` complexity, Bootstrap-vs-custom class ratio, APCA, DevTools CSS coverage | `97.9%` Bootstrap classes, `8` custom classes, `13/13` APCA pass, `77.6%` coverage, `0` dead rules |
+| `npm run qa:links` (linkinator) | All 8 pages as crawl starts: same-origin links, `#fragment` targets, CSS `url()`, `redirects: "error"` | `32` OK, `0` broken |
+| `npm run qa:fast` | Stylelint + html-validate + Chromium/`axe-core` quick pass | PASS |
+| `npm run qa:full` | Stylelint + html-validate + `linkinator` + WebKit & Chromium Playwright/`axe-core` (4 breakpoints + interactive states) | PASS, `0` violations |
 | `npm run qa:w3c` | W3C Nu HTML + Jigsaw CSS (live validators) | `0` errors / `0` warnings across all 8 HTML files + CSS |
-| `npx modern-web-guidance legacy-scan` | Legacy API/pattern scan | `0` findings |
-| `npm run qa:links` (linkinator) | All `8` pages as crawl starts: same-origin links, `#fragment` targets, CSS `url()`, `redirects: "error"` | `32` OK, `30` third-party skips, `0` broken |
-| `npm run qa:links` (pa11y) | `WCAG2AA` via HTML_CodeSniffer (independent of the axe-core engine), all `8` pages | `0` issues |
 | `npm run qa:lighthouse` | Lighthouse `13.6.0`, milestone preset: `index.html` + `booking.html` × mobile + desktop | Mobile `99` / `98` Perf, `100` A11y/BP/SEO · Desktop `100/100/100/100` (see §5) |
 
 Screenshots of every page (desktop `1440x900`, mobile `390x844`) and the validator/Lighthouse reports are stored in [`docs/screenshots/`](docs/screenshots/).
@@ -115,9 +110,9 @@ Screenshots of every page (desktop `1440x900`, mobile `390x844`) and the validat
 
 ## 5. Known Limitations & Deliberate Trade-offs
 
-- **Lighthouse runs against a local static-server preview** (no cache headers, single machine) — `lighthouse_qa.mjs` serves the exact `main` tree and reuses Playwright's Chrome for Testing. GitHub Pages serves the same assets from a global CDN with long `max-age` values, so production Core Web Vitals should be at least as good. Mobile Performance scores `98–99` due to sub-second LCP/FCP timing variance under Lighthouse's 4× CPU throttling; desktop scores `100`.
-- **`style.css` is intentionally not minified** (Lighthouse's `unminified-css` insight). Readable, commented code is a course requirement; the file is `71` rules / ~16 kB.
+- **Lighthouse runs against a local static-server preview** (no cache headers, single machine) — `lighthouse_qa.mjs` serves the exact `main` tree and reuses Playwright's Chromium binary. GitHub Pages serves the same assets from a global CDN with long `max-age` values, so production Core Web Vitals should be at least as good. Mobile Performance scores `98–99` due to sub-second LCP/FCP timing variance under Lighthouse's 4× CPU throttling; desktop scores `100`.
+- **`style.css` is intentionally not minified** (Lighthouse's `unminified-css` insight). Readable, commented code is a course requirement; the file is ~16 kB.
 - **~90% of CDN Bootstrap CSS is unused** (Lighthouse's `unused-css-rules` insight). Inherent to the locked decision to ship unmodified Bootstrap 5.3.9 via CDN rather than a custom build.
-- **Home session cards use a compact thumbnail + text layout below `768px`.** Stacking two full-width 4:3 photos back-to-back on a phone buries the fees and CTAs, so on mobile each card shows a column-width photo beside the text instead. The 3-line card blurb measures `~21–26ch` there — narrower than the `45–75ch` prose ideal — an accepted trade-off for short UI copy (all page prose keeps the ideal measure). The design audit's `[Type]` measure flag on `index.html` mobile reflects this deliberately.
+- **Home session cards use a compact thumbnail + text layout below `768px`.** Stacking two full-width 4:3 photos back-to-back on a phone buries the fees and CTAs, so on mobile each card shows a column-width photo beside the text instead.
 - **The booking calendar is a third-party embed** (`<iframe>`); its internals are outside axe/overflow/validator reach. The page's own markup, fallback actions, and checklist are fully covered.
 - **The contact form uses `method="get"`** so it works on static GitHub Pages without a 405; field values therefore appear in the `thank-you.html` URL. This is covered by the educational disclosure on that page; a live handler is a planned production upgrade (see README).
