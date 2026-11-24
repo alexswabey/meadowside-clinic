@@ -55,6 +55,7 @@
   --clinic-border-ui: #668991;
   --clinic-border-warm: #ddd5c9;
   --clinic-border-input: #557880;
+  --clinic-surface-border: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
   --clinic-error: #9e243b;
   --clinic-error-bg: #fdf3f5;
   --clinic-ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -78,8 +79,9 @@
   --bs-link-color-rgb: 18, 82, 94;
   --bs-link-hover-color: var(--clinic-primary-dark);
   --bs-link-hover-color-rgb: 12, 60, 69;
-  --bs-border-color: var(--clinic-border);
+  --bs-border-color: var(--clinic-surface-border);
   --bs-border-radius: 0.65rem;
+  --bs-border-radius-xl: 0.9rem;
   --bs-focus-ring-color: rgba(18, 82, 94, 0.25);
 }
 
@@ -149,21 +151,24 @@ main li {
   max-width: 65ch;
 }
 
-/* Centered intro paragraphs inherit the 65ch measure cap, but a capped box is
-   placed at the start edge of the column — so center the capped box as well. */
+/* Centered intro paragraphs inherit the 65ch measure cap, so center the capped box as well */
 main .text-center p,
 main p.text-center {
   margin-inline: auto;
 }
 
-/* Lead intros may run the full column width */
-main p.lead {
+/* Lead intros and list-group rows span their full container width so dividers never stop early */
+main p.lead,
+main .list-group-item {
   max-width: none;
 }
 
+/* Keep UI eyebrows, accordion triggers, and card headers in the clean sans-serif face */
 .clinic-eyebrow,
+.card-header,
 main .accordion .accordion-button {
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Source Sans 3", "Source Sans Fallback", system-ui, sans-serif;
+  letter-spacing: normal;
   text-wrap: balance;
 }
 
@@ -213,7 +218,16 @@ header .nav-link {
   position: relative;
   padding-inline: 0.75rem;
   border-radius: 0.45rem;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+header .navbar a[href^="tel:"] {
+  text-underline-offset: 0.25rem;
+}
+
+header .navbar a[href^="tel:"]:hover {
+  color: var(--clinic-primary);
+  text-decoration: underline;
 }
 
 @media (min-width: 992px) {
@@ -250,7 +264,7 @@ header .nav-link.active {
 header .offcanvas-lg {
   --bs-offcanvas-bg: var(--clinic-porcelain);
   --bs-offcanvas-color: var(--clinic-text);
-  --bs-offcanvas-border-color: var(--clinic-border);
+  --bs-offcanvas-border-color: var(--clinic-surface-border);
 }
 
 footer a {
@@ -278,10 +292,10 @@ footer a {
   justify-content: center;
   padding-inline: 1.2rem;
   font-weight: 600;
-  border-radius: 0.65rem;
+  border-radius: var(--bs-border-radius);
 }
 
-/* Mineral Teal primary button */
+/* Mineral Teal primary button (utility / recovery actions) */
 .btn-primary {
   --bs-btn-color: var(--clinic-porcelain);
   --bs-btn-bg: var(--clinic-primary);
@@ -345,13 +359,13 @@ header .navbar .btn-secondary.active {
 
 .card {
   --bs-card-bg: #ffffff;
-  --bs-card-border-color: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
-  --bs-card-border-radius: 0.9rem;
-  --bs-card-inner-border-radius: calc(0.9rem - 1px);
+  --bs-card-border-color: var(--clinic-surface-border);
+  --bs-card-border-radius: var(--bs-border-radius-xl);
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius-xl) - 1px);
 }
 
 .card-header {
-  border-bottom-color: color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
+  border-bottom-color: var(--clinic-surface-border);
 }
 
 .clinic-card-link:hover,
@@ -366,36 +380,27 @@ header .navbar .btn-secondary.active {
   --bs-list-group-color: var(--clinic-text);
 }
 
-/* Unified rounded callouts matching .card corner geometry with 4px left accent bar */
+/* Unified rounded callouts: clipped pseudo-element accent bar avoids curved border-left "horns"
+   and uses a real border so it remains visible in Windows Forced Colors Mode */
 main aside {
-  border: 1px solid color-mix(in oklab, var(--clinic-primary) 18%, var(--clinic-border-warm));
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--clinic-surface-border);
+  border-radius: var(--bs-border-radius-xl);
+}
+
+main aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   border-left: 4px solid var(--clinic-primary);
-  border-radius: 0.9rem;
 }
 
-main aside.border-accent {
-  border-left-color: var(--clinic-accent);
-}
-
-/* Single Rosewood border-start accent utility for quotes */
+/* Single Rosewood border-start accent utility reserved for patient reflection quotes */
 .border-start.border-accent {
   --bs-border-color: var(--clinic-accent);
-}
-
-/* Numbered step circles for the Treatments "What happens in a session" roadmap */
-.clinic-step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  flex-shrink: 0;
-  border: 1px solid var(--clinic-border-ui);
-  border-radius: 50%;
-  background-color: var(--clinic-mist);
-  color: var(--clinic-primary-dark);
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 .blockquote {
@@ -411,8 +416,8 @@ main aside.border-accent {
 main .accordion {
   --bs-accordion-bg: #ffffff;
   --bs-accordion-color: var(--clinic-text);
-  --bs-accordion-border-color: color-mix(in oklab, var(--clinic-primary) 22%, var(--clinic-border-warm));
-  --bs-accordion-border-radius: 0.9rem;
+  --bs-accordion-border-color: var(--clinic-surface-border);
+  --bs-accordion-border-radius: var(--bs-border-radius-xl);
   --bs-accordion-btn-color: var(--clinic-primary-dark);
   --bs-accordion-btn-bg: #ffffff;
   --bs-accordion-active-bg: var(--clinic-mist-soft);
@@ -421,10 +426,19 @@ main .accordion {
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.22rem rgba(18, 82, 94, 0.25);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2312525E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230C3C45' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-  border-radius: 0.9rem;
 
-  /* Close the box: item borders draw only top/bottom edges and dividers */
-  border-inline: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  /* Continuous 1px outer box so rounded corners never taper */
+  border: 1px solid var(--clinic-surface-border);
+  border-radius: var(--bs-border-radius-xl);
+}
+
+main .accordion .accordion-item {
+  border: 0;
+  border-top: 1px solid var(--clinic-surface-border);
+}
+
+main .accordion .accordion-item:first-child {
+  border-top: 0;
 }
 
 main .accordion .accordion-button {
@@ -440,7 +454,7 @@ main .nav-pills {
   background-color: var(--clinic-mist);
   padding: 0.35rem;
   border-radius: 0.75rem;
-  border: 1px solid var(--clinic-border-ui);
+  border: 1px solid var(--clinic-surface-border);
 }
 
 main .nav-pills .nav-link {
@@ -450,7 +464,18 @@ main .nav-pills .nav-link {
 }
 
 @media (max-width: 575.98px) {
+  main .nav-pills {
+    display: flex;
+    width: 100%;
+  }
+
+  main .nav-pills .nav-item {
+    flex: 1 1 auto;
+  }
+
   main .nav-pills .nav-link {
+    width: 100%;
+    text-align: center;
     padding-inline: 0.65rem;
     font-size: 0.9375rem;
   }
@@ -471,11 +496,19 @@ main .table thead th {
 }
 
 main .table thead th:first-child {
-  border-top-left-radius: calc(0.9rem - 1px);
+  border-top-left-radius: calc(var(--bs-border-radius-xl) - 1px);
 }
 
 main .table thead th:last-child {
-  border-top-right-radius: calc(0.9rem - 1px);
+  border-top-right-radius: calc(var(--bs-border-radius-xl) - 1px);
+}
+
+.table tbody tr:last-child > :first-child {
+  border-bottom-left-radius: calc(var(--bs-border-radius-xl) - 1px);
+}
+
+.table tbody tr:last-child > :last-child {
+  border-bottom-right-radius: calc(var(--bs-border-radius-xl) - 1px);
 }
 
 /* ==========================================================================
@@ -588,6 +621,10 @@ main form .form-control:user-valid {
   header .navbar,
   footer {
     border: 1px solid CanvasText;
+  }
+
+  main aside::before {
+    border-left-color: CanvasText;
   }
 
   .clinic-eyebrow::before {

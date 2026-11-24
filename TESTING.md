@@ -111,7 +111,7 @@ Screenshots of every page (desktop `1440x900`, mobile `390x844`) and the validat
 ## 5. Known Limitations & Deliberate Trade-offs
 
 - **Lighthouse runs against a local static-server preview** (no cache headers, single machine) — `lighthouse_qa.mjs` serves the exact `main` tree and reuses Playwright's Chromium binary. GitHub Pages serves the same assets from a global CDN with long `max-age` values, so production Core Web Vitals should be at least as good. Mobile Performance scores `98–99` due to sub-second LCP/FCP timing variance under Lighthouse's 4× CPU throttling; desktop scores `100`.
-- **`style.css` is intentionally not minified** (Lighthouse's `unminified-css` insight). Readable, commented code is a course requirement; the file is ~16 kB.
+- **`style.css` is intentionally not minified** (Lighthouse's `unminified-css` insight). Readable, commented code is a course requirement; the file is `638` lines / ~17 kB.
 - **~90% of CDN Bootstrap CSS is unused** (Lighthouse's `unused-css-rules` insight). Inherent to the locked decision to ship unmodified Bootstrap 5.3.9 via CDN rather than a custom build.
 - **Home session cards use a compact thumbnail + text layout below `768px`.** Stacking two full-width 4:3 photos back-to-back on a phone buries the fees and CTAs, so on mobile each card shows a column-width photo beside the text instead.
 - **The booking calendar is a third-party embed** (`<iframe>`); its internals are outside axe/overflow/validator reach. The page's own markup, fallback actions, and checklist are fully covered.

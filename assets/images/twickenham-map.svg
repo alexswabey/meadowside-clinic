@@ -28,9 +28,9 @@
   </g>
 
   <!-- Road labels placed clear of strokes -->
-  <text x="128" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Staines Rd (A311)</text>
-  <text x="380" y="456" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Hampton Rd</text>
-  <text x="692" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#456268" text-anchor="middle">Heath Rd</text>
+  <text x="128" y="286" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#385257" text-anchor="middle">Staines Rd (A311)</text>
+  <text x="380" y="456" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#385257" text-anchor="middle">Hampton Rd</text>
+  <text x="692" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#385257" text-anchor="middle">Heath Rd</text>
 
   <!-- Short approach path to 14 The Green clinic frontage -->
   <path d="M 325 277 L 325 168 L 375 168" fill="none" stroke="#12525E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6,6" />
@@ -46,8 +46,8 @@
 
   <!-- Minimal Compass -->
   <g transform="translate(72, 74)">
-    <circle cx="0" cy="0" r="20" fill="#FAFCFD" stroke="#B4CACE" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="20" fill="#FAFCFD" stroke="#B8CED3" stroke-width="1.5" />
     <polygon points="0,-11 4.5,3 0,0 -4.5,3" fill="#12525E" />
-    <text x="0" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#456268" text-anchor="middle">N</text>
+    <text x="0" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#385257" text-anchor="middle">N</text>
   </g>
 </svg>

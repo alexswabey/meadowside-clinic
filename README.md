@@ -125,6 +125,10 @@ Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `0` `axe-c
 - **Nu HTML ARIA validation on responsive `.offcanvas-lg`:** Added `role="group"` to `#clinicNav` so `aria-labelledby="clinicNavLabel"` remains valid before Bootstrap JS promotes the drawer to `role="dialog"` on mobile toggle.
 - **WebKit `:user-invalid` hint reveal:** An early `:has()` fallback was added for hint reveal, then removed once `qa:full` confirmed the plain sibling combinator works alone — the shipped rule is only `main form .form-control:user-invalid + .clinic-error-hint`, with hints revealing consistently on blur in both WebKit and Chromium.
 - **Hidden Bootstrap `.tab-pane` image verification:** Updated the automated Playwright runner to skip `scrollIntoViewIfNeeded()` on `display: none` tab images during initial load and explicitly verify `#followup-pane` `.webp` decoding after clicking `#followup-tab`.
+- **iCloud Drive sync overwrites (workflow):** Storing the workspace inside iCloud Drive caused macOS file-sync conflicts to overwrite uncommitted local edits earlier in the project. Resolved by committing small, frequent checkpoints and using GitHub `main` as the canonical sync source.
+- **FAQ `.accordion` corner tapering:** Splitting the outer border between `.accordion` (`border-left`/`border-right` only) and `.accordion-item` (`border-top`/`border-bottom`) caused browsers to taper the `1px` border to `0px` at the rounded corners. Resolved by moving the full `1px` border onto `.accordion` and keeping only internal `border-top` dividers on `.accordion-item`.
+- **`65ch` prose cap clipping `.list-group-item` dividers:** Setting `max-width: 65ch` on `main li` also constrained `.list-group-item` rows inside cards, stopping horizontal dividers short on the right. Resolved by adding `main .list-group-item { max-width: none; }`.
+- **Curved corner "horns" on `<aside>` callouts:** Applying `border-left: 4px` directly alongside `border-radius: 0.9rem` curved the accent bar into dark hooks at the left corners. Resolved with an `overflow: hidden` clipped `::before` `border-left` accent bar (preserving Windows Forced Colors visibility).
 
 ---
 
@@ -132,16 +136,16 @@ Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `0` `axe-c
 
 ### Photography (Responsive `.webp` Sets in `assets/images/`)
 
-| Slot | Page | Files (`w` × `h`) | Photographer | Source & Licence |
+| Slot | Page | Files (`w` × `h`) | Creator / Source | Licence / Disclosure |
 | --- | --- | --- | --- | --- |
 | Hero treatment room | `index.html` | `hero-treatment-room-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | Kimiya Sabbaghan | [Unsplash](https://unsplash.com/photos/a-white-room-with-a-bed-and-a-desk-o4OJfrmMC0o) · Unsplash License |
-| Meet Lydia portrait | `index.html` | `lydia-portrait-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | Vitaly Gariev | [Unsplash](https://unsplash.com/photos/woman-with-short-blonde-hair-smiles-against-colorful-wall-ZwNj7w0BnwA) · Unsplash License |
-| Initial consultation card | `index.html` | `consultation-conversation-480.webp` (`480x360`), `consultation-conversation-960.webp` (`960x720`) | Vitaly Gariev | [Unsplash](https://unsplash.com/photos/two-women-talking-in-a-modern-office-setting-QxkvMblcaJ0) · Unsplash License |
-| Follow-up session card | `index.html` | `osteopathic-lumbar-care-480.webp` (`480x360`), `osteopathic-lumbar-care-960.webp` (`960x720`) | Benjamin Wedemeyer | [Unsplash](https://unsplash.com/photos/persons-hand-on-white-textile-pN140LY8wn8) · Unsplash License |
 | Clinic waiting room opener | `about.html` | `clinic-waiting-room-800.webp` (`800x450`), `clinic-waiting-room-1440.webp` (`1440x810`) | Raphael (Ajani Kamali Akio) | [Unsplash](https://unsplash.com/photos/modern-living-room-with-three-sofas-and-coffee-table-LacQuwrta3I) · Unsplash License |
-| Initial consultation tab | `treatments.html` | `initial-assessment-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | Vitaly Gariev | [Unsplash](https://unsplash.com/photos/a-woman-sitting-in-a-chair-talking-to-another-woman-CGCXJJlkpOQ) · Unsplash License |
-| Follow-up session tab | `treatments.html` | `followup-thoracic-care-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | Benjamin Wedemeyer | [Unsplash](https://unsplash.com/photos/person-in-black-and-white-striped-long-sleeve-shirt-t_29wZLpYwg) · Unsplash License |
-| Twickenham shopfront parade | `visiting.html` | `twickenham-shopfront-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | Michael Dibb *(originally contributed via [geograph.org.uk](https://www.geograph.org.uk/photo/7042211))* | *"St Margarets buildings (1)"* via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:St_Margarets_buildings_(1)_-_geograph.org.uk_-_7042211.jpg) · [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). **Modifications:** downscaled and re-encoded to responsive `.webp`; derived image files remain licensed under CC BY-SA 2.0. |
+| Meet Lydia portrait | `index.html` | `lydia-portrait-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | AI-generated editorial suite | Generated specifically for this fictional clinic so practitioner identity, clothing, and daylight room palette remain cohesive across pages; converted to responsive `.webp` |
+| Initial consultation card | `index.html` | `consultation-conversation-480.webp` (`480x360`), `consultation-conversation-960.webp` (`960x720`) | AI-generated editorial suite | Consistent Lydia Selby consultation scene matching the clinic palette |
+| Follow-up session card | `index.html` | `osteopathic-lumbar-care-480.webp` (`480x360`), `osteopathic-lumbar-care-960.webp` (`960x720`) | AI-generated editorial suite | Clothed hands-on osteopathic care detail matching the clinic's "loose, comfortable clothing" guidance |
+| Initial consultation tab | `treatments.html` | `initial-assessment-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | AI-generated editorial suite | Consistent Lydia Selby consultation scene in the sunlit clinic room |
+| Follow-up session tab | `treatments.html` | `followup-thoracic-care-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | AI-generated editorial suite | Clothed hands-on osteopathic care detail matching the clinic palette |
+| Clinic exterior frontage | `visiting.html` | `twickenham-shopfront-640.webp` (`640x480`), `-800.webp` (`800x600`), `-1200.webp` (`1200x900`) | AI-generated editorial suite | Fictional Meadowside Clinic frontage at 14 The Green with mineral teal timberwork and flush step-free entry |
 
 ### Custom Graphics, Framework & Web Fonts
 
@@ -155,7 +159,7 @@ Headline results: W3C Nu HTML & Jigsaw CSS `0` errors / `0` warnings, `0` `axe-c
 
 - **Code creation:** AI assisted with scaffolding the Bootstrap `5.3.9` layout across eight HTML files, dual-layer `--bs-*` token architecture, and declarative zero-JS controls (offcanvas menu, `.nav-pills` tabs, stay-open accordion, native `:user-invalid` form validation), enabling cleaner structural separation than earlier custom CSS iterations.
 - **Debugging & validation:** AI-assisted contrast audits and cross-engine Playwright + `axe-core` scripts identified `#0d6efd` token leakage, dark navbar specificity collisions, Nu HTML ARIA requirements on `.offcanvas-lg`, and WebKit `:user-invalid` repaint gaps prior to deployment.
-- **Performance & UX optimisation:** Guided responsive `.webp` multi-width `srcset`/`sizes` generation, LCP `fetchpriority="high"` vs lazy/low-priority hints on non-critical or hidden-tab images, trimming unused Google Fonts italic axes, and editorial `Literata` + `Source Sans 3` typography selection.
+- **Performance & UX optimisation:** Guided responsive `.webp` multi-width `srcset`/`sizes` generation, LCP `fetchpriority="high"` vs lazy/low-priority hints on non-critical or hidden-tab images, trimming unused Google Fonts italic axes, editorial `Literata` + `Source Sans 3` typography selection, and generating a cohesive AI editorial photography suite so practitioner identity, clothed care, and the Twickenham frontage stay visually consistent across every page.
 - **Workflow impact:** Separating project state docs and automated QA scripts (`twickenham-osteopath-project-state`) from static site output kept commits auditable and made visual, validator, and accessibility regressions rapid to catch and resolve.
 
 ---
