@@ -1,6 +1,6 @@
 # Testing — Meadowside Clinic
 
-How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling governance repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:design | qa:links | qa:lighthouse | qa:w3c`.
+How the site was verified before submission. This document covers **how** we tested: environments, user-story walkthroughs, and the test matrix. What the site does and the headline validation summary live in [`README.md`](README.md); the automated scripts live in the sibling governance repository (`twickenham-osteopath-project-state`) and run via `npm run qa:fast | qa:full | qa:design | qa:links | qa:lighthouse | qa:unused | qa:visual | qa:w3c`.
 
 ---
 
@@ -99,7 +99,9 @@ Desktop = `1440x900`, Mobile = `390x844` (minimum-width `320x568` also covered b
 | `npm run qa:css` (Stylelint) | `assets/css/style.css` token/specificity/no-`!important` hygiene | `0` errors |
 | `npm run qa:html` (html-validate) | All 8 HTML files, offline | `0` errors |
 | `npm run qa:fast` | Contrast + Stylelint + html-validate + Chromium/axe (4 viewports + interactive states) | PASS |
-| `npm run qa:full` | WebKit + Chromium, 9 viewports, offcanvas/pills/FAQ/`:user-invalid`/forced-colors/reduced-motion/overflow/links/axes + link integrity & pa11y (`qa:links`) | PASS, `0` violations |
+| `npm run qa:full` | WebKit + Chromium, 9 viewports, offcanvas/pills/FAQ/`:user-invalid`/forced-colors/reduced-motion/overflow/links/axes + link integrity & pa11y (`qa:links`) + unused CSS + visual regression | PASS, `0` violations |
+| `npm run qa:unused` (PurgeCSS) | Dead-selector scan of `assets/css/style.css` against all 8 HTML files | `89/89` selectors used, `0` dead rules |
+| `npm run qa:visual` (Playwright `toHaveScreenshot`) | Full-page screenshot baselines: 8 pages × desktop `1440x900` + mobile `390x844` (baselines committed in the governance repo; Koalendar embed substituted with a deterministic placeholder) | `16/16` match committed baselines |
 | `npm run qa:design` | `wallace` complexity, Bootstrap-vs-custom class ratio, APCA, DevTools CSS coverage | `97.9%` Bootstrap classes, `8` custom classes, `13/13` APCA pass, `77.6%` coverage, `0` dead rules |
 | `npm run qa:w3c` | W3C Nu HTML + Jigsaw CSS (live validators) | `0` errors / `0` warnings across all 8 HTML files + CSS |
 | `npx modern-web-guidance legacy-scan` | Legacy API/pattern scan | `0` findings |
