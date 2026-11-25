@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex">
+  <meta name="description"
+    content="Visual summary of the Meadowside Clinic creative template, custom Bootstrap 5.3.9 token layer, editorial typography, and live interactive components.">
+  <title>Design System &amp; Component Showcase | Meadowside Clinic</title>
+  <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Global Porcelain Sticky Header + Offcanvas Mobile Drawer (unchanged from production pages) -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg py-2" data-bs-theme="light" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" href="index.html">
+          <img src="assets/images/brand-mark.svg" alt="" width="34" height="34" class="rounded-circle">
+          <span>Meadowside Clinic</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#clinicNav"
+          aria-controls="clinicNav" aria-label="Open menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="clinicNav" role="group"
+          aria-labelledby="clinicNavLabel">
+          <div class="offcanvas-header d-lg-none border-bottom">
+            <span class="offcanvas-title h5 mb-0" id="clinicNavLabel">Meadowside Clinic</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#clinicNav"
+              aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="visiting.html">Visiting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <!-- Tap-to-call number: inline in the desktop nav, full row in the mobile drawer -->
+              <li class="nav-item d-none d-lg-flex align-items-center ms-lg-2">
+                <a class="d-inline-flex align-items-center gap-2 small fw-semibold text-primary-emphasis text-decoration-none"
+                  href="tel:+442085550142">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  020&nbsp;8555&nbsp;0142
+                </a>
+              </li>
+              <li class="nav-item d-lg-none mt-3">
+                <a class="d-inline-flex align-items-center gap-2 py-2 fw-semibold text-primary-emphasis" href="tel:+442085550142">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  Call&nbsp;020&nbsp;8555&nbsp;0142
+                </a>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-grid d-lg-block">
+                <a class="btn btn-secondary" href="booking.html">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="flex-grow-1">
+    <!-- 1. Opener Hero: Creative Architecture & Jump Navigation -->
+    <section class="pt-3 pb-4 pt-lg-4 pb-lg-5 section-hero">
+      <div class="container">
+        <div class="row align-items-center gy-4 gx-lg-5">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Site UI reference</span>
+            <h1 class="display-5 mb-3">Creative template &amp; <em>Bootstrap showcase</em></h1>
+            <p class="lead mb-4">
+              A single-page visual inventory of the Meadowside Clinic design language — pairing semantic CSS custom
+              properties and editorial serif typography with Bootstrap&nbsp;5.3.9 components and zero custom JavaScript.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-secondary" href="#creative-template">Creative template &darr;</a>
+              <a class="btn btn-primary" href="#bootstrap-components">Bootstrap components &darr;</a>
+              <a class="btn btn-outline-primary" href="#forms-validation">Tables &amp; forms &darr;</a>
+              <a class="btn btn-outline-primary" href="#motion-craft">Animations &amp; craft &darr;</a>
+              <a class="btn btn-outline-primary" href="index.html">Live home page &rarr;</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card shadow-sm">
+              <h2 class="card-header h6 bg-primary-subtle fw-semibold mb-0">System architecture at a glance</h2>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
+                  <strong>Framework:</strong> Bootstrap <code>5.3.9</code> (CDN CSS + bundle JS for declarative
+                  <code>data-bs-*</code>)
+                </li>
+                <li class="list-group-item">
+                  <strong>Custom JS:</strong> <code>0</code> lines authored; tabs, accordions, collapse, and validation
+                  run natively
+                </li>
+                <li class="list-group-item">
+                  <strong>Theme layer:</strong> Dual-layer <code>--clinic-*</code> &amp; <code>--bs-*</code> tokens in
+                  <code>style.css</code>
+                </li>
+                <li class="list-group-item">
+                  <strong>Custom classes:</strong> <code>6</code> helpers (<code>.section-hero</code>,
+                  <code>.clinic-eyebrow</code>, <code>.clinic-card-link</code>, <code>.border-accent</code>,
+                  <code>.clinic-error-hint</code>, <code>.skip-link</code>)
+                </li>
+                <li class="list-group-item">
+                  <strong>Accessibility:</strong> WCAG 2.1 AA+ contrast, 44px touch targets, <code>:focus-visible</code>
+                  outlines, and <code>forced-colors</code> rules
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PART 1 · CREATIVE TEMPLATE (Palette, Surfaces, Typography & Polish)
+         ==================================================================== -->
+    <section id="creative-template" class="py-4 py-lg-5 bg-body-tertiary border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">01 · Creative template</span>
+            <h2 class="h2 mb-0">Colour palette &amp; <em>daylight surfaces</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              190° Mineral Teal anchors utility UI while Rosewood marks primary booking actions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Core Palette Swatches -->
+        <div class="row row-cols-2 row-cols-md-4 g-3 mb-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#12525e"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Mineral Teal</h3>
+                <p class="small text-body-secondary mb-1"><code>#12525E</code> · <code>--clinic-primary</code></p>
+                <p class="small mb-0">Primary links, active nav rule, <code>.btn-primary</code>, focus accent.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#0c3c45"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Deep Teal</h3>
+                <p class="small text-body-secondary mb-1"><code>#0C3C45</code> · <code>--clinic-primary-dark</code></p>
+                <p class="small mb-0">Hover states, form labels, high-contrast Mist text emphasis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#8a3c54"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Rosewood</h3>
+                <p class="small text-body-secondary mb-1"><code>#8A3C54</code> · <code>--clinic-accent</code></p>
+                <p class="small mb-0">Booking CTAs (<code>.btn-secondary</code>), focus rings, quote stripe.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#6e2c40"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Deep Rosewood</h3>
+                <p class="small text-body-secondary mb-1"><code>#6E2C40</code> · <code>--clinic-accent-dark</code></p>
+                <p class="small mb-0">Uppercase <code>.clinic-eyebrow</code> text and CTA hover fills.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#14282c"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Deep Pine Ink</h3>
+                <p class="small text-body-secondary mb-1"><code>#14282C</code> · <code>--clinic-text</code></p>
+                <p class="small mb-0">Primary body copy &amp; headings across all light surfaces.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#385257"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Slate Muted</h3>
+                <p class="small text-body-secondary mb-1"><code>#385257</code> · <code>--clinic-muted</code></p>
+                <p class="small mb-0">Secondary descriptions, captions, and footer metadata.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#b8ced3"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Cool &amp; Mixed Borders</h3>
+                <p class="small text-body-secondary mb-1"><code>#B8CED3</code> / <code>color-mix()</code></p>
+                <p class="small mb-0"><code>--clinic-surface-border</code> frames cards, tables &amp; inputs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <svg viewBox="0 0 240 64" width="240" height="64" class="w-100 h-auto rounded-3 border mb-3"
+                  aria-hidden="true">
+                  <rect width="240" height="64" fill="#9e243b"></rect>
+                </svg>
+                <h3 class="h6 fw-semibold mb-1">Error Crimson</h3>
+                <p class="small text-body-secondary mb-1"><code>#9E243B</code> on <code>#FDF3F5</code></p>
+                <p class="small mb-0">CSS <code>:user-invalid</code> borders and field error hints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Three Alternating Band Surfaces -->
+        <h3 class="h5 fw-semibold mb-3">Three alternating page band surfaces</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-3 g-lg-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm section-hero">
+              <div class="card-body">
+                <span
+                  class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2">Surface
+                  01 · Porcelain</span>
+                <h4 class="h5 fw-semibold mb-2"><code>.section-hero</code> / <code>#FAFCFD</code></h4>
+                <p class="small mb-0">
+                  Pure daylight ground with subtle Mist &amp; Linen radial gradients on openers, plus default page bands
+                  and the sticky header.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm bg-primary-subtle">
+              <div class="card-body">
+                <span
+                  class="badge rounded-pill bg-white text-primary-emphasis border border-primary-subtle mb-2">Surface
+                  02 · Sea-Glass Mist</span>
+                <h4 class="h5 fw-semibold mb-2"><code>.bg-primary-subtle</code> / <code>#EAF3F5</code></h4>
+                <p class="small mb-0">
+                  Mapped onto Bootstrap subtle primary utilities for interactive sections, card headers, badges, and
+                  the global footer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm bg-body-tertiary">
+              <div class="card-body">
+                <span
+                  class="badge rounded-pill bg-white text-primary-emphasis border border-primary-subtle mb-2">Surface
+                  03 · Warm Linen</span>
+                <h4 class="h5 fw-semibold mb-2"><code>.bg-body-tertiary</code> / <code>#F5F2ED</code></h4>
+                <p class="small mb-0">
+                  Soft organic warmth mapped onto <code>--bs-tertiary-bg</code> for reflection bands, care philosophy
+                  cards, and callout asides.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Typography, Rhythm & Custom CSS Polish -->
+    <section id="typography" class="py-4 py-lg-5 border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">02 · Typography &amp; visual craft</span>
+            <h2 class="h2 mb-0">Literata &amp; <em>Source Sans 3</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              Serif display hierarchy meets clean sans-serif UI at a 17px base scale.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 gx-lg-5 align-items-stretch">
+          <!-- Type Specimen Card -->
+          <div class="col-lg-7">
+            <div class="card shadow-sm h-100">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Live type hierarchy &amp; editorial quote
+              </h3>
+              <div class="card-body d-flex flex-column gap-3">
+                <div>
+                  <span class="small text-uppercase fw-semibold clinic-eyebrow mb-1">.clinic-eyebrow (Source Sans 3
+                    uppercase + 2px rule)</span>
+                  <p class="display-5 mb-1">Display 5 with <em>italic inflection</em></p>
+                  <p class="small text-body-secondary mb-0">
+                    <code>Literata</code> · <code>clamp(2rem, 1.35rem + 1.4vw, 2.75rem)</code> · italicised
+                    <code>&lt;em&gt;</code> in Mineral Teal
+                  </p>
+                </div>
+
+                <div class="border-top pt-3">
+                  <p class="h2 mb-1">Section heading <code>.h2</code> balanced line wraps</p>
+                  <p class="h5 fw-semibold mb-1">Card title <code>.h5.fw-semibold</code></p>
+                  <p class="lead mb-2">
+                    Lead copy spans its container without a 65ch width lock, introducing key sections cleanly.
+                  </p>
+                  <p class="mb-0">
+                    Body copy runs at <code>1.0625rem</code> (<code>17px</code>, <code>1.65</code> line height) and is
+                    capped at <code>max-width: 65ch</code> with <code>text-wrap: pretty</code> for comfortable reading.
+                  </p>
+                </div>
+
+                <div class="border-top pt-3 mt-auto">
+                  <figure class="border-accent border-start border-4 ps-3 ps-sm-4 mb-0">
+                    <blockquote class="blockquote fs-5 mb-2">
+                      <p class="mb-0">
+                        &ldquo;Patient reflections reuse Bootstrap&rsquo;s <code>.blockquote</code> in Literata alongside
+                        our custom <code>.border-accent</code> Rosewood stripe.&rdquo;
+                      </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0">
+                      Illustrative reflection pattern <span class="fw-normal">(Home, About, Treatments, Visiting, Booking,
+                        Contact)</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Polish & Responsive Imagery Card -->
+          <div class="col-lg-5">
+            <div class="d-flex flex-column gap-4 h-100">
+              <div class="card shadow-sm">
+                <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Typographic &amp; reading-measure rules</h3>
+                <ul class="list-group list-group-flush small">
+                  <li class="list-group-item">
+                    <strong>Zero-CLS font metrics:</strong> <code>@font-face</code> fallbacks (<code>size-adjust</code>,
+                    <code>ascent-override</code>) match <em>Literata</em> and <em>Source Sans 3</em> before web fonts
+                    swap in.
+                  </li>
+                  <li class="list-group-item">
+                    <strong>65ch reading measure:</strong> Paragraphs and lists cap at <code>65ch</code> and auto-centre
+                    inside <code>.text-center</code> blocks, while releasing <code>p.lead</code> and flush list dividers.
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Modern line wrapping:</strong> Headings and card headers use <code>text-wrap: balance</code>
+                    (avoiding orphans); body copy and quotes use <code>text-wrap: pretty</code>.
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Header typography reset:</strong> UI eyebrows, card headers, and accordion triggers switch back
+                    from serif inheritance to <code>Source Sans 3</code>.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card shadow-sm flex-grow-1">
+                <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Framed media · <code>.ratio-16x9</code> &amp;
+                  <code>.rounded-4</code></h3>
+                <div class="card-body">
+                  <div class="ratio ratio-16x9 mb-2">
+                    <img src="assets/images/clinic-waiting-room-800.webp"
+                      srcset="assets/images/clinic-waiting-room-800.webp 800w, assets/images/clinic-waiting-room-1440.webp 1440w"
+                      sizes="(max-width: 991.98px) 92vw, 420px"
+                      alt="Bright clinic waiting room with pale sofas, tan armchairs, indoor greenery, and tall windows looking onto trees"
+                      class="img-fluid object-fit-cover rounded-4 shadow-sm border" width="1440" height="810"
+                      loading="lazy">
+                  </div>
+                  <p class="small text-body-secondary mb-0">
+                    Responsive WebP sets (<code>srcset</code> + <code>sizes</code>) with explicit dimensions and
+                    <code>object-fit-cover</code> inside <code>.ratio-4x3</code> / <code>.ratio-16x9</code> boxes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PART 2 · INDIVIDUAL BOOTSTRAP 5.3.9 COMPONENTS & INTERACTIVE WIDGETS
+         ==================================================================== -->
+    <section id="bootstrap-components" class="py-4 py-lg-5 bg-primary-subtle border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">03 · Bootstrap 5.3.9 tokens</span>
+            <h2 class="h2 mb-0">Buttons, badges &amp; <em>container patterns</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              Stock Bootstrap classes reskinned via <code>--bs-*</code> custom properties.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <!-- Buttons & Touch Targets -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Buttons &amp; action groups</h3>
+              <div class="card-body d-flex flex-column gap-3">
+                <p class="small mb-0">
+                  Every button enforces <code>min-height: 44px</code> for WCAG touch targets and pairs with
+                  <code>.d-grid.gap-2.d-sm-flex</code> so actions stack full-width on narrow phones.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex flex-wrap">
+                  <a class="btn btn-secondary btn-lg" href="booking.html">Primary CTA (.btn-secondary.btn-lg)</a>
+                  <button type="button" class="btn btn-primary">Utility (.btn-primary)</button>
+                  <button type="button" class="btn btn-outline-primary">Secondary (.btn-outline-primary)</button>
+                </div>
+                <p class="small text-body-secondary mb-0 mt-auto">
+                  Note: <code>.btn-secondary</code> is mapped to Rosewood exclusively for booking &amp; enquiry submits;
+                  <code>.btn-primary</code> serves return &amp; utility navigation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges, Navbar & Offcanvas -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Badges, sticky navbar &amp; mobile offcanvas</h3>
+              <div class="card-body d-flex flex-column gap-3">
+                <div>
+                  <div class="small fw-semibold mb-2">Pill badges (Home, About &amp; Treatments)</div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span
+                      class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">First
+                      Visit &middot; 90 mins &middot; &pound;200</span>
+                    <span
+                      class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">Returning
+                      &middot; 45 mins &middot; &pound;100</span>
+                    <span
+                      class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle">01
+                      &middot; Listen</span>
+                  </div>
+                </div>
+                <div class="border-top pt-3 mt-auto">
+                  <div class="small fw-semibold mb-1">Global Navigation (<code>.sticky-top</code> +
+                    <code>.offcanvas-lg.offcanvas-end</code>)</div>
+                  <p class="small text-body-secondary mb-0">
+                    The sticky header above renders on every page: inline desktop links with CSS <code>scaleX</code>
+                    underlines collapse below <code>992px</code> into a right-hand Bootstrap offcanvas drawer with a
+                    <code>44px</code> toggler and tap-to-call row.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unified Cards, Interactive Link Card & Clipped Callout <aside> -->
+        <h3 class="h5 fw-semibold mb-3">Card spacing unification &amp; callout surfaces</h3>
+        <div class="row row-cols-1 row-cols-lg-3 g-3 g-lg-4">
+          <!-- Card 1: Headered Card + Flush List + Footer -->
+          <div class="col">
+            <div class="card shadow-sm h-100">
+              <h4 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Header + <code>.list-group-flush</code> + Footer</h4>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
+                  <strong>Shared 24px gutter:</strong> <code>--bs-card-cap-padding-x</code>, <code>--bs-card-spacer-x</code>,
+                  and list-item padding align cleanly.
+                </li>
+                <li class="list-group-item">
+                  <strong>Mobile step-down:</strong> Compacted smoothly to <code>20px</code> below <code>576px</code>.
+                </li>
+                <li class="list-group-item">
+                  <strong>Where used:</strong> About, Booking &amp; Contact sidebars.
+                </li>
+              </ul>
+              <div class="card-footer bg-transparent small">
+                <a class="fw-semibold" href="booking.html">See live in Booking &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Interactive Horizontal Media Card (.clinic-card-link + .stretched-link) -->
+          <div class="col">
+            <div class="card clinic-card-link overflow-hidden h-100 shadow-sm">
+              <div class="row g-0 h-100">
+                <div class="col-4">
+                  <div class="ratio ratio-4x3 h-100 overflow-hidden">
+                    <img src="assets/images/consultation-conversation-480.webp"
+                      srcset="assets/images/consultation-conversation-480.webp 480w, assets/images/consultation-conversation-960.webp 960w"
+                      sizes="(max-width: 991.98px) 30vw, 150px"
+                      alt="Lydia Selby listening warmly to a client across a small pale-oak table in a sunlit clinic room"
+                      class="object-fit-cover" width="960" height="720" loading="lazy">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="card-body d-flex flex-column justify-content-center h-100 p-3 p-md-4">
+                    <span
+                      class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle align-self-start mb-2">Interactive
+                      card</span>
+                    <h4 class="h6 card-title fw-semibold mb-2">
+                      <a class="stretched-link text-decoration-none" href="treatments.html"><code>.clinic-card-link</code></a>
+                    </h4>
+                    <p class="small card-text mb-2">
+                      <code>.stretched-link</code> makes the whole card clickable with subtle image zoom &amp; elevation lift.
+                    </p>
+                    <span class="small fw-semibold text-primary">Explore in Treatments &rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Clipped Rounded <aside> Callout -->
+          <div class="col">
+            <aside class="bg-white shadow-sm p-4 h-100 d-flex flex-column justify-content-center">
+              <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">Editorial callout</span>
+              <h4 class="h5 fw-semibold mb-2">Clipped <code>&lt;aside&gt;</code> bar</h4>
+              <p class="small mb-2">
+                Uses <code>overflow: hidden</code> plus a <code>::before</code> <code>border-left: 4px solid</code> so
+                rounded corners stay crisp without curved &ldquo;horns&rdquo;.
+              </p>
+              <p class="small text-body-secondary mb-0">
+                Using a real border rather than <code>box-shadow</code> ensures the stripe survives Windows Forced Colors
+                Mode (seen on About, Booking, Contact &amp; Thank You).
+              </p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Bootstrap Widgets (Zero Custom JavaScript) -->
+    <section id="interactive-widgets" class="py-4 py-lg-5 bg-body-tertiary border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">04 · Zero-JS interactions</span>
+            <h2 class="h2 mb-0">Tabs, accordion &amp; <em>collapse disclosure</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              Powered strictly by Bootstrap&rsquo;s <code>data-bs-toggle</code> HTML attributes.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 gx-lg-5 align-items-start">
+          <!-- .nav-pills + .collapse column -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm mb-4">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">1. Segmented <code>.nav-pills</code> tabs
+                (Treatments &amp; Visiting)</h3>
+              <div class="card-body">
+                <ul class="nav nav-pills d-inline-flex flex-wrap gap-1 mb-3" id="showcaseTabs" role="tablist">
+                  <li class="nav-item" role="none">
+                    <button class="nav-link active" id="tab-overview-btn" data-bs-toggle="pill"
+                      data-bs-target="#tab-overview-pane" type="button" role="tab" aria-controls="tab-overview-pane"
+                      aria-selected="true">Overview</button>
+                  </li>
+                  <li class="nav-item" role="none">
+                    <button class="nav-link" id="tab-mobile-btn" data-bs-toggle="pill" data-bs-target="#tab-mobile-pane"
+                      type="button" role="tab" aria-controls="tab-mobile-pane" aria-selected="false">Mobile fit</button>
+                  </li>
+                  <li class="nav-item" role="none">
+                    <button class="nav-link" id="tab-a11y-btn" data-bs-toggle="pill" data-bs-target="#tab-a11y-pane"
+                      type="button" role="tab" aria-controls="tab-a11y-pane" aria-selected="false">ARIA roles</button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="showcaseTabsContent">
+                  <div class="tab-pane fade show active" id="tab-overview-pane" role="tabpanel"
+                    aria-labelledby="tab-overview-btn" tabindex="0">
+                    <p class="small mb-0">
+                      Replaces stacked prose with focused panels on Sea-Glass Mist pill trays. Active pill adopts
+                      Mineral Teal while inactive tabs maintain <code>&gt; 7:1</code> text contrast.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="tab-mobile-pane" role="tabpanel" aria-labelledby="tab-mobile-btn"
+                    tabindex="0">
+                    <p class="small mb-0">
+                      Below <code>576px</code>, our CSS flips <code>.nav-pills</code> to equal-width flex buttons so
+                      multi-option tab bars never wrap awkwardly or overflow.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="tab-a11y-pane" role="tabpanel" aria-labelledby="tab-a11y-btn"
+                    tabindex="0">
+                    <p class="small mb-0">
+                      Native <code>role="tablist"</code>, <code>role="tab"</code>, and <code>role="tabpanel"</code>
+                      enable arrow-key switching via Bootstrap&rsquo;s bundle script.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Standalone .collapse disclosure -->
+            <div class="card shadow-sm">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">2. Standalone <code>.collapse</code> toggle
+                (Booking)</h3>
+              <div class="card-body">
+                <p class="small mb-3">
+                  Keeps secondary reassurance tucked out of the primary visual flow until a patient clicks to inspect it.
+                </p>
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#showcaseCollapsePanel" aria-expanded="false" aria-controls="showcaseCollapsePanel">
+                  Toggle sample disclosure &darr;
+                </button>
+                <div class="collapse mt-3" id="showcaseCollapsePanel">
+                  <div class="card bg-primary-subtle small">
+                    <div class="card-body">
+                      Revealed without custom JS using <code>data-bs-toggle="collapse"</code> &mdash; identical to the
+                      <em>Quick visit checklist</em> on <a href="booking.html">Book an Appointment</a>.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stay-open boxed .accordion column -->
+          <div class="col-lg-6">
+            <h3 class="h5 fw-semibold mb-2">3. Boxed stay-open <code>.accordion</code> (Treatments FAQ)</h3>
+            <p class="small text-body-secondary mb-3">
+              Omitting <code>data-bs-parent</code> keeps opened answers visible for easy comparison, while an explicit
+              <code>1px</code> outer border on <code>.accordion</code> eliminates corner tapering.
+            </p>
+            <div class="accordion overflow-hidden shadow-sm" id="showcaseFaq">
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#showcaseAccOne"
+                    aria-expanded="true" aria-controls="showcaseAccOne">
+                    Why are FAQ triggers rendered in Source Sans 3?
+                  </button>
+                </h4>
+                <div id="showcaseAccOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body small">
+                    UI questions sit inside interactive controls, so <code>style.css</code> overrides heading inheritance
+                    back to <code>Source Sans 3</code> at a <code>48px</code> minimum hit height while keeping
+                    <code>Literata</code> for editorial headings.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#showcaseAccTwo" aria-expanded="false" aria-controls="showcaseAccTwo">
+                    <span>Why remove <code>data-bs-parent</code> on clinic FAQs?</span>
+                  </button>
+                </h4>
+                <div id="showcaseAccTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body small">
+                    Anxious first-time patients often compare GP referral rules alongside what to wear; stay-open items let
+                    visitors leave multiple answers visible simultaneously.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#showcaseAccThree" aria-expanded="false" aria-controls="showcaseAccThree">
+                    How is the chevron recoloured without extra images?
+                  </button>
+                </h4>
+                <div id="showcaseAccThree" class="accordion-collapse collapse">
+                  <div class="accordion-body small">
+                    Via inline Mineral Teal data-URI SVGs assigned directly to <code>--bs-accordion-btn-icon</code> and
+                    <code>--bs-accordion-btn-active-icon</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Responsive Comparison Table & Native :user-invalid Form Showcase -->
+    <section id="forms-validation" class="py-4 py-lg-5 border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">05 · Data &amp; form validation</span>
+            <h2 class="h2 mb-0">Responsive tables &amp; <em>native form states</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              Rounded table containers and CSS <code>:user-invalid</code> hints without script handlers.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 gx-lg-5 align-items-start">
+          <!-- Live Table Specimen = Component-to-Page Directory -->
+          <div class="col-lg-6">
+            <h3 class="h5 fw-semibold mb-2"><code>.table-responsive</code> &amp; <code>.table-hover</code></h3>
+            <p class="small text-body-secondary mb-3">
+              Styled with Mist column headers, rounded outer corners inside a <code>.rounded-4.border</code> wrapper, and
+              accessible <code>&lt;caption&gt;</code> / <code>scope</code> attributes. Below is where each feature lives:
+            </p>
+            <div class="table-responsive rounded-4 border bg-white shadow-sm">
+              <table class="table table-hover align-middle mb-0 small">
+                <caption class="visually-hidden">
+                  Mapping of Meadowside Clinic UI features to the pages where they are used
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-2 px-3">Feature / Component</th>
+                    <th scope="col" class="py-2 px-3">Clinic Page(s)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">Sticky navbar &amp; offcanvas</th>
+                    <td class="py-2 px-3">All 8 site pages</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3"><code>.clinic-card-link</code> + <code>.stretched-link</code></th>
+                    <td class="py-2 px-3"><a href="index.html">Home</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">3-col cards &amp; <code>&lt;aside&gt;</code> split</th>
+                    <td class="py-2 px-3"><a href="about.html">About</a>, <a href="treatments.html">Treatments</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3"><code>.table</code>, <code>.nav-pills</code> &amp; <code>.accordion</code></th>
+                    <td class="py-2 px-3"><a href="treatments.html">Treatments</a>, <a href="visiting.html">Visiting</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3">Koalendar <code>&lt;iframe&gt;</code> &amp; <code>.collapse</code></th>
+                    <td class="py-2 px-3"><a href="booking.html">Book an Appointment</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-2 px-3 border-bottom-0">Stacked form &amp; <code>:user-invalid</code></th>
+                    <td class="py-2 px-3 border-bottom-0"><a href="contact.html">Contact</a> &rarr; <a href="thank-you.html">Thank You</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Native HTML5 Form Specimen -->
+          <div class="col-lg-6">
+            <h3 class="h5 fw-semibold mb-2">Stacked form &amp; post-interaction <code>:user-invalid</code></h3>
+            <p class="small text-body-secondary mb-3">
+              Clear and blur an empty required input below to inspect live Crimson <code>:user-invalid</code> borders and
+              <code>.clinic-error-hint</code> feedback (no hidden error IDs in <code>aria-describedby</code>).
+            </p>
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <form action="thank-you.html" method="get">
+                  <div class="mb-3">
+                    <label for="showcaseName" class="form-label mb-1">Sample required input <span
+                        aria-hidden="true">*</span></label>
+                    <input type="text" class="form-control" id="showcaseName" name="name" required autocomplete="name"
+                      placeholder="Type, clear, and blur to test :user-invalid">
+                    <div class="clinic-error-hint">Shown automatically via CSS <code>:user-invalid</code> after interaction.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="showcaseEmail" class="form-label mb-1">Email input with hint above <span
+                        aria-hidden="true">*</span></label>
+                    <div id="showcaseEmailHint" class="form-text mt-0 mb-2">
+                      Helper text sits above the control so browser autofill menus never obscure it.
+                    </div>
+                    <input type="email" class="form-control" id="showcaseEmail" name="email" required autocomplete="email"
+                      inputmode="email" aria-describedby="showcaseEmailHint" placeholder="you@example.com">
+                    <div class="clinic-error-hint">Enter a valid email format (e.g. name@example.com).</div>
+                  </div>
+
+                  <fieldset class="mb-4">
+                    <legend class="form-label fs-6 mb-2">Radio controls (<code>.form-check-inline</code>)</legend>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="demo_choice" id="demoChoiceOne" value="email"
+                        checked>
+                      <label class="form-check-label" for="demoChoiceOne">Mineral Teal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="demo_choice" id="demoChoiceTwo" value="phone">
+                      <label class="form-check-label" for="demoChoiceTwo">Accessible focus</label>
+                    </div>
+                  </fieldset>
+
+                  <div class="d-grid gap-2 d-sm-flex">
+                    <button type="submit" class="btn btn-secondary">Test GET Submit</button>
+                    <a class="btn btn-outline-primary" href="contact.html">View live Contact form</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Animations, Transitions & Subtle Craft -->
+    <section id="motion-craft" class="py-4 py-lg-5 bg-body-tertiary border-top">
+      <div class="container">
+        <div class="row align-items-end justify-content-between gy-2 mb-4">
+          <div class="col-lg-7">
+            <span class="small text-uppercase fw-semibold clinic-eyebrow mb-2">06 · Animations &amp; subtle details</span>
+            <h2 class="h2 mb-0">Quiet motion &amp; <em>under-the-hood craft</em></h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-body-secondary mb-0">
+              Compositor-only hover cues, strict reduced-motion opt-ins, and browser-level refinements.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-4 mb-4">
+          <!-- Animations & Micro-Interactions Card -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Animations &amp; hover transitions</h3>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
+                  <strong>Custom ease curve:</strong> Interactive transitions share
+                  <code>--clinic-ease: cubic-bezier(0.16, 1, 0.3, 1)</code> for a calm, weighted deceleration without
+                  bounce.
+                </li>
+                <li class="list-group-item">
+                  <strong>Desktop nav hairline sweep:</strong> <code>header .nav-link::after</code> expands from
+                  <code>scaleX(0)</code> to <code>scaleX(1)</code> anchored at <code>left center</code>
+                  (<code>0.3s</code>) on <code>&ge; 992px</code> screens; below <code>992px</code>, active links fall back
+                  to <code>2px</code> underlined text.
+                </li>
+                <li class="list-group-item">
+                  <strong>Button micro-lift &amp; active halo:</strong> Buttons lift <code>translateY(-1px)</code> on
+                  hover with <code>0.25s</code> fill transitions; when on Booking, <code>.btn-secondary.active</code>
+                  adds a Porcelain-to-Rosewood double outline ring.
+                </li>
+                <li class="list-group-item">
+                  <strong>Linked card lift + photo zoom:</strong> Hovering or tabbing into
+                  <code>.clinic-card-link</code> raises the card <code>translateY(-2px)</code> with a deeper teal shadow
+                  while zooming its <code>&lt;img&gt;</code> to <code>scale(1.03)</code> over <code>0.6s</code> inside
+                  <code>.overflow-hidden</code>.
+                </li>
+                <li class="list-group-item">
+                  <strong>Smooth anchor scrolling:</strong> <code>html { scroll-behavior: smooth; }</code> glides
+                  in-page jumps while <code>scroll-padding-top: 5.25rem</code> stops targeted headings clear beneath the
+                  sticky header.
+                </li>
+              </ul>
+              <div class="card-footer bg-transparent d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <span class="small text-body-secondary">Hover top nav links or test lift buttons:</span>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-secondary" href="#main-content">Back to top &uarr;</a>
+                  <a class="btn btn-outline-primary" href="booking.html">Active CTA halo demo &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accessibility, Reduced Motion & Forced Colors Card -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+              <h3 class="card-header h6 bg-primary-subtle fw-semibold mb-0">Accessibility &amp; system preference
+                safeguards</h3>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item">
+                  <strong>Strict reduced-motion opt-in:</strong> Hover lifts, image scales, and nav sweeps only compile
+                  inside <code>@media (prefers-reduced-motion: no-preference)</code>, and
+                  <code>prefers-reduced-motion: reduce</code> resets <code>scroll-behavior: auto</code>.
+                </li>
+                <li class="list-group-item">
+                  <strong>Windows Forced Colors Mode:</strong> <code>@media (forced-colors: active)</code> adds explicit
+                  <code>CanvasText</code> borders to buttons, cards, <code>&lt;aside&gt;</code>, pills, header, and
+                  footer, converts focus rings to <code>Highlight</code>, and hides decorative eyebrow hairlines.
+                </li>
+                <li class="list-group-item">
+                  <strong>Keyboard-only focus rings:</strong> <code>:focus-visible</code> renders a crisp
+                  <code>3px solid var(--clinic-accent)</code> ring (<code>2px</code> offset) across light and subtle
+                  headers while suppressing mouse-click focus outlines.
+                </li>
+                <li class="list-group-item">
+                  <strong>Skip link &amp; minimum hit sizes:</strong> Tabbing first reveals <code>.skip-link</code> fixed
+                  at top-left (<code>z-index: 1080</code>); interactive buttons and nav toggles stay at least
+                  <code>44px</code> tall (accordion headers <code>48px</code>).
+                </li>
+                <li class="list-group-item">
+                  <strong>Bootstrap native transitions:</strong> Tabs use <code>.fade</code> opacity cross-fades,
+                  accordions animate height alongside custom Mineral Teal SVG chevrons, and mobile menus slide in via
+                  <code>.offcanvas-lg</code>.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Rendering, Border Geometry & Platform Details -->
+        <h3 class="h5 fw-semibold mb-3">Subtle CSS, mobile &amp; static-platform details</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-3 g-lg-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h4 class="h6 fw-semibold mb-2">Border geometry &amp; colour math</h4>
+                <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                  <li>
+                    <strong>OKLab border blending:</strong> <code>--clinic-surface-border</code> mixes 18% Mineral Teal
+                    into warm stone in <code>oklab</code> so borders fit both Mist and Linen without hue shifts.
+                  </li>
+                  <li>
+                    <strong>Anti-tapering accordions:</strong> Outer borders sit on <code>.accordion</code> while items
+                    strip side borders, keeping rounded corners even.
+                  </li>
+                  <li>
+                    <strong>Corner-clipped aside stripes:</strong> <code>overflow: hidden</code> plus a
+                    <code>::before</code> border eliminates curved corner &ldquo;horns&rdquo;.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h4 class="h6 fw-semibold mb-2">Mobile viewport &amp; form ergonomics</h4>
+                <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                  <li>
+                    <strong>No iOS zoom on focus:</strong> Inputs set <code>font-size: max(1rem, 1em)</code>
+                    (<code>&ge; 16px</code>) to stop Safari zooming in when tapping fields.
+                  </li>
+                  <li>
+                    <strong>Responsive phone formatting:</strong> Navbar telephone numbers use non-breaking spaces
+                    (<code>020&nbsp;8555&nbsp;0142</code>) so digits never split across lines.
+                  </li>
+                  <li>
+                    <strong>Equal-width mobile pills &amp; card gutters:</strong> Below <code>576px</code>,
+                    <code>.nav-pills</code> flex evenly and card padding steps smoothly from <code>24px</code> to
+                    <code>20px</code>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h4 class="h6 fw-semibold mb-2">Zero-JS validation, security &amp; speed</h4>
+                <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                  <li>
+                    <strong>Post-interaction errors only:</strong> Hints rely strictly on <code>:user-invalid</code> and
+                    are excluded from <code>aria-describedby</code> until the user interacts.
+                  </li>
+                  <li>
+                    <strong>LCP &amp; responsive WebP:</strong> Opener photos add <code>fetchpriority="high"</code> and
+                    explicit aspect boxes, while secondary photos set <code>loading="lazy"</code>.
+                  </li>
+                  <li>
+                    <strong>Static hosting &amp; SRI:</strong> CDN assets enforce <code>integrity="sha384-..."</code>,
+                    referrer policy is pinned site-wide, and forms submit via <code>GET</code> for GitHub Pages.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer on Sea-Glass Mist -->
+  <footer class="bg-primary-subtle border-top py-4 py-lg-5 mt-auto">
+    <div class="container">
+      <div class="row gy-4 pb-4">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-semibold mb-2">Meadowside Clinic</h2>
+          <p class="mb-2">
+            Thoughtful, one-to-one osteopathic care with Lydia Selby, M.Ost. on Twickenham Green.
+          </p>
+          <p class="small text-body-secondary mb-0">
+            General Osteopathic Council (GOsC) registered · Visits by appointment.
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h2 class="h5 fw-semibold mb-2">Clinic Pages</h2>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="visiting.html">Visiting</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h2 class="h5 fw-semibold mb-2">Location &amp; Contact</h2>
+          <p class="mb-1">14 The Green, Twickenham TW2 5QA</p>
+          <p class="mb-1">Tel: <a href="tel:+442085550142">020&nbsp;8555&nbsp;0142</a></p>
+          <p class="mb-0">Email: <a
+              href="mailto:enquiries@meadowsideclinic.example">enquiries@meadowsideclinic.example</a></p>
+        </div>
+      </div>
+      <div
+        class="border-top border-primary-subtle pt-3 d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
+        <p class="mb-0">&copy; 2026 Meadowside Clinic. Fictional practice created for educational assessment.</p>
+        <p class="mb-0">Non-urgent musculoskeletal care · In an emergency, call NHS 111 or 999.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
+</body>
+
+</html>
